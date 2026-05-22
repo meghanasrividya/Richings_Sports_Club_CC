@@ -656,4 +656,195 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoSlide();
     }
 
+    // ==========================================================================
+    // 10. RPSC VISUAL MASTERPIECE UPGRADE - ADDITIONAL MECHANICS
+    // ==========================================================================
+
+    // --- Scroll Progress Tracker ---
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        if (scrollProgress) {
+            scrollProgress.style.width = `${scrollPercent}%`;
+        }
+    });
+
+    // --- Dynamic Club Weather & Playability Engine ---
+    function updateClubWeather() {
+        const tempEl = document.getElementById('weatherTemp');
+        const descEl = document.getElementById('weatherDesc');
+        const statusEl = document.getElementById('playingStatus');
+        const iconEl = document.getElementById('weatherIcon');
+        
+        if (!tempEl || !descEl || !statusEl) return;
+        
+        const now = new Date();
+        const month = now.getMonth(); 
+        const hour = now.getHours();
+        
+        let temp = 15;
+        let desc = 'Sunny Sky';
+        let iconSvg = 'sunny';
+        let status = '🎾 Tennis: Ideal Conditions';
+        
+        // Generate seasonal temperature and conditions for Iver, UK
+        if (month >= 4 && month <= 8) { // Summer/Spring (May-Sept)
+            temp = Math.floor(16 + Math.random() * 6);
+            if (hour < 8 || hour > 20) temp -= 6;
+            
+            const conds = [
+                { desc: 'Clear Skies', status: '🎾 Tennis & Rackets: Ideal Conditions', icon: 'sunny' },
+                { desc: 'Warm Sunshine', status: '🎾 Tennis & Padel: Ideal Play', icon: 'sunny' },
+                { desc: 'Light Breeze', status: '⛳ Bowls: Perfect Green Speed', icon: 'wind' },
+                { desc: 'Scattered Clouds', status: '⚽ Football: Excellent Pitch Playability', icon: 'cloudy' }
+            ];
+            const chosen = conds[Math.floor(Math.random() * conds.length)];
+            desc = chosen.desc;
+            status = chosen.status;
+            iconSvg = chosen.icon;
+        } else { // Winter/Autumn (Oct-Apr)
+            temp = Math.floor(4 + Math.random() * 8);
+            if (hour < 8 || hour > 18) temp -= 4;
+            
+            const conds = [
+                { desc: 'Overcast Sky', status: '🎾 Tennis: Damp court, play with care', icon: 'cloudy' },
+                { desc: 'Drizzle Rain', status: '⚽ Football: Playable, wet turf', icon: 'rain' },
+                { desc: 'Mist Fog', status: '🎾 Tennis: Indoor & floodlit active', icon: 'cloudy' }
+            ];
+            const chosen = conds[Math.floor(Math.random() * conds.length)];
+            desc = chosen.desc;
+            status = chosen.status;
+            iconSvg = chosen.icon;
+        }
+        
+        tempEl.innerText = `${temp}°C`;
+        descEl.innerText = desc;
+        statusEl.innerText = status;
+        
+        // Dynamically adjust SVG elements based on generated weather state
+        if (iconSvg === 'sunny') {
+            iconEl.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+        } else if (iconSvg === 'cloudy') {
+            iconEl.innerHTML = '<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>';
+        } else if (iconSvg === 'rain') {
+            iconEl.innerHTML = '<line x1="16" y1="13" x2="16" y2="21"></line><line x1="8" y1="13" x2="8" y2="21"></line><line x1="12" y1="15" x2="12" y2="23"></line><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path>';
+        } else { // wind
+            iconEl.innerHTML = '<path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>';
+        }
+    }
+    
+    updateClubWeather();
+    // Refresh weather details every 5 minutes
+    setInterval(updateClubWeather, 300000);
+
+    // --- 3D Mouse Tilt & Dynamic Glow Engine (Desktop Only) ---
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    if (!isTouchDevice) {
+        const tiltCards = document.querySelectorAll('.tilt-card, .well-card');
+        
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; 
+                const y = e.clientY - rect.top;  
+                
+                const width = rect.width;
+                const height = rect.height;
+                
+                // Pct boundaries -0.5 to 0.5
+                const xPct = (x / width) - 0.5;
+                const yPct = (y / height) - 0.5;
+                
+                const maxRotate = 10; // degrees
+                
+                // Rotations mapped
+                const rotateX = (-yPct * maxRotate).toFixed(2);
+                const rotateY = (xPct * maxRotate).toFixed(2);
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                // Colored glow shadow calculations
+                let glowColor = card.getAttribute('data-glow-color') || 'rgba(212, 175, 55, 0.15)';
+                card.style.boxShadow = `0 20px 40px ${glowColor}, 0 8px 20px rgba(0, 0, 0, 0.4)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                
+                let defaultShadow = card.classList.contains('active-card') 
+                    ? '0 15px 40px rgba(0, 201, 167, 0.15)' 
+                    : 'var(--shadow-intense)';
+                card.style.boxShadow = defaultShadow;
+            });
+        });
+    }
+
+    // --- Holographic Digital Membership Card Controller ---
+    const holoCard = document.getElementById('holoCard');
+    const holoShine = document.getElementById('holoShine');
+    const userNameInput = document.getElementById('userName');
+    const userMembershipSelect = document.getElementById('userMembership');
+    
+    const holoCardholder = document.getElementById('holoCardholder');
+    const holoTierText = document.getElementById('holoTier');
+    
+    // Connect input name changes to Cardholder name
+    if (userNameInput && holoCardholder) {
+        userNameInput.addEventListener('input', (e) => {
+            const val = e.target.value.trim();
+            holoCardholder.innerText = val ? val.toUpperCase() : 'GUEST VISITOR';
+        });
+    }
+    
+    // Connect select memberships to Card Tiers
+    if (userMembershipSelect && holoCard) {
+        userMembershipSelect.addEventListener('change', (e) => {
+            const tier = e.target.value;
+            
+            holoCard.classList.remove('bronze-tier', 'silver-tier', 'gold-tier');
+            
+            if (tier === 'visitor') {
+                holoCard.classList.add('bronze-tier');
+                if (holoTierText) holoTierText.innerText = 'BRONZE';
+            } else if (tier === 'club') {
+                holoCard.classList.add('silver-tier');
+                if (holoTierText) holoTierText.innerText = 'SILVER';
+            } else if (tier === 'gold') {
+                holoCard.classList.add('gold-tier');
+                if (holoTierText) holoTierText.innerText = 'GOLD';
+            }
+        });
+    }
+    
+    // Drag/shine mechanics over digital credit card
+    if (holoCard && holoShine && !isTouchDevice) {
+        holoCard.addEventListener('mousemove', (e) => {
+            const rect = holoCard.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const w = rect.width;
+            const h = rect.height;
+            
+            const xPct = (x / w) - 0.5;
+            const yPct = (y / h) - 0.5;
+            
+            const rX = (-yPct * 15).toFixed(2);
+            const rY = (xPct * 15).toFixed(2);
+            holoCard.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) scale3d(1.03, 1.03, 1.03)`;
+            
+            const shineX = (x / w * 100).toFixed(2);
+            const shineY = (y / h * 100).toFixed(2);
+            holoShine.style.background = `radial-gradient(circle at ${shineX}% ${shineY}%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%)`;
+        });
+        
+        holoCard.addEventListener('mouseleave', () => {
+            holoCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            holoShine.style.background = 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 80%)';
+        });
+    }
+
 });

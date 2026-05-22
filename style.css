@@ -2277,3 +2277,320 @@ body:hover .cursor-glow {
         gap: 10px;
     }
 }
+
+/* ==========================================================================
+   RPSC VISUAL MASTERPIECE UPGRADE - ADDITIONAL STYLES
+   ========================================================================== */
+
+/* --- Scroll Progress Bar --- */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-gold-light), var(--primary-gold), var(--primary-gold-dark));
+    z-index: 10001;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+    transition: width 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* --- Live Playing Conditions & Weather Widget --- */
+.weather-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 20px;
+    background: rgba(11, 15, 25, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border-radius: 50px;
+    margin-bottom: 30px;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-white);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-medium);
+}
+.weather-badge:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.15);
+}
+.weather-icon {
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+}
+.weather-temp {
+    font-weight: 700;
+    color: var(--primary-gold);
+}
+.weather-desc {
+    text-transform: capitalize;
+}
+.weather-divider {
+    color: rgba(255, 255, 255, 0.2);
+}
+.playing-status {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--primary-gold-light);
+}
+
+/* --- Ambient Floating Particles --- */
+.particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+.ambient-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    filter: blur(8px);
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+.ambient-particle.p-1 {
+    top: 15%;
+    left: 8%;
+    width: 250px;
+    height: 250px;
+    animation: floatSlowly1 22s infinite alternate ease-in-out;
+}
+.ambient-particle.p-2 {
+    top: 50%;
+    right: 5%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.05) 0%, transparent 70%);
+    animation: floatSlowly2 30s infinite alternate ease-in-out;
+}
+.ambient-particle.p-3 {
+    bottom: 12%;
+    left: 25%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 201, 167, 0.04) 0%, transparent 70%);
+    animation: floatSlowly3 26s infinite alternate ease-in-out;
+}
+@keyframes floatSlowly1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, 30px) scale(1.1); }
+}
+@keyframes floatSlowly2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-50px, 40px) scale(0.95); }
+}
+@keyframes floatSlowly3 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -30px) scale(1.15); }
+}
+
+/* --- 3D Mouse Tilt Elements & Dynamic Hover Shadows --- */
+.tilt-card {
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+    transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.1s ease-out, border-color 0.3s ease;
+}
+.sports-grid, .wellness-grid {
+    perspective: 1500px;
+}
+.tilt-card .sport-icon-wrapper,
+.tilt-card .sport-badge {
+    transform: translateZ(35px);
+}
+.tilt-card .sport-info h3 {
+    transform: translateZ(40px);
+}
+.tilt-card .sport-info p,
+.tilt-card .sport-specs {
+    transform: translateZ(25px);
+}
+.tilt-card .sport-footer-actions {
+    transform: translateZ(30px);
+}
+
+/* --- Holographic Membership Card Styling --- */
+.holo-card-container {
+    width: 100%;
+    perspective: 1000px;
+    margin: 25px 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.holo-card {
+    position: relative;
+    width: 320px;
+    height: 190px;
+    border-radius: 16px;
+    background: #0f172a;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.15s ease-out;
+    user-select: none;
+}
+
+.holo-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 80%);
+    z-index: 10;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transition: background 0.05s ease-out;
+}
+
+.holo-card-inner {
+    width: 100%;
+    height: 100%;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    z-index: 5;
+}
+
+.holo-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transform: translateZ(30px);
+}
+
+.holo-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.holo-logo {
+    font-family: var(--font-ui);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.holo-chip-icon {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.holo-chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa7c11 100%);
+    border-radius: 6px;
+    margin-top: 4px;
+    position: relative;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.holo-chip::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.holo-number {
+    font-family: var(--font-ui);
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 12px 0 4px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.holo-holder-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.holo-label {
+    font-family: var(--font-ui);
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.45);
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.holo-val {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: block;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* --- TIER-SPECIFIC DESIGNS --- */
+
+/* Guest / Bronze Tier */
+.holo-card.bronze-tier {
+    background: linear-gradient(135deg, #1c1512 0%, #3e271c 50%, #1c1512 100%);
+    border: 1px solid rgba(205, 127, 50, 0.35);
+    box-shadow: 0 15px 35px rgba(205, 127, 50, 0.15), 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.holo-card.bronze-tier .holo-logo {
+    color: #cd7f32;
+    text-shadow: 0 0 10px rgba(205, 127, 50, 0.4);
+}
+.holo-card.bronze-tier .holo-chip {
+    background: linear-gradient(135deg, #e5a67a 0%, #a05c30 100%);
+}
+
+/* Club / Silver Tier */
+.holo-card.silver-tier {
+    background: linear-gradient(135deg, #181d23 0%, #444c56 50%, #181d23 100%);
+    border: 1px solid rgba(192, 192, 192, 0.35);
+    box-shadow: 0 15px 35px rgba(192, 192, 192, 0.15), 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.holo-card.silver-tier .holo-logo {
+    color: #c0c0c0;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.4);
+}
+.holo-card.silver-tier .holo-chip {
+    background: linear-gradient(135deg, #ffffff 0%, #8a939e 100%);
+}
+
+/* Gold Tier */
+.holo-card.gold-tier {
+    background: linear-gradient(135deg, #201a07 0%, #4f4012 50%, #201a07 100%);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.22), 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.holo-card.gold-tier .holo-logo {
+    color: var(--primary-gold);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+.holo-card.gold-tier .holo-chip {
+    background: linear-gradient(135deg, #fff2b2 0%, #d4af37 50%, #8e6c0d 100%);
+}

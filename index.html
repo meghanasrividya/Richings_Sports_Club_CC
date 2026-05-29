@@ -3,1186 +3,692 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richings Park Sports Club | Ultra-Premium Sports & Social Experience</title>
-    <meta name="description" content="Discover Richings Park Sports Club (RPSC) – a premier destination offering world-class sports facilities, luxury wellness centers, high-end dining, social events, and family entertainment.">
-    <!-- Google Fonts -->
+    <title>Richings Park Sports Club | Est. 1926 — Iver, Buckinghamshire</title>
+    <meta name="description" content="Richings Park Sports Club — a prestigious multi-sport and social club in the heart of Iver, Buckinghamshire. Tennis, Padel, Cricket, Bowls, fine dining and wellness since 1926.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
-    <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="style.css?v=20260529-3">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress" id="scrollProgress"></div>
+<!-- Scroll progress -->
+<div class="progress-bar" id="progressBar"></div>
 
-    <!-- Custom Cursor Glow for Desktop -->
-    <div class="cursor-glow" id="cursorGlow"></div>
+<!-- ═══════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════ -->
+<header class="nav" id="nav">
+    <div class="nav__inner">
+        <a href="#" class="nav__brand">
+            <svg width="38" height="38" viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="40" r="36" stroke="#d3b973" stroke-width="2"/>
+                <circle cx="40" cy="40" r="28" stroke="#d3b973" stroke-width="1" opacity="0.5"/>
+                <text x="40" y="46" font-family="'Libre Baskerville',serif" font-size="14" font-weight="700" fill="#d3b973" text-anchor="middle" letter-spacing="1">RPSC</text>
+            </svg>
+            <div class="nav__brand-text">
+                <span class="nav__brand-name">RICHINGS PARK</span>
+                <span class="nav__brand-tagline">Sports &amp; Social Club</span>
+            </div>
+        </a>
 
-    <!-- Ambient background floating particles -->
-    <div class="particle-container">
-        <div class="ambient-particle p-1"></div>
-        <div class="ambient-particle p-2"></div>
-        <div class="ambient-particle p-3"></div>
+        <button class="nav__burger" id="navBurger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav__links" id="navLinks">
+            <a href="#about" class="nav__link">About</a>
+            <a href="#facilities" class="nav__link">Facilities</a>
+            <a href="#dining" class="nav__link">Dining</a>
+            <a href="#wellness" class="nav__link">Wellness</a>
+            <a href="#membership" class="nav__link">Membership</a>
+            <a href="#contact" class="nav__cta">Reserve a Visit</a>
+        </nav>
     </div>
+</header>
 
-    <!-- Header / Navbar -->
-    <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo-area" id="logoLink">
-                <!-- Stylized SVG logo of RPSC with the athletic circles from the notes -->
-                <svg width="45" height="45" viewBox="0 0 100 100" class="logo-svg">
-                    <circle cx="50" cy="50" r="42" fill="none" stroke="url(#goldGradient)" stroke-width="4" stroke-dasharray="3 3"/>
-                    <circle cx="50" cy="50" r="35" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
-                    <text x="50" y="58" font-family="'Outfit', sans-serif" font-weight="800" font-size="22" fill="#d4af37" text-anchor="middle" letter-spacing="1">RPSC</text>
-                    <defs>
-                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#f3e5ab" />
-                            <stop offset="50%" stop-color="#d4af37" />
-                            <stop offset="100%" stop-color="#aa7c11" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <div class="logo-text">
-                    <span class="logo-title">RICHINGS PARK</span>
-                    <span class="logo-subtitle">SPORTS & SOCIAL CLUB</span>
+<!-- ═══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+    <div class="hero__media">
+        <img src="images/hero.png" alt="Richings Park Sports Club grounds" class="hero__img">
+        <div class="hero__veil"></div>
+    </div>
+    <div class="hero__content">
+        <p class="hero__est">— Established 1926 —</p>
+        <h1 class="hero__heading">Where Heritage<br><em>Meets Excellence</em></h1>
+        <p class="hero__sub">A distinguished sports and social club nestled in the heart of Iver, Buckinghamshire. World-class courts, restorative wellness, and refined dining — all under one roof.</p>
+        <div class="hero__actions">
+            <a href="#book" class="btn btn--crimson">Book a Facility</a>
+            <a href="#about" class="btn btn--ghost">Discover the Club</a>
+        </div>
+    </div>
+    <div class="hero__scroll">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">Scroll</span>
+    </div>
+    <!-- Stats ribbon -->
+    <div class="hero__ribbon">
+        <div class="ribbon__item">
+            <strong>1926</strong>
+            <span>Year Founded</span>
+        </div>
+        <div class="ribbon__divider"></div>
+        <div class="ribbon__item">
+            <strong>7+</strong>
+            <span>Sport Facilities</span>
+        </div>
+        <div class="ribbon__divider"></div>
+        <div class="ribbon__item">
+            <strong>1,200+</strong>
+            <span>Club Members</span>
+        </div>
+        <div class="ribbon__divider"></div>
+        <div class="ribbon__item">
+            <strong>Iver</strong>
+            <span>Buckinghamshire</span>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════ -->
+<section class="about" id="about">
+    <div class="wrap">
+        <div class="about__grid">
+            <div class="about__image-col">
+                <div class="about__img-frame">
+                    <img src="images/hero.png" alt="Club grounds aerial" class="about__img">
                 </div>
-            </a>
+                <div class="about__badge">
+                    <strong>Est.</strong>
+                    <span>1926</span>
+                </div>
+            </div>
+            <div class="about__text-col">
+                <p class="eyebrow">Our Story</p>
+                <h2 class="heading">A Century of Sport,<br><em>Community & Tradition</em></h2>
+                <div class="rule"></div>
+                <p class="body-text">Richings Park Sports Club has been the heart of sport and community in Iver since 1926. Built on the pillars of heritage, authenticity and the enduring spirit of competition, the club offers an unrivalled environment for athletes, families and social members alike.</p>
+                <p class="body-text">From immaculate grass tennis courts and panoramic padel arenas to our acclaimed 1920 Kitchen restaurant and luxury wellness retreat — RPSC is far more than a sports club. It is a way of life.</p>
+                <div class="about__pillars">
+                    <div class="pillar">
+                        <div class="pillar__icon">⚜</div>
+                        <strong>Heritage</strong>
+                        <p>A century of tradition and pride</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar__icon">🏆</div>
+                        <strong>Excellence</strong>
+                        <p>World-class facilities and coaching</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar__icon">🤝</div>
+                        <strong>Community</strong>
+                        <p>A family for sport and social life</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Mobile Navigation Toggle -->
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+<!-- ═══════════════════════════════════════════════
+     FACILITIES
+════════════════════════════════════════════════ -->
+<section class="facilities" id="facilities">
+    <div class="wrap">
+        <div class="section-intro">
+            <p class="eyebrow">Active Facilities</p>
+            <h2 class="heading heading--light">World-Class Sports Arenas</h2>
+            <div class="rule rule--gold"></div>
+            <p class="body-text body-text--light">Precision-engineered courts and fields for every discipline — from championship tennis and padel to lawn bowls and cricket nets.</p>
+        </div>
 
-            <!-- Navigation Links -->
-            <nav class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#hero" class="nav-link active">Home</a></li>
-                    <li><a href="#dining" class="nav-link">Dining</a></li>
-                    <li><a href="#wellness" class="nav-link">Wellness</a></li>
-                    <li><a href="#sports" class="nav-link">Sports</a></li>
-                    <li><a href="#entertainment" class="nav-link">Socials</a></li>
-                    <li><a href="#bookings" class="nav-btn">Reserve Now</a></li>
+        <div class="facilities__grid">
+            <div class="fac-card">
+                <div class="fac-card__top">
+                    <span class="fac-card__icon">🎾</span>
+                    <span class="fac-card__tag">Racket Sport</span>
+                </div>
+                <h3 class="fac-card__title">Championship Tennis</h3>
+                <p class="fac-card__desc">Four world-class grass courts and six premium acrylic courts. LTA-qualified coaching available year-round.</p>
+                <ul class="fac-card__list">
+                    <li>10 courts available</li>
+                    <li>Floodlit for evening play</li>
+                    <li>Equipment hire included</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="hero-bg-container">
-                <img src="images/hero.png" alt="Richings Park Sports Club Sunset View" class="hero-image">
-                <div class="hero-overlay"></div>
+                <a href="#book" class="fac-card__btn">Book a Court</a>
             </div>
-            
-            <div class="hero-content">
-                <div class="hero-badge animate-fade-in">
-                    <span class="badge-dot"></span> ESTABLISHED 1926 <span class="badge-dot"></span>
-                </div>
 
-                <!-- Live Playing Conditions & Weather Widget -->
-                <div class="weather-badge animate-fade-in" id="weatherWidget">
-                    <svg class="weather-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" id="weatherIcon">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <div class="fac-card">
+                <div class="fac-card__top">
+                    <span class="fac-card__icon">🏓</span>
+                    <span class="fac-card__tag">Racket Sport</span>
+                </div>
+                <h3 class="fac-card__title">Panoramic Padel</h3>
+                <p class="fac-card__desc">Three glass-walled padel courts offering a panoramic backdrop. The fastest-growing sport in the world, mastered here.</p>
+                <ul class="fac-card__list">
+                    <li>3 premium courts</li>
+                    <li>Structural glass panels</li>
+                    <li>Racquet hire available</li>
+                </ul>
+                <a href="#book" class="fac-card__btn">Book a Court</a>
+            </div>
+
+            <div class="fac-card">
+                <div class="fac-card__top">
+                    <span class="fac-card__icon">🏏</span>
+                    <span class="fac-card__tag">Heritage Sport</span>
+                </div>
+                <h3 class="fac-card__title">Cricket Nets</h3>
+                <p class="fac-card__desc">Three high-performance lanes with synthetic weave surface, automated bowling machines and video analysis.</p>
+                <ul class="fac-card__list">
+                    <li>3 private lanes</li>
+                    <li>Pro bowling feeder</li>
+                    <li>Video coaching available</li>
+                </ul>
+                <a href="#book" class="fac-card__btn">Book a Lane</a>
+            </div>
+
+            <div class="fac-card">
+                <div class="fac-card__top">
+                    <span class="fac-card__icon">🎱</span>
+                    <span class="fac-card__tag">Lawn Sport</span>
+                </div>
+                <h3 class="fac-card__title">Luxury Lawn Bowls</h3>
+                <p class="fac-card__desc">Six-rink bentgrass bowling green, maintained to the highest standard, surrounded by mature oaks and pavilions.</p>
+                <ul class="fac-card__list">
+                    <li>6 tournament rinks</li>
+                    <li>Equipment hire available</li>
+                    <li>Spectator pavilions</li>
+                </ul>
+                <a href="#book" class="fac-card__btn">Book a Rink</a>
+            </div>
+
+            <div class="fac-card">
+                <div class="fac-card__top">
+                    <span class="fac-card__icon">⚽</span>
+                    <span class="fac-card__tag">Team Sport</span>
+                </div>
+                <h3 class="fac-card__title">Elite Football Pitch</h3>
+                <p class="fac-card__desc">State-of-the-art 3G tournament turf accommodating 5-a-side, 7-a-side and full 11-a-side matches.</p>
+                <ul class="fac-card__list">
+                    <li>Pro match-lighting</li>
+                    <li>Shock-pad underlayer</li>
+                    <li>Changing facilities</li>
+                </ul>
+                <a href="#book" class="fac-card__btn">Book the Pitch</a>
+            </div>
+
+            <div class="fac-card">
+                <div class="fac-card__top">
+                    <span class="fac-card__icon">🏃</span>
+                    <span class="fac-card__tag">Traditional Sport</span>
+                </div>
+                <h3 class="fac-card__title">Kho Kho Arena</h3>
+                <p class="fac-card__desc">A dedicated tournament-standard Kho Kho court with agility coaching clinics and team hosting capability.</p>
+                <ul class="fac-card__list">
+                    <li>Professional surface</li>
+                    <li>Agility coaching</li>
+                    <li>Tournament hosting</li>
+                </ul>
+                <a href="#book" class="fac-card__btn">Book the Arena</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     DINING
+════════════════════════════════════════════════ -->
+<section class="dining" id="dining">
+    <div class="wrap">
+        <div class="section-intro">
+            <p class="eyebrow">Culinary &amp; Social</p>
+            <h2 class="heading">The Art of<br><em>Dining &amp; Gathering</em></h2>
+            <div class="rule"></div>
+        </div>
+
+        <div class="dining__grid">
+            <!-- 1920 Kitchen -->
+            <div class="dining__card dining__card--large">
+                <div class="dining__img-wrap">
+                    <img src="images/kitchen.png" alt="1920 Kitchen restaurant" class="dining__img">
+                    <div class="dining__img-overlay"></div>
+                    <span class="dining__badge">Fine Dining</span>
+                </div>
+                <div class="dining__body">
+                    <p class="eyebrow">Since 1920</p>
+                    <h3 class="dining__title">The 1920 Kitchen</h3>
+                    <p class="dining__desc">Step into a century of timeless dining. Our seasonally-led menu celebrates the finest British produce — prepared by our executive chef and paired with an exceptional curated wine list.</p>
+                    <ul class="dining__features">
+                        <li>Artisanal seasonal menu</li>
+                        <li>150+ wine labels from our sommelier</li>
+                        <li>Private dining room for up to 20</li>
+                    </ul>
+                    <div class="dining__hours">Wed – Sun &nbsp;|&nbsp; Noon – 11 pm</div>
+                    <a href="#book" class="btn btn--crimson">Reserve a Table</a>
+                </div>
+            </div>
+
+            <!-- Players Bar -->
+            <div class="dining__card">
+                <div class="dining__img-wrap">
+                    <img src="images/bar.png" alt="The Players Bar" class="dining__img">
+                    <div class="dining__img-overlay"></div>
+                    <span class="dining__badge">Sports Bar</span>
+                </div>
+                <div class="dining__body">
+                    <p class="eyebrow">Daily from 11 am</p>
+                    <h3 class="dining__title">The Players Bar</h3>
+                    <p class="dining__desc">Dual 150" screens, craft ales and signature cocktails. The ultimate matchday experience.</p>
+                    <a href="#book" class="btn btn--outline">Reserve a Table</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     WELLNESS
+════════════════════════════════════════════════ -->
+<section class="wellness" id="wellness">
+    <div class="wellness__bg-img">
+        <img src="images/wellness.png" alt="Wellness centre" class="wellness__bg">
+        <div class="wellness__bg-veil"></div>
+    </div>
+    <div class="wrap wellness__content">
+        <div class="wellness__text">
+            <p class="eyebrow eyebrow--gold">Health &amp; Recovery</p>
+            <h2 class="heading heading--light">The Wellness<br><em>Sanctuary</em></h2>
+            <div class="rule rule--gold"></div>
+            <p class="body-text body-text--light">Three distinct recovery environments designed to restore the body, calm the mind and elevate your physical readiness.</p>
+        </div>
+        <div class="wellness__cards">
+            <div class="w-card">
+                <div class="w-card__icon">🌿</div>
+                <h4 class="w-card__title">The Retreat Spa</h4>
+                <p class="w-card__desc">Swedish massages, hot stone rituals, cedar saunas and deep-heat steam rooms.</p>
+                <a href="#book" class="w-card__link">Book a Treatment →</a>
+            </div>
+            <div class="w-card w-card--featured">
+                <div class="w-card__icon">❄</div>
+                <h4 class="w-card__title">Athletes' Recovery</h4>
+                <p class="w-card__desc">Cryotherapy at -110°C, hyperbaric oxygen chambers and lymphatic compression.</p>
+                <a href="#book" class="w-card__link">Reserve a Session →</a>
+            </div>
+            <div class="w-card">
+                <div class="w-card__icon">💪</div>
+                <h4 class="w-card__title">Park Gym</h4>
+                <p class="w-card__desc">Elite Technogym equipment, free weight yards and certified personal trainers.</p>
+                <a href="#book" class="w-card__link">Get a Day Pass →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     MEMBERSHIP
+════════════════════════════════════════════════ -->
+<section class="membership" id="membership">
+    <div class="wrap">
+        <div class="section-intro">
+            <p class="eyebrow">Join the Club</p>
+            <h2 class="heading">Become a Member<br><em>of Richings Park</em></h2>
+            <div class="rule"></div>
+            <p class="body-text">Choose the tier that suits your lifestyle. All members enjoy priority booking, exclusive social events and access to our full facility network.</p>
+        </div>
+
+        <div class="membership__grid">
+            <div class="mem-card">
+                <div class="mem-card__header">
+                    <p class="mem-card__tier">Social</p>
+                    <h3 class="mem-card__name">Club Member</h3>
+                    <div class="mem-card__price"><strong>£35</strong> /month</div>
+                </div>
+                <div class="mem-card__body">
+                    <ul class="mem-card__perks">
+                        <li>Access to all sports courts</li>
+                        <li>Priority court booking</li>
+                        <li>10% dining discount</li>
+                        <li>Members social events</li>
+                        <li>Guest passes (×2/month)</li>
+                    </ul>
+                    <a href="#book" class="btn btn--outline btn--full">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="mem-card mem-card--featured">
+                <div class="mem-card__ribbon">Most Popular</div>
+                <div class="mem-card__header">
+                    <p class="mem-card__tier">Premier</p>
+                    <h3 class="mem-card__name">Gold Member</h3>
+                    <div class="mem-card__price"><strong>£65</strong> /month</div>
+                </div>
+                <div class="mem-card__body">
+                    <ul class="mem-card__perks">
+                        <li>Everything in Club</li>
+                        <li>Unlimited gym access 24/7</li>
+                        <li>20% dining &amp; spa discount</li>
+                        <li>Free equipment hire</li>
+                        <li>Guest passes (×5/month)</li>
+                        <li>Lounge &amp; bar priority seating</li>
+                    </ul>
+                    <a href="#book" class="btn btn--crimson btn--full">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="mem-card">
+                <div class="mem-card__header">
+                    <p class="mem-card__tier">Corporate</p>
+                    <h3 class="mem-card__name">Corporate Membership</h3>
+                    <div class="mem-card__price"><strong>Bespoke</strong></div>
+                </div>
+                <div class="mem-card__body">
+                    <ul class="mem-card__perks">
+                        <li>Everything in Gold</li>
+                        <li>Up to 10 staff memberships</li>
+                        <li>Private event space hire</li>
+                        <li>Dedicated account manager</li>
+                        <li>Branded matchday hosting</li>
+                    </ul>
+                    <a href="#book" class="btn btn--outline btn--full">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════ -->
+<section class="testimonials">
+    <div class="wrap">
+        <div class="section-intro">
+            <p class="eyebrow">Member Voices</p>
+            <h2 class="heading">What Our Members Say</h2>
+            <div class="rule"></div>
+        </div>
+        <div class="testimonials__grid">
+            <div class="testi">
+                <div class="testi__stars">★★★★★</div>
+                <p class="testi__quote">"The grass tennis courts are exceptional — among the finest I've played on outside of Wimbledon. The club has a warmth and character that is truly rare."</p>
+                <div class="testi__author">
+                    <div class="testi__avatar">H</div>
+                    <div>
+                        <strong>Helena Westwood</strong>
+                        <span>Gold Member, 8 years</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi">
+                <div class="testi__stars">★★★★★</div>
+                <p class="testi__quote">"The Recovery Centre has become an essential part of my training week. The cryotherapy and oxygen chambers are genuine elite-level facilities."</p>
+                <div class="testi__author">
+                    <div class="testi__avatar">M</div>
+                    <div>
+                        <strong>Marcus T.</strong>
+                        <span>Professional Athlete &amp; Patron</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi">
+                <div class="testi__stars">★★★★★</div>
+                <p class="testi__quote">"We host all our corporate events at The Balcony. The backdrop, the catering and the professionalism of the team make every occasion unforgettable."</p>
+                <div class="testi__author">
+                    <div class="testi__avatar">S</div>
+                    <div>
+                        <strong>Sarah Patel</strong>
+                        <span>Corporate Member</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     BOOKING / CONTACT
+════════════════════════════════════════════════ -->
+<section class="contact" id="book">
+    <div class="contact__split">
+        <!-- Left: Info -->
+        <div class="contact__info">
+            <p class="eyebrow eyebrow--gold">Reservations &amp; Enquiries</p>
+            <h2 class="heading heading--light">Visit Richings Park<br><em>Sports Club</em></h2>
+            <div class="rule rule--gold"></div>
+            <div class="contact__details">
+                <div class="contact__detail">
+                    <span class="contact__icon">📍</span>
+                    <div>
+                        <strong>Address</strong>
+                        <p>Wellesley Avenue, Iver,<br>Buckinghamshire, SL0 9BY</p>
+                    </div>
+                </div>
+                <div class="contact__detail">
+                    <span class="contact__icon">📞</span>
+                    <div>
+                        <strong>Telephone</strong>
+                        <p><a href="tel:+441753652345">+44 (0) 1753 652345</a></p>
+                    </div>
+                </div>
+                <div class="contact__detail">
+                    <span class="contact__icon">✉</span>
+                    <div>
+                        <strong>Email</strong>
+                        <p><a href="mailto:info@richingsparksc.co.uk">info@richingsparksc.co.uk</a></p>
+                    </div>
+                </div>
+                <div class="contact__detail">
+                    <span class="contact__icon">🕐</span>
+                    <div>
+                        <strong>Club Hours</strong>
+                        <p>Sports Grounds: 6am – 10pm daily<br>Gym: 24hrs (members)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact__form-wrap">
+            <form class="contact__form" id="bookingForm" onsubmit="submitForm(event)">
+                <h3 class="contact__form-title">Make a Reservation</h3>
+                <div class="form__row">
+                    <div class="form__group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="Jane" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="Smith" required>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="jane@example.com" required>
+                </div>
+                <div class="form__group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+44 7700 000000">
+                </div>
+                <div class="form__row">
+                    <div class="form__group">
+                        <label for="facility">Facility</label>
+                        <select id="facility" required>
+                            <option value="" disabled selected>Select…</option>
+                            <optgroup label="Sports">
+                                <option>Tennis Court</option>
+                                <option>Padel Court</option>
+                                <option>Cricket Nets</option>
+                                <option>Lawn Bowls</option>
+                                <option>Football Pitch</option>
+                                <option>Kho Kho Arena</option>
+                            </optgroup>
+                            <optgroup label="Dining">
+                                <option>1920 Kitchen</option>
+                                <option>The Players Bar</option>
+                            </optgroup>
+                            <optgroup label="Wellness">
+                                <option>The Retreat Spa</option>
+                                <option>Athletes' Recovery</option>
+                                <option>Park Gym Day Pass</option>
+                            </optgroup>
+                            <optgroup label="Events">
+                                <option>The Balcony (Private Event)</option>
+                                <option>Membership Enquiry</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form__group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <label for="message">Additional Notes</label>
+                    <textarea id="message" rows="3" placeholder="Any special requirements or questions…"></textarea>
+                </div>
+                <button type="submit" class="btn btn--crimson btn--full">Confirm Reservation</button>
+                <div class="form__confirm" id="formConfirm">
+                    <span>✓</span> Thank you — we'll be in touch within 24 hours to confirm your booking.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="footer" id="contact">
+    <div class="footer__top">
+        <div class="wrap">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <svg width="44" height="44" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="36" stroke="#d3b973" stroke-width="2"/>
+                        <circle cx="40" cy="40" r="28" stroke="#d3b973" stroke-width="1" opacity="0.4"/>
+                        <text x="40" y="46" font-family="'Libre Baskerville',serif" font-size="14" font-weight="700" fill="#d3b973" text-anchor="middle">RPSC</text>
                     </svg>
-                    <span class="weather-temp" id="weatherTemp">18°C</span>
-                    <span class="weather-desc" id="weatherDesc">Sunny Sky</span>
-                    <span class="weather-divider">|</span>
-                    <span class="playing-status" id="playingStatus">🎾 Tennis: Ideal Conditions</span>
+                    <div class="footer__brand-text">
+                        <strong>Richings Park Sports Club</strong>
+                        <span>Est. 1926 · Iver, Buckinghamshire</span>
+                    </div>
                 </div>
-
-                <h1 class="hero-title animate-slide-up">
-                    Where Elite Athletics <br>
-                    <span class="highlight-text">Meets Luxury Leisure</span>
-                </h1>
-                <p class="hero-description animate-slide-up-delay">
-                    Experience state-of-the-art sports arenas, restorative wellness therapies, high-end culinary concepts, and vibrant family entertainment nestled in the heart of Iver.
-                </p>
-                <div class="hero-actions animate-slide-up-long">
-                    <a href="#bookings" class="btn btn-primary">Book Court / Area</a>
-                    <a href="#sports" class="btn btn-secondary">Explore Facilities</a>
-                </div>
-            </div>
-
-            <!-- Stats Overlay Quick Bar -->
-            <div class="hero-quick-stats">
-                <div class="stat-item">
-                    <span class="stat-number">7+</span>
-                    <span class="stat-label">Sports Arenas</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">1920</span>
-                    <span class="stat-label">Bespoke Dining</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Luxury Gym Access</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Pure Recovery</span>
+                <p class="footer__about">A prestigious multi-sport and social club dedicated to athletic excellence, refined dining, restorative wellness and vibrant community life since 1926.</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Facebook" class="footer__social">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="footer__social">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter / X" class="footer__social">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
                 </div>
             </div>
 
-            <a href="#dining" class="scroll-indicator" aria-label="Scroll down">
-                <span class="mouse">
-                    <span class="wheel"></span>
-                </span>
-            </a>
-        </section>
-
-
-        <!-- Dining & Bar Section (1920 Kitchen & The Players) -->
-        <section id="dining" class="section-padding dining-section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">CULINARY & SOCIAL EXPERIENCE</span>
-                    <h2 class="section-title">A Symphony of Gastronomy & Sport</h2>
-                    <p class="section-subtitle">Indulge in seasonal culinary masterpieces at the historic 1920 Kitchen or raise a glass while catching the live action at The Players.</p>
-                </div>
-
-                <!-- Tab Selectors -->
-                <div class="dining-tabs-wrapper">
-                    <div class="dining-tabs">
-                        <button class="tab-btn active" data-tab="kitchen">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tab-icon">
-                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                            </svg>
-                            1920 Kitchen
-                        </button>
-                        <button class="tab-btn" data-tab="players">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="tab-icon">
-                                <path d="M6 18c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1h1c.55 0 1 .45 1 1v4zM12 18c0 .55-.45 1-1 1h-1c-.55 0-1-.45-1-1v-8c0-.55.45-1 1-1h1c.55 0 1 .45 1 1v8zM18 18c0 .55-.45 1-1 1h-1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h1c.55 0 1 .45 1 1v12z"/>
-                            </svg>
-                            The Players Sports Bar
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Tab Content Grid -->
-                <div class="dining-content-box">
-                    
-                    <!-- 1920 Kitchen Pane -->
-                    <div class="dining-pane active" id="pane-kitchen">
-                        <div class="dining-grid">
-                            <div class="dining-image-col">
-                                <img src="images/kitchen.png" alt="1920 Kitchen Elegant Restaurant Design" class="pane-img">
-                                <div class="image-glass-card">
-                                    <h4>Chef's Signature Table</h4>
-                                    <p>Sourced locally, prepared masterfully.</p>
-                                </div>
-                            </div>
-                            <div class="dining-text-col">
-                                <div class="pane-badge">FINE DINING RESTAURANT</div>
-                                <h3>The 1920 Kitchen</h3>
-                                <p class="pane-description">
-                                    Step into elegance. The 1920 Kitchen celebrates a century of timeless dining by offering a refined seasonal menu, organic local ingredients, and an exceptional wine list selected by our house sommelier. Perfect for high-profile client entertaining, family milestones, or a romantic dinner overlooking the club grounds.
-                                </p>
-                                
-                                <div class="dining-features">
-                                    <div class="d-feat">
-                                        <span class="feat-dot"></span>
-                                        <div>
-                                            <strong>Artisanal Menu:</strong> High-end dry-aged steaks, wild seafood, and vibrant vegan selections.
-                                        </div>
-                                    </div>
-                                    <div class="d-feat">
-                                        <span class="feat-dot"></span>
-                                        <div>
-                                            <strong>Sommelier Collection:</strong> Over 150 labels of fine international vintages.
-                                        </div>
-                                    </div>
-                                    <div class="d-feat">
-                                        <span class="feat-dot"></span>
-                                        <div>
-                                            <strong>Legacy Setting:</strong> Original 1920s architecture meets ultra-modern luxury.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pane-actions">
-                                    <a href="#bookings" class="btn btn-primary mini-book-trigger" data-facility="1920 Kitchen (Restaurant)">Book Table</a>
-                                    <button class="btn btn-text" id="toggleMenuBtn">View Dinner Menu &rarr;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- The Players Sports Bar Pane -->
-                    <div class="dining-pane" id="pane-players">
-                        <div class="dining-grid">
-                            <div class="dining-image-col">
-                                <img src="images/bar.png" alt="The Players Modern Sports Bar and Lounge" class="pane-img">
-                                <div class="image-glass-card secondary-card">
-                                    <h4>Matchday Live</h4>
-                                    <p>Unmatched stadium atmosphere.</p>
-                                </div>
-                            </div>
-                            <div class="dining-text-col">
-                                <div class="pane-badge">BAR & SPORTS LOUNGE</div>
-                                <h3>The Players Bar</h3>
-                                <p class="pane-description">
-                                    Raise the excitement. The Players is the ultimate destination for sports enthusiasts. Boasting state-of-the-art 4K laser projectors, crystal-clear spatial audio, premium craft beer lines, and custom signature cocktails, it's the premium way to watch every Grand Slam, Premier League match, and championship final.
-                                </p>
-
-                                <div class="dining-features">
-                                    <div class="d-feat">
-                                        <span class="feat-dot"></span>
-                                        <div>
-                                            <strong>Elite Viewing:</strong> Dual 150" screens and high-fidelity surround sound.
-                                        </div>
-                                    </div>
-                                    <div class="d-feat">
-                                        <span class="feat-dot"></span>
-                                        <div>
-                                            <strong>Craft Drafts:</strong> Curated rotating taps of local micro-brews and imported classics.
-                                        </div>
-                                    </div>
-                                    <div class="d-feat">
-                                        <span class="feat-dot"></span>
-                                        <div>
-                                            <strong>Social Hub:</strong> Weekly interactive sports trivias, billiards, and active social gatherings.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pane-actions">
-                                    <a href="#bookings" class="btn btn-primary mini-book-trigger" data-facility="The Players (Sports Bar)">Reserve Bar Table</a>
-                                    <button class="btn btn-text" id="toggleDrinksBtn">Beverages & Bites &rarr;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Wellness & Recovery Centre Section (The Retreat, The Recovery, Park Gym) -->
-        <section id="wellness" class="section-padding wellness-section">
-            <div class="section-glow-left"></div>
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">ELITE PHYSICALITY & WELL-BEING</span>
-                    <h2 class="section-title">The Wellness & Performance Alliance</h2>
-                    <p class="section-subtitle">Rejuvenate your spirit, supercharge physical recovery, and push your absolute physical limits in our premium, integrated health ecosystems.</p>
-                </div>
-
-                <div class="wellness-grid">
-                    
-                    <!-- Card 1: The Retreat -->
-                    <div class="well-card" data-tilt>
-                        <div class="well-card-bg">
-                            <img src="images/wellness.png" alt="The Retreat Luxury Spa Room" class="well-bg-img">
-                        </div>
-                        <div class="well-card-content">
-                            <div class="well-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <span class="well-tag">THE RETREAT</span>
-                            <h3 class="well-title">Wellness Centre</h3>
-                            <p class="well-desc">A premium sanctuary designed for mental clarity and complete cellular restoration. Experience therapeutic Swedish massages, holistic hot stone rituals, biological facials, and a deep-heat steam room.</p>
-                            <ul class="well-list">
-                                <li>Custom aromatherapy sessions</li>
-                                <li>Private wood-fired cedar saunas</li>
-                                <li>Deep-tissue herbal treatments</li>
-                            </ul>
-                            <a href="#bookings" class="btn btn-secondary-outline btn-full mini-book-trigger" data-facility="The Retreat (Wellness Centre)">Book Spa Treatment</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: The Recovery -->
-                    <div class="well-card active-card" data-tilt>
-                        <div class="well-card-bg">
-                            <!-- Overlay gradients are handled in CSS -->
-                        </div>
-                        <div class="well-card-content">
-                            <div class="well-icon highlight-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c9a7" stroke-width="2">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                                    <polyline points="2 17 12 22 22 17"/>
-                                    <polyline points="2 12 12 17 22 12"/>
-                                </svg>
-                            </div>
-                            <span class="well-tag tag-cyan">THE RECOVERY</span>
-                            <h3 class="well-title text-glow">Players Recovery Area</h3>
-                            <p class="well-desc">Unlock modern sports science. Our recovery lab is equipped to accelerate metabolic clearance, prevent muscle damage, and optimize athletic readiness for professional players and ambitious amateurs alike.</p>
-                            <ul class="well-list">
-                                <li>Whole-body cryotherapy (-110°C)</li>
-                                <li>Hyperbaric oxygen chambers</li>
-                                <li>Active lymphatic compression sleeves</li>
-                            </ul>
-                            <a href="#bookings" class="btn btn-primary btn-full mini-book-trigger" data-facility="The Recovery (Athlete Area)">Reserve Recovery Session</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Park Gym -->
-                    <div class="well-card" data-tilt>
-                        <div class="well-card-bg">
-                            <!-- Background gradient grid -->
-                        </div>
-                        <div class="well-card-content">
-                            <div class="well-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
-                                    <rect x="2" y="7" width="20" height="10" rx="2" ry="2"/>
-                                    <line x1="6" y1="2" x2="6" y2="22"/>
-                                    <line x1="18" y1="2" x2="18" y2="22"/>
-                                </svg>
-                            </div>
-                            <span class="well-tag">PARK GYM</span>
-                            <h3 class="well-title">State-of-the-Art Gym</h3>
-                            <p class="well-desc">An elite-tier training environment engineered for strength, power, and cardiovascular high performance. Featuring top-of-the-line Technogym machines, free weight yards, and elite group classes.</p>
-                            <ul class="well-list">
-                                <li>Biometric progress screening</li>
-                                <li>Elite certified athletic trainers</li>
-                                <li>High-intensity functional layouts</li>
-                            </ul>
-                            <a href="#bookings" class="btn btn-secondary-outline btn-full mini-book-trigger" data-facility="Park Gym (Full Access)">Claim Gym Day Pass</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Sports Arena Grid Section -->
-        <section id="sports" class="section-padding sports-section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">RPSC ACTIVE FACILITY NETWORK</span>
-                    <h2 class="section-title">Elite Multi-Sport Arenas</h2>
-                    <p class="section-subtitle">Play with passion across our precision-engineered sports network. Choose from standard racket sports, grass courts, traditional fields, or elite practice zones.</p>
-                </div>
-
-                <!-- Filter Controls -->
-                <div class="sports-filters">
-                    <button class="filter-btn active" data-filter="all">All Fields</button>
-                    <button class="filter-btn" data-filter="rackets">Racket Arenas</button>
-                    <button class="filter-btn" data-filter="field">Field & Greens</button>
-                    <button class="filter-btn" data-filter="traditional">Agility & Heritage</button>
-                </div>
-
-                <!-- Sports Grid -->
-                <div class="sports-grid" id="sportsGrid">
-                    
-                    <!-- Sport 1: Tennis -->
-                    <div class="sport-card tilt-card" data-category="rackets" data-glow-color="rgba(0, 201, 167, 0.2)">
-                        <div class="sport-icon-wrapper">
-                            <!-- Custom tennis racket SVG -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="10" cy="10" r="7"/>
-                                <line x1="15" y1="15" x2="21" y2="21"/>
-                                <path d="M7 6l6 6M6 7l6 6M7 13l6-6"/>
-                                <circle cx="21" cy="21" r="1.5" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <div class="sport-info">
-                            <span class="sport-badge">Floodlit Acrylic / Grass</span>
-                            <h3>Championship Tennis Courts</h3>
-                            <p>Four world-class grass courts and six premium acrylic courts designed for speed, high bounce, and low joint impact.</p>
-                            <div class="sport-specs">
-                                <span><strong class="gold-c">10</strong> Courts Available</span>
-                                <span>LTA Qualified Coaches</span>
-                            </div>
-                            <div class="sport-footer-actions">
-                                <button class="btn btn-secondary-outline btn-sm view-spec-btn" data-sport="Tennis">Specs</button>
-                                <a href="#bookings" class="btn btn-primary btn-sm mini-book-trigger" data-facility="Tennis Court">Book Court</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sport 2: Football -->
-                    <div class="sport-card tilt-card" data-category="field" data-glow-color="rgba(6, 182, 212, 0.2)">
-                        <div class="sport-icon-wrapper">
-                            <!-- Soccer ball SVG -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                                <path d="M2 12h20M12 12l4-4M12 12l-4-4M12 12l4 4M12 12l-4 4"/>
-                            </svg>
-                        </div>
-                        <div class="sport-info">
-                            <span class="sport-badge">3G Tournament Turf</span>
-                            <h3>Elite Football Pitch</h3>
-                            <p>State-of-the-art synthetic football pitches accommodating standard 5-a-side, 7-a-side, or full 11-a-side tournament leagues.</p>
-                            <div class="sport-specs">
-                                <span>Pro Match-lighting</span>
-                                <span>Dampener shock pads</span>
-                            </div>
-                            <div class="sport-footer-actions">
-                                <button class="btn btn-secondary-outline btn-sm view-spec-btn" data-sport="Football">Specs</button>
-                                <a href="#bookings" class="btn btn-primary btn-sm mini-book-trigger" data-facility="Football Pitch">Book Pitch</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sport 3: Bowls -->
-                    <div class="sport-card tilt-card" data-category="field" data-glow-color="rgba(212, 175, 55, 0.15)">
-                        <div class="sport-icon-wrapper">
-                            <!-- Bowls / Target SVG -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="9"/>
-                                <circle cx="12" cy="12" r="5"/>
-                                <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <div class="sport-info">
-                            <span class="sport-badge">Manicured Bentgrass</span>
-                            <h3>Luxury Lawn Bowls</h3>
-                            <p>Indulge in a relaxing yet highly competitive game on our immaculate six-rink bentgrass bowling green surrounded by lush oaks.</p>
-                            <div class="sport-specs">
-                                <span>Full Equipment Hire</span>
-                                <span>Spectator Pavilions</span>
-                            </div>
-                            <div class="sport-footer-actions">
-                                <button class="btn btn-secondary-outline btn-sm view-spec-btn" data-sport="Bowls">Specs</button>
-                                <a href="#bookings" class="btn btn-primary btn-sm mini-book-trigger" data-facility="Bowling Green">Book Rink</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sport 4: Pickleball -->
-                    <div class="sport-card tilt-card" data-category="rackets" data-glow-color="rgba(236, 72, 153, 0.15)">
-                        <div class="sport-icon-wrapper">
-                            <!-- Pickleball paddle SVG -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="12" height="14" rx="2"/>
-                                <line x1="9" y1="17" x2="9" y2="22"/>
-                                <path d="M17 9A4 4 0 1 1 9 9"/>
-                                <circle cx="20" cy="18" r="2"/>
-                            </svg>
-                        </div>
-                        <div class="sport-info">
-                            <span class="sport-badge">High-Grip Hardcourt</span>
-                            <h3>Pickleball Courts</h3>
-                            <p>Fast-paced, highly strategic, and immensely fun. Four dedicated, customized courts equipped with international competition nets.</p>
-                            <div class="sport-specs">
-                                <span>Rackets provided free</span>
-                                <span>Open Social Sessions</span>
-                            </div>
-                            <div class="sport-footer-actions">
-                                <button class="btn btn-secondary-outline btn-sm view-spec-btn" data-sport="Pickleball">Specs</button>
-                                <a href="#bookings" class="btn btn-primary btn-sm mini-book-trigger" data-facility="Pickleball Court">Book Court</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sport 5: Padel -->
-                    <div class="sport-card tilt-card" data-category="rackets" data-glow-color="rgba(168, 85, 247, 0.15)">
-                        <div class="sport-icon-wrapper">
-                            <!-- Padel glass wall court SVG -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="2 2"/>
-                                <path d="M3 12h18M12 3v18"/>
-                                <circle cx="12" cy="12" r="3" fill="none"/>
-                            </svg>
-                        </div>
-                        <div class="sport-info">
-                            <span class="sport-badge">Panoramic Structural Glass</span>
-                            <h3>Panoramic Padel Courts</h3>
-                            <p>Experience the sensation taking over the athletic world. Outfitted with structural glass panels and professional turf.</p>
-                            <div class="sport-specs">
-                                <span>3 Deluxe Courts</span>
-                                <span>Custom Racquets Hire</span>
-                            </div>
-                            <div class="sport-footer-actions">
-                                <button class="btn btn-secondary-outline btn-sm view-spec-btn" data-sport="Padel">Specs</button>
-                                <a href="#bookings" class="btn btn-primary btn-sm mini-book-trigger" data-facility="Padel Court">Book Court</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sport 6: Cricket Nets -->
-                    <div class="sport-card tilt-card" data-category="traditional" data-glow-color="rgba(249, 115, 22, 0.15)">
-                        <div class="sport-icon-wrapper">
-                            <!-- Cricket bat/stumps SVG -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="4" y="2" width="2" height="20" rx="0.5"/>
-                                <rect x="11" y="2" width="2" height="20" rx="0.5"/>
-                                <rect x="18" y="2" width="2" height="20" rx="0.5"/>
-                                <line x1="2" y1="5" x2="22" y2="5"/>
-                            </svg>
-                        </div>
-                        <div class="sport-info">
-                            <span class="sport-badge">Synthetic Elite Weave</span>
-                            <h3>High-Performance Cricket Nets</h3>
-                            <p>Unmatched batting practice featuring premium shock-dampening lane tracks, automated bowling machines, and video analysis capabilities.</p>
-                            <div class="sport-specs">
-                                <span>Pro Bowling Feeder</span>
-                                <span>3 Private Lanes</span>
-                            </div>
-                            <div class="sport-footer-actions">
-                                <button class="btn btn-secondary-outline btn-sm view-spec-btn" data-sport="Cricket Nets">Specs</button>
-                                <a href="#bookings" class="btn btn-primary btn-sm mini-book-trigger" data-facility="Cricket Nets">Book Lane</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sport 7: Kho Kho -->
-                    <div class="sport-card tilt-card" data-category="traditional" data-glow-color="rgba(16, 185, 129, 0.15)">
-                        <div class="sport-icon-wrapper">
-                            <!-- Kho Kho agility symbol / poles SVG -->
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="6" cy="12" r="3"/>
-                                <circle cx="18" cy="12" r="3"/>
-                                <path d="M6 12h12M6 12V6m12 6v6"/>
-                                <path d="M3 3l18 18M3 21l18-18" stroke-dasharray="2 2"/>
-                            </svg>
-                        </div>
-                        <div class="sport-info">
-                            <span class="sport-badge">Professional Clay / Grass</span>
-                            <h3>Kho Kho Agility Court</h3>
-                            <p>Hone your chasing, diving, and speed coordination on our dedicated tournament-standard Kho Kho court with high-agility coaching clinics.</p>
-                            <div class="sport-specs">
-                                <span>Agility Coaching</span>
-                                <span>Team Tournament Host</span>
-                            </div>
-                            <div class="sport-footer-actions">
-                                <button class="btn btn-secondary-outline btn-sm view-spec-btn" data-sport="Kho Kho">Specs</button>
-                                <a href="#bookings" class="btn btn-primary btn-sm mini-book-trigger" data-facility="Kho Kho Arena">Book Arena</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Socials & Entertainment Section (The Balcony & The Plaza) -->
-        <section id="entertainment" class="section-padding entertainment-section">
-            <div class="section-glow-right"></div>
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">MEMBERSHIP LIFESTYLE</span>
-                    <h2 class="section-title">The Balcony & The Plaza</h2>
-                    <p class="section-subtitle">Exquisite social atmospheres for refined private events alongside active family entertainment designed with kids in mind.</p>
-                </div>
-
-                <div class="entertainment-grid">
-                    
-                    <!-- The Balcony Event Space -->
-                    <div class="ent-block block-balcony">
-                        <div class="ent-content">
-                            <span class="ent-badge">THE BALCONY</span>
-                            <h3>Breathtaking Event Space</h3>
-                            <p>
-                                Rising above our scenic championship fields, The Balcony provides an unparalleled panoramic backdrop for high-end celebrations. Custom glass railings, premium outdoor fire-pits, luxury lounging zones, and bespoke catering packages ensure your wedding reception, elite anniversary, or corporate banquet is memorable.
-                            </p>
-                            <div class="balcony-stats">
-                                <div class="b-stat">
-                                    <span class="b-num">250+</span>
-                                    <span class="b-lab">Guests Capacity</span>
-                                </div>
-                                <div class="b-stat">
-                                    <span class="b-num">360°</span>
-                                    <span class="b-lab">Arena Panoramas</span>
-                                </div>
-                            </div>
-                            <a href="#bookings" class="btn btn-primary mini-book-trigger" data-facility="The Balcony (Private Event)">Request Private Booking</a>
-                        </div>
-                    </div>
-
-                    <!-- The Plaza Kids Cinema -->
-                    <div class="ent-block block-plaza">
-                        <div class="ent-content">
-                            <span class="ent-badge">THE PLAZA</span>
-                            <h3>Bespoke Kids Cinema</h3>
-                            <p>
-                                While parents unwind at the wellness centre or enjoy a game of tennis, children can escape into a magical cinema adventure. The Plaza is our custom-built kid-friendly acoustic theater featuring ultra-soft beanbags, high-definition curved projection, fresh gourmet popcorn, and specialized child care professionals on staff.
-                            </p>
-                            
-                            <!-- Dynamic Cinema Showtimes Widget -->
-                            <div class="cinema-showtimes">
-                                <div class="cinema-header">
-                                    <span>Now Playing</span>
-                                    <span class="live-dot-pulse">Active Screenings</span>
-                                </div>
-                                <div class="movie-list" id="movieList">
-                                    <!-- Populated via JavaScript -->
-                                    <div class="movie-item">
-                                        <div>
-                                            <span class="movie-time">13:30</span>
-                                            <span class="movie-name">Finding Nemo (Digital Remaster)</span>
-                                        </div>
-                                        <span class="movie-badge bg-green">Seats Open</span>
-                                    </div>
-                                    <div class="movie-item">
-                                        <div>
-                                            <span class="movie-time">16:00</span>
-                                            <span class="movie-name">Toy Story 4</span>
-                                        </div>
-                                        <span class="movie-badge bg-orange">Almost Full</span>
-                                    </div>
-                                    <div class="movie-item">
-                                        <div>
-                                            <span class="movie-time">18:30</span>
-                                            <span class="movie-name">The Lion King (2019)</span>
-                                        </div>
-                                        <span class="movie-badge bg-green">Seats Open</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a href="#bookings" class="btn btn-secondary-outline btn-full mini-book-trigger" data-facility="The Plaza (Kids Cinema)">Pre-Book Kids Seat (Free for Members)</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Interactive Court & Table Booking System Section -->
-        <section id="bookings" class="section-padding booking-section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">IMMEDIATE ACCESS</span>
-                    <h2 class="section-title">The RPSC Concierge Booking Engine</h2>
-                    <p class="section-subtitle">Real-time dynamic availability. Choose your experience, select your timing, and finalize secure reservations instantly.</p>
-                </div>
-
-                <!-- Booking Engine Form Wrapper -->
-                <div class="booking-engine-wrapper">
-                    
-                    <div class="booking-sidebar">
-                        <div class="sidebar-header">
-                            <h4>RPSC Elite Club</h4>
-                            <p>Reservation Assistance</p>
-                        </div>
-
-                        <!-- 3D Holographic Digital Member Pass Widget -->
-                        <div class="holo-card-container">
-                            <div class="holo-card bronze-tier" id="holoCard">
-                                <div class="holo-shine" id="holoShine"></div>
-                                <div class="holo-card-inner">
-                                    <div class="holo-card-front">
-                                        <div class="holo-header-row">
-                                            <span class="holo-logo">RPSC</span>
-                                            <span class="holo-chip-icon">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                                    <rect x="3" y="6" width="18" height="12" rx="2" stroke-dasharray="2 2"/>
-                                                    <line x1="8" y1="6" x2="8" y2="18"/>
-                                                    <line x1="16" y1="6" x2="16" y2="18"/>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="holo-chip"></div>
-                                        <div class="holo-number">•••• •••• •••• 1926</div>
-                                        <div class="holo-holder-row">
-                                            <div>
-                                                <span class="holo-label">CARDHOLDER</span>
-                                                <span class="holo-val" id="holoCardholder">GUEST VISITOR</span>
-                                            </div>
-                                            <div>
-                                                <span class="holo-label">TIER TICKET</span>
-                                                <span class="holo-val" id="holoTier">BRONZE</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sidebar-perks">
-                            <div class="perk-item">
-                                <span class="perk-num">01</span>
-                                <p><strong>Immediate Booking:</strong> Instant slot reservation with email notification confirmation.</p>
-                            </div>
-                            <div class="perk-item">
-                                <span class="perk-num">02</span>
-                                <p><strong>Flexible Policies:</strong> Free cancellations up to 4 hours in advance for all members.</p>
-                            </div>
-                        </div>
-                        <div class="sidebar-support">
-                            <span class="support-title">Need direct support?</span>
-                            <span class="support-phone">+44 (0) 1753 652345</span>
-                        </div>
-                    </div>
-
-                    <!-- Main Interactive Form -->
-                    <div class="booking-form-box">
-                        <form id="rpscBookingForm" class="rpsc-form" onsubmit="event.preventDefault();">
-                            <div class="form-grid">
-                                
-                                <!-- Facility Select -->
-                                <div class="form-group">
-                                    <label for="bookingFacility">Select Facility or Court</label>
-                                    <div class="select-wrapper">
-                                        <select id="bookingFacility" required>
-                                            <option value="" disabled selected>Choose your experience...</option>
-                                            <optgroup label="Culinary & Dining">
-                                                <option value="1920 Kitchen (Restaurant)">1920 Kitchen (Restaurant)</option>
-                                                <option value="The Players (Sports Bar)">The Players (Sports Bar)</option>
-                                            </optgroup>
-                                            <optgroup label="Health & Fitness">
-                                                <option value="The Retreat (Wellness Centre)">The Retreat (Wellness Centre Spa)</option>
-                                                <option value="The Recovery (Athlete Area)">The Recovery (Sports Recovery Area)</option>
-                                                <option value="Park Gym (Full Access)">Park Gym (Day Pass)</option>
-                                            </optgroup>
-                                            <optgroup label="Sports Arenas">
-                                                <option value="Tennis Court">Tennis Court</option>
-                                                <option value="Football Pitch">Football Pitch</option>
-                                                <option value="Bowling Green">Lawn Bowls Rink</option>
-                                                <option value="Pickleball Court">Pickleball Court</option>
-                                                <option value="Padel Court">Panoramic Padel Court</option>
-                                                <option value="Cricket Nets">High-Performance Cricket Lane</option>
-                                                <option value="Kho Kho Arena">Kho Kho Arena</option>
-                                            </optgroup>
-                                            <optgroup label="Social & Family">
-                                                <option value="The Balcony (Private Event)">The Balcony (Private Event Space)</option>
-                                                <option value="The Plaza (Kids Cinema)">The Plaza (Kids Cinema Entrance)</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <!-- Date Picker -->
-                                <div class="form-group">
-                                    <label for="bookingDate">Date</label>
-                                    <input type="date" id="bookingDate" required>
-                                </div>
-                            </div>
-
-                            <!-- Time Slots Selection Grid -->
-                            <div class="form-group margin-top-20">
-                                <label>Select Available Time Slot</label>
-                                <div class="slots-grid" id="slotsGrid">
-                                    <!-- Dynamically Populated by JS -->
-                                    <div class="slot-pill disabled">Select a Date & Facility first</div>
-                                </div>
-                            </div>
-
-                            <!-- Name and Details -->
-                            <div class="form-grid margin-top-20">
-                                <div class="form-group">
-                                    <label for="userName">Full Name</label>
-                                    <input type="text" id="userName" placeholder="e.g. Sir Richard Alston" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="userEmail">Email Address</label>
-                                    <input type="email" id="userEmail" placeholder="e.g. richard@richingsclub.co.uk" required>
-                                </div>
-                            </div>
-
-                            <div class="form-grid margin-top-20">
-                                <div class="form-group">
-                                    <label for="userMembership">Membership Tier</label>
-                                    <div class="select-wrapper">
-                                        <select id="userMembership">
-                                            <option value="visitor">Guest Visitor (Standard rate)</option>
-                                            <option value="club">Club Member (15% Off all services)</option>
-                                            <option value="gold">Gold Elite Member (30% Off + Free lounge access)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="equipmentRental">Equipment Hire</label>
-                                    <div class="select-wrapper">
-                                        <select id="equipmentRental">
-                                            <option value="none">No Equipment Needed</option>
-                                            <option value="racket">Elite Racket / Club Bat (+£10.00)</option>
-                                            <option value="full">Pro Training Package (Gear + Hydration) (+£25.00)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Booking Pricing Calculator Panel -->
-                            <div class="pricing-calc-box" id="pricingPanel" style="display:none;">
-                                <div class="calc-row">
-                                    <span>Base Rate:</span>
-                                    <span id="baseRateVal">£0.00</span>
-                                </div>
-                                <div class="calc-row">
-                                    <span>Membership Discount:</span>
-                                    <span id="discountVal" class="text-green">-£0.00</span>
-                                </div>
-                                <div class="calc-row">
-                                    <span>Equipment Hire:</span>
-                                    <span id="equipVal">£0.00</span>
-                                </div>
-                                <div class="calc-divider"></div>
-                                <div class="calc-row final-price">
-                                    <span>Estimated Total Due:</span>
-                                    <span id="totalPriceVal">£0.00</span>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-full margin-top-20" id="submitBookingBtn" disabled>Complete Reservation</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Testimonials Carousel Section -->
-        <section class="section-padding testimonial-section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">MEMBER TESTIMONIALS</span>
-                    <h2 class="section-title">Endorsed by the Best</h2>
-                </div>
-
-                <div class="testimonial-slider-container">
-                    <div class="testimonial-slider" id="testimonialSlider">
-                        
-                        <!-- Testimonial 1 -->
-                        <div class="testimonial-card active">
-                            <div class="stars">★★★★★</div>
-                            <p class="quote">"Richings Park Sports Club provides a standard of quality that is truly unmatched. The panoramic Padel courts are exceptional, and finishing a hard session with a session in The Recovery's cryotherapy and then dining at 1920 Kitchen is my weekly luxury ritual."</p>
-                            <div class="author">
-                                <div class="author-avatar">
-                                    <span class="avatar-letter">H</span>
-                                </div>
-                                <div>
-                                    <h4 class="author-name">Lady Helena Westwood</h4>
-                                    <span class="author-title">Gold Elite Club Member</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 2 -->
-                        <div class="testimonial-card">
-                            <div class="stars">★★★★★</div>
-                            <p class="quote">"As a professional player, athletic recovery is critical. The Recovery Centre's cold compression and active oxygen chambers have slashed my injury times. RPSC has built a true temple of athletic excellence here in Buckinghamshire."</p>
-                            <div class="author">
-                                <div class="author-avatar">
-                                    <span class="avatar-letter">M</span>
-                                </div>
-                                <div>
-                                    <h4 class="author-name">Marcus Rashford MBE</h4>
-                                    <span class="author-title">Professional Athlete / Club Patron</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="testimonial-card">
-                            <div class="stars">★★★★★</div>
-                            <p class="quote">"The family accommodation is incredible. While I spend hours practicing on the Championship tennis grass courts, my kids are supervised, safe and completely entertained watching cinema movies inside The Plaza. Unbelievable vision by the club management."</p>
-                            <div class="author">
-                                <div class="author-avatar">
-                                    <span class="avatar-letter">T</span>
-                                </div>
-                                <div>
-                                    <h4 class="author-name">Timothy Hargreaves</h4>
-                                    <span class="author-title">RPSC Club Member</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Slider Controls -->
-                    <div class="slider-controls">
-                        <button class="slider-btn" id="prevSlide" aria-label="Previous Slide">&larr;</button>
-                        <div class="slider-dots" id="sliderDots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                        <button class="slider-btn" id="nextSlide" aria-label="Next Slide">&rarr;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- Specification Details Modal Dialog -->
-    <div class="modal" id="specModal">
-        <div class="modal-content glass-card">
-            <button class="close-modal" id="closeModalBtn">&times;</button>
-            <div class="modal-header">
-                <span class="modal-tag" id="modalTag">FACILITY SUMMARY</span>
-                <h3 id="modalTitle">Facility Specifications</h3>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Dynamically Populated by JS -->
-            </div>
-            <div class="modal-footer">
-                <a href="#bookings" class="btn btn-primary" id="modalBookBtn">Select & Book</a>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Successful Booking Receipt Modal -->
-    <div class="modal" id="receiptModal">
-        <div class="modal-content glass-card receipt-content text-center">
-            <div class="receipt-success-icon">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#00c9a7" stroke-width="2" class="checkmark-pulse">
-                    <circle cx="12" cy="12" r="10" stroke="#00c9a7"/>
-                    <polyline points="7 12 10 15 17 8"/>
-                </svg>
-            </div>
-            <h2>Reservation Confirmed</h2>
-            <p class="receipt-subtitle">Your spot at Richings Park has been secured</p>
-            
-            <div class="receipt-box" id="receiptBox">
-                <!-- Filled by JS -->
-            </div>
-
-            <p class="receipt-disclaimer">A confirmation ticket has been sent to your email address. Please present this ticket at the Concierge desk on arrival.</p>
-            
-            <button class="btn btn-primary" id="closeReceiptBtn">Done & Return</button>
-        </div>
-    </div>
-
-
-    <!-- Dinner Menu Modal -->
-    <div class="modal" id="menuModal">
-        <div class="modal-content glass-card menu-modal-content">
-            <button class="close-modal" id="closeDinnerModal">&times;</button>
-            <div class="menu-modal-header text-center">
-                <h2>1920 KITCHEN</h2>
-                <p class="menu-sub">Seasonal Gastronomic Selection</p>
-            </div>
-            <div class="menu-modal-body">
-                <div class="menu-column">
-                    <h3>Starters</h3>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Heritage Beetroot Salad</span>
-                            <span class="dish-price">£14</span>
-                        </div>
-                        <p class="dish-desc">Whipped organic goat cheese, toasted walnuts, baby greens, age-old balsamic glaze.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Pan-Seared Hand-Dived Scallops</span>
-                            <span class="dish-price">£18</span>
-                        </div>
-                        <p class="dish-desc">Silky cauliflower purée, dry-cured pancetta crisps, brown butter emulsion.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Black Truffle Gnocchi</span>
-                            <span class="dish-price">£16</span>
-                        </div>
-                        <p class="dish-desc">Housemade potato gnocchi, wild forest mushrooms, Parmigiano-Reggiano foam.</p>
-                    </div>
-                </div>
-                <div class="menu-column">
-                    <h3>Mains</h3>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Dry-Aged Hereford Ribeye (300g)</span>
-                            <span class="dish-price">£38</span>
-                        </div>
-                        <p class="dish-desc">Grass-fed beef aged for 35 days, bone marrow butter, triple-cooked rosemary chips.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Wild Cornish Stone Bass</span>
-                            <span class="dish-price">£32</span>
-                        </div>
-                        <p class="dish-desc">Saffron potato braise, buttered samphire, sparkling Champagne velouté.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Roasted Squash & Sage Risotto</span>
-                            <span class="dish-price">£24</span>
-                        </div>
-                        <p class="dish-desc">Acorn squash, local sage leaves, smoked pumpkin seeds, virgin olive oil drizzle.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Beverages Modal -->
-    <div class="modal" id="drinksModal">
-        <div class="modal-content glass-card menu-modal-content">
-            <button class="close-modal" id="closeDrinksModal">&times;</button>
-            <div class="menu-modal-header text-center">
-                <h2>THE PLAYERS</h2>
-                <p class="menu-sub">Signature Brews & Social Bites</p>
-            </div>
-            <div class="menu-modal-body">
-                <div class="menu-column">
-                    <h3>Curated Drafts & Cocktails</h3>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Richings Gold Ale</span>
-                            <span class="dish-price">£6.50</span>
-                        </div>
-                        <p class="dish-desc">Bespoke local blonde ale brewed exclusively for RPSC. Crisp, hoppy citrus notes.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>The Champion's Smash (Cocktail)</span>
-                            <span class="dish-price">£12.00</span>
-                        </div>
-                        <p class="dish-desc">Luxury gin, hand-muddled fresh cucumber, fresh mint, freshly squeezed lime, tonic.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Smoked Maple Old Fashioned</span>
-                            <span class="dish-price">£14.00</span>
-                        </div>
-                        <p class="dish-desc">Woodford Reserve bourbon, rich maple syrup, orange bitters, hickory smoke-dome finish.</p>
-                    </div>
-                </div>
-                <div class="menu-column">
-                    <h3>Social Platters</h3>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>High-Performance Power Bowl</span>
-                            <span class="dish-price">£15.00</span>
-                        </div>
-                        <p class="dish-desc">Organic tri-color quinoa, charred avocado, roasted sweet potato, sesame ginger glaze.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Crispy Maple-Glazed Pork Belly Bites</span>
-                            <span class="dish-price">£11.00</span>
-                        </div>
-                        <p class="dish-desc">Slow-cooked belly cubes, local honey glaze, sesame seed sprinkles, fresh chives.</p>
-                    </div>
-                    <div class="menu-item-dish">
-                        <div class="dish-header">
-                            <span>Artisanal Charcuterie Board</span>
-                            <span class="dish-price">£22.00</span>
-                        </div>
-                        <p class="dish-desc">Selection of regional cured meats, British cheeses, house chutney, sourdough bread toast.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                
-                <!-- Footer Identity -->
-                <div class="footer-col-brand">
-                    <div class="footer-logo">
-                        <svg width="40" height="40" viewBox="0 0 100 100" class="logo-svg">
-                            <circle cx="50" cy="50" r="42" fill="none" stroke="#d4af37" stroke-width="3"/>
-                            <text x="50" y="58" font-family="'Outfit', sans-serif" font-weight="800" font-size="22" fill="#d4af37" text-anchor="middle">RPSC</text>
-                        </svg>
-                        <div class="logo-text">
-                            <span class="logo-title font-gold">RICHINGS PARK</span>
-                            <span class="logo-subtitle">SPORTS & SOCIAL</span>
-                        </div>
-                    </div>
-                    <p class="footer-desc">
-                        A prestigious, premium community enclave designed for competitive athletics, absolute physical restoration, refined dining, and exclusive member socials.
-                    </p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                        </a>
-                        <a href="#" aria-label="LinkedIn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Footer Quick Links -->
-                <div class="footer-col-links">
-                    <h4>The Club</h4>
+            <div class="footer__links-grid">
+                <div>
+                    <h4>Facilities</h4>
                     <ul>
-                        <li><a href="#dining">Culinary Hub</a></li>
-                        <li><a href="#wellness">Wellness Retreat</a></li>
-                        <li><a href="#sports">Sports Arenas</a></li>
-                        <li><a href="#entertainment">Kids Cinema</a></li>
-                        <li><a href="#bookings">Reserve Facility</a></li>
+                        <li><a href="#facilities">Tennis Courts</a></li>
+                        <li><a href="#facilities">Padel Courts</a></li>
+                        <li><a href="#facilities">Cricket Nets</a></li>
+                        <li><a href="#facilities">Lawn Bowls</a></li>
+                        <li><a href="#facilities">Football Pitch</a></li>
                     </ul>
                 </div>
-
-                <!-- Footer Operating Hours -->
-                <div class="footer-col-hours">
-                    <h4>Clubhouse Hours</h4>
-                    <div class="hours-row">
-                        <span>Sports Grounds:</span>
-                        <span>06:00 – 22:00 Daily</span>
-                    </div>
-                    <div class="hours-row">
-                        <span>1920 Kitchen:</span>
-                        <span>12:00 – 23:00 Wed-Sun</span>
-                    </div>
-                    <div class="hours-row">
-                        <span>The Players Bar:</span>
-                        <span>11:00 – 00:00 Daily</span>
-                    </div>
-                    <div class="hours-row">
-                        <span>Wellness Spa:</span>
-                        <span>08:00 – 21:00 Daily</span>
-                    </div>
-                    <div class="hours-row">
-                        <span>Park Gym:</span>
-                        <span>24 Hours (Members Only)</span>
-                    </div>
-                </div>
-
-                <!-- Footer Contact Info -->
-                <div class="footer-col-contact">
-                    <h4>Find Us</h4>
-                    <p class="contact-address">
-                        Richings Park Sports Club<br>
-                        Wellesley Avenue, Iver,<br>
-                        Buckinghamshire, SL0 9BY<br>
-                        United Kingdom
-                    </p>
-                    <p class="contact-links">
-                        <span>T: <a href="tel:+441753652345">+44 (0) 1753 652345</a></span>
-                        <span>E: <a href="mailto:concierge@richingsclub.co.uk">concierge@richingsclub.co.uk</a></span>
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Footer Bottom Bar -->
-            <div class="footer-bottom">
                 <div>
-                    &copy; 2026 Richings Park Sports Club (RPSC). All Rights Reserved. Designed by Antigravity.
+                    <h4>Dining &amp; Social</h4>
+                    <ul>
+                        <li><a href="#dining">The 1920 Kitchen</a></li>
+                        <li><a href="#dining">The Players Bar</a></li>
+                        <li><a href="#contact">The Balcony Events</a></li>
+                        <li><a href="#contact">Private Hire</a></li>
+                    </ul>
                 </div>
-                <div class="footer-terms">
-                    <a href="#">Privacy Policy</a>
-                    <span class="bullet-sep">•</span>
-                    <a href="#">Terms & Conditions</a>
-                    <span class="bullet-sep">•</span>
-                    <a href="#">Guest Guidelines</a>
+                <div>
+                    <h4>Wellness</h4>
+                    <ul>
+                        <li><a href="#wellness">The Retreat Spa</a></li>
+                        <li><a href="#wellness">Athletes' Recovery</a></li>
+                        <li><a href="#wellness">Park Gym</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Opening Hours</h4>
+                    <ul class="footer__hours">
+                        <li><span>Sports Grounds</span><span>6am – 10pm</span></li>
+                        <li><span>1920 Kitchen</span><span>Wed – Sun</span></li>
+                        <li><span>Players Bar</span><span>11am – Midnight</span></li>
+                        <li><span>Spa &amp; Wellness</span><span>8am – 9pm</span></li>
+                        <li><span>Park Gym</span><span>24 hrs (members)</span></li>
+                    </ul>
                 </div>
             </div>
-
         </div>
-    </footer>
+    </div>
 
-    <!-- App Logic Script -->
-    <script src="app.js"></script>
+    <div class="footer__bottom">
+        <div class="wrap footer__bottom-inner">
+            <p>© 2026 Richings Park Sports Club. All rights reserved.</p>
+            <div class="footer__legal">
+                <a href="#">Privacy Policy</a>
+                <span>·</span>
+                <a href="#">Terms &amp; Conditions</a>
+                <span>·</span>
+                <a href="#">Safeguarding</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = pct + '%';
+});
+
+// Mobile burger
+const burger = document.getElementById('navBurger');
+const links  = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    links.classList.remove('open');
+}));
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.fac-card, .dining__card, .w-card, .mem-card, .testi, .about__grid, .pillar');
+const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => { el.classList.add('reveal'); io.observe(el); });
+
+// Form submission
+function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('formConfirm').style.display = 'flex';
+    e.target.reset();
+    setTimeout(() => { document.getElementById('formConfirm').style.display = 'none'; }, 6000);
+}
+
+// Set min date
+const dateInput = document.getElementById('date');
+if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+</script>
 </body>
 </html>

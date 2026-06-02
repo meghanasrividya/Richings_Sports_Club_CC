@@ -1,5 +1,5 @@
 /* ============================================================
-   RICHINGS PARK SPORTS CLUB — v5 Client Ready
+   RICHINGS PARK SPORTS CLUB — v6 Client Ready
    Brand: Crimson #751716 · Velvet #272727 · Ivory #fffdf5 · Gold #d3b973
    Fonts: Libre Baskerville · Open Sans
    ============================================================ */
@@ -82,8 +82,8 @@ input,select,textarea,button{font-family:inherit;border:none;outline:none;backgr
 
 /* Brand */
 .nav__brand{display:flex;align-items:center;gap:11px;cursor:pointer;flex-shrink:0}
-.nav__logo-img{width:44px;height:44px;object-fit:contain;transition:width .3s,height .3s}
-.nav--scrolled .nav__logo-img{width:38px;height:38px}
+.nav__logo-img{width:54px;height:54px;object-fit:contain;transition:width .3s,height .3s;mix-blend-mode:lighten;filter:drop-shadow(0 2px 6px rgba(0,0,0,.3))}
+.nav--scrolled .nav__logo-img{width:46px;height:46px;mix-blend-mode:normal}
 .nav__brand-text{display:flex;flex-direction:column;line-height:1.2}
 .nav__brand-name{font-family:var(--fh);font-size:.88rem;font-weight:700;letter-spacing:.14em;color:var(--ivory);transition:color .3s}
 .nav__brand-sub{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
@@ -294,7 +294,7 @@ input,select,textarea,button{font-family:inherit;border:none;outline:none;backgr
 
 .footer__brand-row{display:grid;grid-template-columns:auto 1fr auto;gap:2.5rem;align-items:start;margin-bottom:3.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,253,245,.06)}
 .footer__brand{display:flex;align-items:center;gap:12px}
-.footer__logo{width:50px;height:50px;object-fit:contain}
+.footer__logo{width:64px;height:64px;object-fit:contain;mix-blend-mode:lighten}
 .footer__brand strong{font-family:var(--fh);font-size:.9rem;font-weight:700;color:var(--ivory);display:block;letter-spacing:.06em}
 .footer__brand span{font-size:.62rem;color:var(--gold);letter-spacing:.14em;margin-top:2px;display:block}
 .footer__desc{font-size:.84rem;color:rgba(255,253,245,.4);line-height:1.75;max-width:380px}

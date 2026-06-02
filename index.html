@@ -5,118 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richings Park Sports Club | Est. 1926 — Iver, Buckinghamshire</title>
     <meta name="description" content="Richings Park Sports Club — a prestigious multi-sport and social club in Iver, Buckinghamshire. Tennis, Padel, Cricket, Bowls, fine dining and wellness since 1926.">
-    <meta property="og:title" content="Richings Park Sports Club">
-    <meta property="og:description" content="World-class sports, dining and wellness in Iver, Buckinghamshire since 1926.">
-    <meta property="og:url" content="https://richingsparksc.co.uk">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
-<!-- Progress bar -->
 <div class="progress-bar" id="progressBar"></div>
 
-<!-- ═══ NAVBAR ════════════════════════════════ -->
+<!-- ═══════════ NAVBAR ═══════════ -->
 <header class="nav" id="nav">
     <div class="nav__inner">
-
         <a href="#hero" class="nav__brand">
-            <img src="images/logo.png" alt="Richings Park Sports Club Logo" class="nav__logo-img">
-            <div class="nav__brand-text">
-                <span class="nav__brand-name">RICHINGS PARK</span>
-                <span class="nav__brand-sub">Sports &amp; Social Club</span>
+            <img src="images/logo.png" alt="Richings Park Sports Club" class="nav__logo">
+            <div class="nav__brand-words">
+                <span class="nav__brand-main">RICHINGS PARK</span>
+                <span class="nav__brand-sub">Sports &amp; Social Club · Est. 1926</span>
             </div>
         </a>
-
-        <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-
-        <nav class="nav__links" id="navLinks" role="navigation" aria-label="Main navigation">
-            <a href="#about"      class="nav__link">About</a>
-            <a href="#facilities" class="nav__link">Facilities</a>
-            <a href="#dining"     class="nav__link">Dining</a>
-            <a href="#wellness"   class="nav__link">Wellness</a>
-            <a href="#membership" class="nav__link">Membership</a>
-            <a href="#book"       class="nav__cta">Reserve a Visit</a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <nav class="nav__menu" id="navMenu">
+            <a href="#about"       class="nav__item">About</a>
+            <a href="#facilities"  class="nav__item">Facilities</a>
+            <a href="#dining"      class="nav__item">Dining</a>
+            <a href="#wellness"    class="nav__item">Wellness</a>
+            <a href="#membership"  class="nav__item">Membership</a>
+            <a href="#contact"     class="nav__book">Contact Us</a>
         </nav>
-
     </div>
 </header>
 
-<!-- ═══ HERO ══════════════════════════════════ -->
+<!-- ═══════════ HERO ═══════════ -->
 <section class="hero" id="hero">
-    <div class="hero__media">
-        <img src="images/hero.png" alt="Richings Park Sports Club grounds at sunset" class="hero__img" loading="eager">
-        <div class="hero__veil"></div>
+    <div class="hero__bg">
+        <img src="images/hero.png" alt="Richings Park Sports Club" class="hero__bg-img">
+        <div class="hero__bg-overlay"></div>
     </div>
-
-    <div class="hero__content">
-        <div class="hero__badge">
-            <span class="hero__badge-dot"></span>
-            Established 1926
-            <span class="hero__badge-dot"></span>
+    <div class="hero__body">
+        <div class="hero__ornament" aria-hidden="true">
+            <span class="hero__orn-line"></span>
+            <span class="hero__orn-diamond">◆</span>
+            <span class="hero__orn-line"></span>
         </div>
-        <h1 class="hero__heading">Where Heritage<br><em>Meets Excellence</em></h1>
-        <p class="hero__sub">A distinguished sports and social club nestled in the heart of Iver, Buckinghamshire. World-class courts, restorative wellness, and refined dining — all under one roof.</p>
-        <div class="hero__actions">
-            <a href="#book"        class="btn btn--crimson">Book a Facility</a>
-            <a href="#facilities"  class="btn btn--ghost">Explore the Club</a>
+        <p class="hero__kicker">Established 1926 · Iver, Buckinghamshire</p>
+        <h1 class="hero__h1">Where Heritage<br><em>Meets Excellence</em></h1>
+        <p class="hero__lead">A distinguished sports and social club nestled in the heart of Buckinghamshire. World-class courts, restorative wellness and refined dining — all under one roof.</p>
+        <div class="hero__ctas">
+            <a href="#contact"    class="cta cta--gold">Reserve a Visit</a>
+            <a href="#facilities" class="cta cta--outline">Explore the Club</a>
         </div>
     </div>
-
-    <div class="hero__scroll" aria-hidden="true">
-        <span class="hero__scroll-line"></span>
-        <span class="hero__scroll-text">Scroll</span>
-    </div>
-
-    <div class="hero__ribbon" aria-label="Club highlights">
-        <div class="ribbon__stat"><strong>1926</strong><span>Year Founded</span></div>
-        <div class="ribbon__divider" aria-hidden="true"></div>
-        <div class="ribbon__stat"><strong>7+</strong><span>Sport Facilities</span></div>
-        <div class="ribbon__divider" aria-hidden="true"></div>
-        <div class="ribbon__stat"><strong>1,200+</strong><span>Members</span></div>
-        <div class="ribbon__divider" aria-hidden="true"></div>
-        <div class="ribbon__stat"><strong>Iver</strong><span>Buckinghamshire</span></div>
+    <div class="hero__ribbon">
+        <div class="hero__stat"><strong>1926</strong><span>Year Founded</span></div>
+        <div class="hero__rib-sep"></div>
+        <div class="hero__stat"><strong>7+</strong><span>Facilities</span></div>
+        <div class="hero__rib-sep"></div>
+        <div class="hero__stat"><strong>1,200+</strong><span>Members</span></div>
+        <div class="hero__rib-sep"></div>
+        <div class="hero__stat"><strong>100</strong><span>Years of Heritage</span></div>
     </div>
 </section>
 
-<!-- ═══ ABOUT ════════════════════════════════ -->
+<!-- ═══════════ ABOUT ═══════════ -->
 <section class="about" id="about">
     <div class="wrap">
-        <div class="about__grid">
-            <div class="about__img-col">
-                <div class="about__img-frame">
-                    <img src="images/hero.png" alt="Richings Park Club grounds" class="about__img" loading="lazy">
+        <div class="about__layout">
+            <div class="about__visual">
+                <div class="about__frame">
+                    <img src="images/hero.png" alt="Club grounds" class="about__photo" loading="lazy">
                 </div>
-                <div class="about__badge">
-                    <strong>Est.</strong>
-                    <span>1926</span>
+                <div class="about__stamp">
+                    <span>Est.</span>
+                    <strong>1926</strong>
                 </div>
             </div>
-            <div class="about__text-col">
-                <p class="eyebrow">Our Story</p>
-                <h2 class="heading">A Century of Sport,<br><em>Community &amp; Tradition</em></h2>
-                <div class="rule"></div>
-                <p class="body-text">Richings Park Sports Club has been the heartbeat of sport and community in Iver since 1926. Built on the pillars of heritage, authenticity and enduring sporting values, the club offers an unrivalled environment for athletes, families and social members alike.</p>
-                <p class="body-text">From immaculate grass tennis courts and panoramic padel arenas to our acclaimed 1920 Kitchen restaurant and luxury wellness retreat — RPSC is more than a sports club. It is a way of life.</p>
-                <div class="about__pillars">
+            <div class="about__prose">
+                <p class="label">Our Story</p>
+                <h2 class="h2">A Century of Sport,<br><em>Community &amp; Tradition</em></h2>
+                <div class="divider"></div>
+                <p class="prose">Richings Park Sports Club has been the heartbeat of sport and community in Iver since 1926. Built on the pillars of heritage, authenticity and enduring sporting values, the club offers an unrivalled environment for athletes, families and social members alike.</p>
+                <p class="prose">From immaculate grass tennis courts and panoramic padel arenas to our acclaimed 1920 Kitchen restaurant and luxury wellness retreat — RPSC is far more than a sports club. It is a way of life.</p>
+                <div class="pillars">
                     <div class="pillar">
-                        <div class="pillar__icon">⚜</div>
+                        <i class="pillar__glyph">⚜</i>
                         <strong>Heritage</strong>
-                        <p>A century of tradition and pride</p>
+                        <p>A century of pride and tradition</p>
                     </div>
                     <div class="pillar">
-                        <div class="pillar__icon">🏆</div>
+                        <i class="pillar__glyph">🏆</i>
                         <strong>Excellence</strong>
-                        <p>World-class facilities and coaching</p>
+                        <p>World-class facilities &amp; coaching</p>
                     </div>
                     <div class="pillar">
-                        <div class="pillar__icon">🤝</div>
+                        <i class="pillar__glyph">🤝</i>
                         <strong>Community</strong>
-                        <p>A family united by sport and life</p>
+                        <p>A family united by sport</p>
                     </div>
                 </div>
             </div>
@@ -124,246 +108,240 @@
     </div>
 </section>
 
-<!-- ═══ FACILITIES ════════════════════════════ -->
-<section class="facilities" id="facilities">
+<!-- ═══════════ FACILITIES ═══════════ -->
+<section class="facilities dark-section" id="facilities">
     <div class="wrap">
-        <div class="section-intro">
-            <p class="eyebrow eyebrow--gold">Active Facilities</p>
-            <h2 class="heading heading--light">World-Class Sports Arenas</h2>
-            <div class="rule rule--gold"></div>
-            <p class="body-text body-text--light">Precision-engineered courts and fields for every discipline — from championship tennis and padel to lawn bowls and cricket nets.</p>
+        <div class="sec-head sec-head--center">
+            <p class="label label--gold">Active Facilities</p>
+            <h2 class="h2 h2--light">World-Class<em> Sports Arenas</em></h2>
+            <div class="divider divider--gold divider--center"></div>
+            <p class="prose prose--dim">Precision-engineered courts and fields for every discipline — from championship tennis and padel to lawn bowls and cricket.</p>
         </div>
-
-        <div class="fac-grid">
-            <div class="fac-card">
-                <div class="fac-card__head"><span class="fac-card__icon">🎾</span><span class="fac-card__tag">Racket Sport</span></div>
-                <h3 class="fac-card__title">Championship Tennis</h3>
-                <p class="fac-card__desc">Four world-class grass courts and six premium acrylic courts. LTA-qualified coaching available year-round for all abilities.</p>
-                <ul class="fac-card__list"><li>10 courts available</li><li>Floodlit for evening play</li><li>LTA-qualified coaches</li></ul>
-                <a href="#book" class="fac-card__btn">Book a Court</a>
-            </div>
-            <div class="fac-card">
-                <div class="fac-card__head"><span class="fac-card__icon">🏓</span><span class="fac-card__tag">Racket Sport</span></div>
-                <h3 class="fac-card__title">Panoramic Padel</h3>
-                <p class="fac-card__desc">Three glass-walled courts offering spectacular views. The world's fastest-growing sport, played at its finest here in Iver.</p>
-                <ul class="fac-card__list"><li>3 premium glass courts</li><li>Structural panoramic walls</li><li>Racquet hire available</li></ul>
-                <a href="#book" class="fac-card__btn">Book a Court</a>
-            </div>
-            <div class="fac-card">
-                <div class="fac-card__head"><span class="fac-card__icon">🏏</span><span class="fac-card__tag">Heritage Sport</span></div>
-                <h3 class="fac-card__title">Cricket Nets</h3>
-                <p class="fac-card__desc">Three high-performance lanes with synthetic weave surface, automated bowling machines and video analysis capability.</p>
-                <ul class="fac-card__list"><li>3 private lanes</li><li>Pro bowling machines</li><li>Video coaching available</li></ul>
-                <a href="#book" class="fac-card__btn">Book a Lane</a>
-            </div>
-            <div class="fac-card">
-                <div class="fac-card__head"><span class="fac-card__icon">🎱</span><span class="fac-card__tag">Lawn Sport</span></div>
-                <h3 class="fac-card__title">Luxury Lawn Bowls</h3>
-                <p class="fac-card__desc">Six-rink bentgrass bowling green maintained to the highest standard, surrounded by mature oaks and elegant pavilions.</p>
-                <ul class="fac-card__list"><li>6 tournament rinks</li><li>Full equipment hire</li><li>Spectator pavilions</li></ul>
-                <a href="#book" class="fac-card__btn">Book a Rink</a>
-            </div>
-            <div class="fac-card">
-                <div class="fac-card__head"><span class="fac-card__icon">⚽</span><span class="fac-card__tag">Team Sport</span></div>
-                <h3 class="fac-card__title">Elite Football Pitch</h3>
-                <p class="fac-card__desc">State-of-the-art 3G tournament turf accommodating 5-a-side, 7-a-side or full 11-a-side matches with professional lighting.</p>
-                <ul class="fac-card__list"><li>Pro floodlit pitch</li><li>Shock-pad underlayer</li><li>Changing facilities</li></ul>
-                <a href="#book" class="fac-card__btn">Book the Pitch</a>
-            </div>
-            <div class="fac-card">
-                <div class="fac-card__head"><span class="fac-card__icon">🏃</span><span class="fac-card__tag">Traditional Sport</span></div>
-                <h3 class="fac-card__title">Kho Kho Arena</h3>
-                <p class="fac-card__desc">A dedicated tournament-standard court with agility coaching clinics and full team hosting capability throughout the season.</p>
-                <ul class="fac-card__list"><li>Professional surface</li><li>Agility coaching</li><li>Tournament hosting</li></ul>
-                <a href="#book" class="fac-card__btn">Book the Arena</a>
-            </div>
+        <div class="cards-3">
+            <article class="fcard">
+                <div class="fcard__top"><span class="fcard__emoji">🎾</span><span class="fcard__cat">Racket Sport</span></div>
+                <h3 class="fcard__h">Championship Tennis</h3>
+                <p class="fcard__body">Four world-class grass courts and six premium acrylic courts. LTA-qualified coaching available year-round for all abilities.</p>
+                <ul class="fcard__list"><li>10 courts available</li><li>Floodlit evening play</li><li>LTA-qualified coaches</li></ul>
+                <a href="#contact" class="fcard__link">Book a Court →</a>
+            </article>
+            <article class="fcard">
+                <div class="fcard__top"><span class="fcard__emoji">🏓</span><span class="fcard__cat">Racket Sport</span></div>
+                <h3 class="fcard__h">Panoramic Padel</h3>
+                <p class="fcard__body">Three glass-walled courts offering spectacular views. The world's fastest-growing sport, played at its finest here in Iver.</p>
+                <ul class="fcard__list"><li>3 panoramic glass courts</li><li>Structural glass walls</li><li>Racquet hire available</li></ul>
+                <a href="#contact" class="fcard__link">Book a Court →</a>
+            </article>
+            <article class="fcard">
+                <div class="fcard__top"><span class="fcard__emoji">🏏</span><span class="fcard__cat">Heritage Sport</span></div>
+                <h3 class="fcard__h">Cricket Nets</h3>
+                <p class="fcard__body">Three high-performance lanes with synthetic surface, automated bowling machines and full video analysis capability.</p>
+                <ul class="fcard__list"><li>3 private lanes</li><li>Pro bowling machines</li><li>Video coaching</li></ul>
+                <a href="#contact" class="fcard__link">Book a Lane →</a>
+            </article>
+            <article class="fcard">
+                <div class="fcard__top"><span class="fcard__emoji">🎱</span><span class="fcard__cat">Lawn Sport</span></div>
+                <h3 class="fcard__h">Luxury Lawn Bowls</h3>
+                <p class="fcard__body">Six-rink bentgrass bowling green maintained to the highest standard, surrounded by mature oaks and elegant pavilions.</p>
+                <ul class="fcard__list"><li>6 tournament rinks</li><li>Full equipment hire</li><li>Spectator pavilions</li></ul>
+                <a href="#contact" class="fcard__link">Book a Rink →</a>
+            </article>
+            <article class="fcard">
+                <div class="fcard__top"><span class="fcard__emoji">⚽</span><span class="fcard__cat">Team Sport</span></div>
+                <h3 class="fcard__h">Elite Football Pitch</h3>
+                <p class="fcard__body">State-of-the-art 3G tournament turf accommodating 5-a-side, 7-a-side and full 11-a-side matches with floodlights.</p>
+                <ul class="fcard__list"><li>Pro floodlit pitch</li><li>Shock-pad underlayer</li><li>Changing facilities</li></ul>
+                <a href="#contact" class="fcard__link">Book the Pitch →</a>
+            </article>
+            <article class="fcard">
+                <div class="fcard__top"><span class="fcard__emoji">🏃</span><span class="fcard__cat">Traditional Sport</span></div>
+                <h3 class="fcard__h">Kho Kho Arena</h3>
+                <p class="fcard__body">A dedicated tournament-standard court with agility coaching clinics and full team hosting capability throughout the season.</p>
+                <ul class="fcard__list"><li>Professional surface</li><li>Agility coaching</li><li>Tournament hosting</li></ul>
+                <a href="#contact" class="fcard__link">Book the Arena →</a>
+            </article>
         </div>
     </div>
 </section>
 
-<!-- ═══ DINING ════════════════════════════════ -->
+<!-- ═══════════ DINING ═══════════ -->
 <section class="dining" id="dining">
     <div class="wrap">
-        <div class="section-intro">
-            <p class="eyebrow">Culinary &amp; Social</p>
-            <h2 class="heading">The Art of<br><em>Dining &amp; Gathering</em></h2>
-            <div class="rule"></div>
+        <div class="sec-head sec-head--center">
+            <p class="label">Culinary &amp; Social</p>
+            <h2 class="h2">The Art of<em> Dining &amp; Gathering</em></h2>
+            <div class="divider divider--center"></div>
         </div>
-
-        <div class="dining-grid">
-            <div class="dining-card dining-card--large">
-                <div class="dining-card__img-wrap">
-                    <img src="images/kitchen.png" alt="The 1920 Kitchen fine dining restaurant" class="dining-card__img" loading="lazy">
-                    <div class="dining-card__overlay"></div>
-                    <span class="dining-card__badge">Fine Dining</span>
+        <div class="dining__layout">
+            <div class="dcard dcard--large">
+                <div class="dcard__img-wrap">
+                    <img src="images/kitchen.png" alt="The 1920 Kitchen" class="dcard__img" loading="lazy">
+                    <div class="dcard__img-veil"></div>
+                    <span class="dcard__pill">Fine Dining</span>
                 </div>
-                <div class="dining-card__body">
-                    <p class="eyebrow">Since 1920</p>
-                    <h3 class="dining-card__title">The 1920 Kitchen</h3>
-                    <p class="dining-card__desc">Step into a century of timeless dining. Our seasonally-led menu celebrates the finest British produce — prepared by our executive chef and paired with an exceptional curated wine list of over 150 labels.</p>
-                    <ul class="dining-card__features">
+                <div class="dcard__prose">
+                    <p class="label">Since 1920</p>
+                    <h3 class="dcard__h">The 1920 Kitchen</h3>
+                    <p class="dcard__body">Step into a century of timeless dining. Our seasonally-led menu celebrates the finest British produce — prepared by our executive chef and paired with an exceptional curated wine list of over 150 labels.</p>
+                    <ul class="dcard__feats">
                         <li>Artisanal seasonal à la carte menu</li>
                         <li>150+ wine labels curated by our sommelier</li>
                         <li>Private dining room for up to 20 guests</li>
                     </ul>
-                    <div class="dining-card__hours">Wednesday – Sunday &nbsp;|&nbsp; Noon – 11 pm</div>
-                    <a href="#book" class="btn btn--crimson">Reserve a Table</a>
+                    <p class="dcard__hours">Wednesday – Sunday &nbsp;|&nbsp; Noon – 11 pm</p>
+                    <a href="#contact" class="cta cta--crimson">Reserve a Table</a>
                 </div>
             </div>
-
-            <div class="dining-card">
-                <div class="dining-card__img-wrap">
-                    <img src="images/bar.png" alt="The Players Sports Bar" class="dining-card__img" loading="lazy">
-                    <div class="dining-card__overlay"></div>
-                    <span class="dining-card__badge">Sports Bar</span>
+            <div class="dcard">
+                <div class="dcard__img-wrap">
+                    <img src="images/bar.png" alt="The Players Bar" class="dcard__img" loading="lazy">
+                    <div class="dcard__img-veil"></div>
+                    <span class="dcard__pill">Sports Bar</span>
                 </div>
-                <div class="dining-card__body">
-                    <p class="eyebrow">Daily from 11 am</p>
-                    <h3 class="dining-card__title">The Players Bar</h3>
-                    <p class="dining-card__desc">Dual 150" screens, craft ales on tap and signature cocktails. The ultimate way to watch every Grand Slam, Premier League match and championship final in style.</p>
-                    <a href="#book" class="btn btn--outline">Reserve a Table</a>
+                <div class="dcard__prose">
+                    <p class="label">Daily from 11 am</p>
+                    <h3 class="dcard__h">The Players Bar</h3>
+                    <p class="dcard__body">Dual 150" screens, craft ales on tap and signature cocktails. The ultimate way to watch every Grand Slam, Premier League match and championship final.</p>
+                    <a href="#contact" class="cta cta--outline">Reserve a Table</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══ WELLNESS ══════════════════════════════ -->
-<section class="wellness" id="wellness">
-    <div class="wellness__bg">
-        <img src="images/wellness.png" alt="RPSC Wellness and Spa Centre" class="wellness__bg-img" loading="lazy">
-        <div class="wellness__veil"></div>
+<!-- ═══════════ WELLNESS ═══════════ -->
+<section class="wellness dark-section" id="wellness">
+    <div class="wellness__bg-wrap">
+        <img src="images/wellness.png" alt="Wellness sanctuary" class="wellness__bg-img" loading="lazy">
+        <div class="wellness__bg-veil"></div>
     </div>
-    <div class="wrap wellness__inner">
-        <div class="wellness__text">
-            <p class="eyebrow eyebrow--gold">Health &amp; Recovery</p>
-            <h2 class="heading heading--light">The Wellness<br><em>Sanctuary</em></h2>
-            <div class="rule rule--gold"></div>
-            <p class="body-text body-text--light">Three distinct recovery environments designed to restore the body, calm the mind and elevate your physical readiness.</p>
+    <div class="wrap wellness__layout">
+        <div class="wellness__intro">
+            <p class="label label--gold">Health &amp; Recovery</p>
+            <h2 class="h2 h2--light">The Wellness<em> Sanctuary</em></h2>
+            <div class="divider divider--gold"></div>
+            <p class="prose prose--dim">Three distinct recovery environments designed to restore the body, calm the mind and elevate your physical readiness.</p>
         </div>
         <div class="wellness__cards">
-            <div class="w-card">
-                <div class="w-card__icon">🌿</div>
-                <h4 class="w-card__title">The Retreat Spa</h4>
-                <p class="w-card__desc">Swedish massages, hot stone rituals, cedar saunas and deep-heat steam rooms for total restoration.</p>
-                <a href="#book" class="w-card__link">Book a Treatment →</a>
+            <div class="wcard">
+                <span class="wcard__icon">🌿</span>
+                <h4 class="wcard__h">The Retreat Spa</h4>
+                <p class="wcard__body">Swedish massages, hot stone rituals, cedar saunas and deep-heat steam rooms for total restoration.</p>
+                <a href="#contact" class="wcard__link">Book a Treatment →</a>
             </div>
-            <div class="w-card w-card--gold">
-                <div class="w-card__icon">❄</div>
-                <h4 class="w-card__title">Athletes' Recovery</h4>
-                <p class="w-card__desc">Cryotherapy at -110°C, hyperbaric oxygen chambers and lymphatic compression sleeves.</p>
-                <a href="#book" class="w-card__link">Reserve a Session →</a>
+            <div class="wcard wcard--gold">
+                <span class="wcard__icon">❄</span>
+                <h4 class="wcard__h">Athletes' Recovery</h4>
+                <p class="wcard__body">Cryotherapy at -110°C, hyperbaric oxygen chambers and lymphatic compression sleeves.</p>
+                <a href="#contact" class="wcard__link">Reserve a Session →</a>
             </div>
-            <div class="w-card">
-                <div class="w-card__icon">💪</div>
-                <h4 class="w-card__title">Park Gym</h4>
-                <p class="w-card__desc">Elite Technogym equipment, free weight yards and certified personal trainers. Open 24hrs for members.</p>
-                <a href="#book" class="w-card__link">Get a Day Pass →</a>
+            <div class="wcard">
+                <span class="wcard__icon">💪</span>
+                <h4 class="wcard__h">Park Gym</h4>
+                <p class="wcard__body">Elite Technogym equipment, free weight yards and certified personal trainers. Open 24hrs for members.</p>
+                <a href="#contact" class="wcard__link">Get a Day Pass →</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══ MEMBERSHIP ════════════════════════════ -->
+<!-- ═══════════ MEMBERSHIP ═══════════ -->
 <section class="membership" id="membership">
     <div class="wrap">
-        <div class="section-intro">
-            <p class="eyebrow">Join the Club</p>
-            <h2 class="heading">Become a Member<br><em>of Richings Park</em></h2>
-            <div class="rule"></div>
-            <p class="body-text">Choose the tier that suits your lifestyle. All members enjoy priority booking, exclusive social events and full access to our facility network.</p>
+        <div class="sec-head sec-head--center">
+            <p class="label">Join the Club</p>
+            <h2 class="h2">Become a Member<em> of Richings Park</em></h2>
+            <div class="divider divider--center"></div>
+            <p class="prose">All members enjoy priority booking, exclusive social events and full access to our world-class facility network.</p>
         </div>
-
         <div class="mem-grid">
-            <div class="mem-card">
-                <div class="mem-card__head">
-                    <span class="mem-card__tier">Social</span>
-                    <h3 class="mem-card__name">Club Member</h3>
-                    <div class="mem-card__price"><strong>£35</strong><span>/month</span></div>
+            <div class="mcard">
+                <div class="mcard__head">
+                    <p class="mcard__tier">Social</p>
+                    <h3 class="mcard__name">Club Member</h3>
+                    <p class="mcard__price"><strong>£35</strong> /month</p>
                 </div>
-                <div class="mem-card__body">
-                    <ul class="mem-card__perks">
+                <div class="mcard__body">
+                    <ul class="mcard__perks">
                         <li>Access to all sports courts</li>
                         <li>Priority court booking</li>
                         <li>10% dining discount</li>
-                        <li>Members social events</li>
+                        <li>Member social events</li>
                         <li>Guest passes ×2/month</li>
                     </ul>
-                    <a href="#book" class="btn btn--outline btn--full">Enquire Now</a>
+                    <a href="#contact" class="cta cta--outline cta--full">Enquire Now</a>
                 </div>
             </div>
-
-            <div class="mem-card mem-card--featured">
-                <div class="mem-card__ribbon">Most Popular</div>
-                <div class="mem-card__head">
-                    <span class="mem-card__tier">Premier</span>
-                    <h3 class="mem-card__name">Gold Member</h3>
-                    <div class="mem-card__price"><strong>£65</strong><span>/month</span></div>
+            <div class="mcard mcard--featured">
+                <div class="mcard__ribbon">Most Popular</div>
+                <div class="mcard__head">
+                    <p class="mcard__tier">Premier</p>
+                    <h3 class="mcard__name">Gold Member</h3>
+                    <p class="mcard__price"><strong>£65</strong> /month</p>
                 </div>
-                <div class="mem-card__body">
-                    <ul class="mem-card__perks">
+                <div class="mcard__body">
+                    <ul class="mcard__perks">
                         <li>Everything in Club</li>
-                        <li>Unlimited gym access 24/7</li>
+                        <li>Unlimited gym 24/7</li>
                         <li>20% dining &amp; spa discount</li>
                         <li>Free equipment hire</li>
                         <li>Guest passes ×5/month</li>
-                        <li>Lounge &amp; bar priority seating</li>
+                        <li>Lounge priority seating</li>
                     </ul>
-                    <a href="#book" class="btn btn--crimson btn--full">Enquire Now</a>
+                    <a href="#contact" class="cta cta--gold cta--full">Enquire Now</a>
                 </div>
             </div>
-
-            <div class="mem-card">
-                <div class="mem-card__head">
-                    <span class="mem-card__tier">Corporate</span>
-                    <h3 class="mem-card__name">Corporate</h3>
-                    <div class="mem-card__price"><strong>Bespoke</strong></div>
+            <div class="mcard">
+                <div class="mcard__head">
+                    <p class="mcard__tier">Corporate</p>
+                    <h3 class="mcard__name">Corporate</h3>
+                    <p class="mcard__price"><strong>Bespoke</strong></p>
                 </div>
-                <div class="mem-card__body">
-                    <ul class="mem-card__perks">
+                <div class="mcard__body">
+                    <ul class="mcard__perks">
                         <li>Everything in Gold</li>
                         <li>Up to 10 staff memberships</li>
                         <li>Private event space hire</li>
                         <li>Dedicated account manager</li>
                         <li>Branded matchday hosting</li>
                     </ul>
-                    <a href="#book" class="btn btn--outline btn--full">Contact Us</a>
+                    <a href="#contact" class="cta cta--outline cta--full">Contact Us</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══ TESTIMONIALS ══════════════════════════ -->
-<section class="testimonials">
+<!-- ═══════════ TESTIMONIALS ═══════════ -->
+<section class="testi-section">
     <div class="wrap">
-        <div class="section-intro">
-            <p class="eyebrow">Member Voices</p>
-            <h2 class="heading">What Our Members Say</h2>
-            <div class="rule"></div>
+        <div class="sec-head sec-head--center">
+            <p class="label">Member Voices</p>
+            <h2 class="h2">What Our Members Say</h2>
+            <div class="divider divider--center"></div>
         </div>
-        <div class="testi-grid">
-            <div class="testi-card">
-                <div class="testi-card__stars">★★★★★</div>
-                <p class="testi-card__quote">"The grass tennis courts are exceptional — among the finest I've played on outside of Wimbledon. The club has a warmth and character that is truly rare."</p>
-                <div class="testi-card__author">
-                    <div class="testi-card__avatar">H</div>
+        <div class="cards-3">
+            <div class="tcard">
+                <div class="tcard__stars">★★★★★</div>
+                <p class="tcard__quote">"The grass tennis courts are exceptional — among the finest I've played on outside of Wimbledon. The club has a warmth and character that is truly rare."</p>
+                <div class="tcard__author">
+                    <div class="tcard__av">H</div>
                     <div><strong>Helena Westwood</strong><span>Gold Member, 8 years</span></div>
                 </div>
             </div>
-            <div class="testi-card">
-                <div class="testi-card__stars">★★★★★</div>
-                <p class="testi-card__quote">"The Recovery Centre has become an essential part of my training week. The cryotherapy and oxygen chambers are genuine elite-level facilities."</p>
-                <div class="testi-card__author">
-                    <div class="testi-card__avatar">M</div>
+            <div class="tcard">
+                <div class="tcard__stars">★★★★★</div>
+                <p class="tcard__quote">"The Recovery Centre has become essential to my training week. The cryotherapy and oxygen chambers are genuine elite-level facilities — remarkable."</p>
+                <div class="tcard__author">
+                    <div class="tcard__av">M</div>
                     <div><strong>Marcus T.</strong><span>Professional Athlete &amp; Patron</span></div>
                 </div>
             </div>
-            <div class="testi-card">
-                <div class="testi-card__stars">★★★★★</div>
-                <p class="testi-card__quote">"We host all our corporate events at The Balcony. The backdrop, the catering and the professionalism of the team make every occasion unforgettable."</p>
-                <div class="testi-card__author">
-                    <div class="testi-card__avatar">S</div>
+            <div class="tcard">
+                <div class="tcard__stars">★★★★★</div>
+                <p class="tcard__quote">"We host all our corporate events at The Balcony. The backdrop, catering and professionalism of the team make every occasion unforgettable."</p>
+                <div class="tcard__author">
+                    <div class="tcard__av">S</div>
                     <div><strong>Sarah Patel</strong><span>Corporate Member</span></div>
                 </div>
             </div>
@@ -371,118 +349,143 @@
     </div>
 </section>
 
-<!-- ═══ BOOKING ════════════════════════════════ -->
-<section class="booking" id="book">
-    <div class="booking__split">
-        <div class="booking__info">
-            <p class="eyebrow eyebrow--gold">Reservations &amp; Enquiries</p>
-            <h2 class="heading heading--light">Visit Richings Park<br><em>Sports Club</em></h2>
-            <div class="rule rule--gold"></div>
-            <div class="booking__details">
-                <div class="booking__detail">
-                    <span class="booking__detail-icon">📍</span>
-                    <div>
-                        <strong>Address</strong>
-                        <p>Wellesley Avenue, Iver,<br>Buckinghamshire, SL0 9BY</p>
+<!-- ═══════════ CONTACT US ═══════════ -->
+<section class="contact dark-section" id="contact">
+    <div class="contact__layout">
+
+        <!-- Left info panel -->
+        <div class="contact__panel">
+            <div class="contact__panel-inner">
+                <p class="label label--gold">Get In Touch</p>
+                <h2 class="h2 h2--light">Contact &amp;<em> Reserve a Visit</em></h2>
+                <div class="divider divider--gold"></div>
+                <p class="prose prose--dim">Whether you'd like to book a court, reserve a table, enquire about membership or plan a private event — our team is ready to help.</p>
+
+                <div class="cinfo">
+                    <div class="cinfo__row">
+                        <div class="cinfo__icon">📍</div>
+                        <div>
+                            <strong>Address</strong>
+                            <p>Wellesley Avenue, Iver,<br>Buckinghamshire, SL0 9BY</p>
+                        </div>
+                    </div>
+                    <div class="cinfo__row">
+                        <div class="cinfo__icon">📞</div>
+                        <div>
+                            <strong>Telephone</strong>
+                            <p><a href="tel:+441753652345">+44 (0) 1753 652345</a></p>
+                        </div>
+                    </div>
+                    <div class="cinfo__row">
+                        <div class="cinfo__icon">✉</div>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:info@richingsparksc.co.uk">info@richingsparksc.co.uk</a></p>
+                        </div>
+                    </div>
+                    <div class="cinfo__row">
+                        <div class="cinfo__icon">🕐</div>
+                        <div>
+                            <strong>Opening Hours</strong>
+                            <p>Sports Grounds: 6am – 10pm daily<br>Gym: 24hrs (members only)</p>
+                        </div>
                     </div>
                 </div>
-                <div class="booking__detail">
-                    <span class="booking__detail-icon">📞</span>
-                    <div>
-                        <strong>Telephone</strong>
-                        <p><a href="tel:+441753652345">+44 (0) 1753 652345</a></p>
-                    </div>
-                </div>
-                <div class="booking__detail">
-                    <span class="booking__detail-icon">✉</span>
-                    <div>
-                        <strong>Email</strong>
-                        <p><a href="mailto:info@richingsparksc.co.uk">info@richingsparksc.co.uk</a></p>
-                    </div>
-                </div>
-                <div class="booking__detail">
-                    <span class="booking__detail-icon">🕐</span>
-                    <div>
-                        <strong>Opening Hours</strong>
-                        <p>Sports Grounds: 6am – 10pm daily<br>Gym: 24hrs (members only)</p>
-                    </div>
+
+                <div class="contact__socials">
+                    <a href="#" class="contact__soc" aria-label="Facebook">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="#" class="contact__soc" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" class="contact__soc" aria-label="Twitter">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="booking__form-wrap">
-            <form class="booking__form" id="bookingForm" novalidate>
-                <h3 class="booking__form-title">Make a Reservation</h3>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fname">First Name *</label>
-                        <input type="text" id="fname" name="fname" placeholder="Jane" required autocomplete="given-name">
+        <!-- Right form panel -->
+        <div class="contact__form-panel">
+            <form class="cform" id="cform" novalidate>
+                <div class="cform__header">
+                    <h3 class="cform__title">Make a Reservation</h3>
+                    <p class="cform__sub">We'll confirm your booking within 24 hours</p>
+                </div>
+                <div class="cform__row">
+                    <div class="cform__group">
+                        <label for="cf-fname">First Name *</label>
+                        <input type="text" id="cf-fname" placeholder="Jane" required autocomplete="given-name">
                     </div>
-                    <div class="form-group">
-                        <label for="lname">Last Name *</label>
-                        <input type="text" id="lname" name="lname" placeholder="Smith" required autocomplete="family-name">
+                    <div class="cform__group">
+                        <label for="cf-lname">Last Name *</label>
+                        <input type="text" id="cf-lname" placeholder="Smith" required autocomplete="family-name">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+                <div class="cform__row">
+                    <div class="cform__group">
+                        <label for="cf-email">Email Address *</label>
+                        <input type="email" id="cf-email" placeholder="jane@example.com" required autocomplete="email">
+                    </div>
+                    <div class="cform__group">
+                        <label for="cf-phone">Phone Number</label>
+                        <input type="tel" id="cf-phone" placeholder="+44 7700 000000" autocomplete="tel">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+44 7700 000000" autocomplete="tel">
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="facility">Facility *</label>
-                        <select id="facility" name="facility" required>
+                <div class="cform__row">
+                    <div class="cform__group">
+                        <label for="cf-facility">Facility / Service *</label>
+                        <select id="cf-facility" required>
                             <option value="" disabled selected>Select a facility…</option>
                             <optgroup label="⚽ Sports Courts">
-                                <option value="Tennis Court">Tennis Court</option>
-                                <option value="Padel Court">Padel Court</option>
-                                <option value="Cricket Nets">Cricket Nets</option>
-                                <option value="Lawn Bowls">Lawn Bowls</option>
-                                <option value="Football Pitch">Football Pitch</option>
-                                <option value="Kho Kho Arena">Kho Kho Arena</option>
+                                <option>Tennis Court</option>
+                                <option>Padel Court</option>
+                                <option>Cricket Nets</option>
+                                <option>Lawn Bowls</option>
+                                <option>Football Pitch</option>
+                                <option>Kho Kho Arena</option>
                             </optgroup>
                             <optgroup label="🍽 Dining">
-                                <option value="1920 Kitchen">The 1920 Kitchen</option>
-                                <option value="Players Bar">The Players Bar</option>
+                                <option>The 1920 Kitchen</option>
+                                <option>The Players Bar</option>
                             </optgroup>
                             <optgroup label="💆 Wellness">
-                                <option value="Retreat Spa">The Retreat Spa</option>
-                                <option value="Athletes Recovery">Athletes' Recovery</option>
-                                <option value="Park Gym">Park Gym Day Pass</option>
+                                <option>The Retreat Spa</option>
+                                <option>Athletes' Recovery</option>
+                                <option>Park Gym Day Pass</option>
                             </optgroup>
-                            <optgroup label="🎉 Events">
-                                <option value="Balcony Event">The Balcony (Private Event)</option>
-                                <option value="Membership Enquiry">Membership Enquiry</option>
+                            <optgroup label="🎉 Other">
+                                <option>Private Event (The Balcony)</option>
+                                <option>Membership Enquiry</option>
+                                <option>General Enquiry</option>
                             </optgroup>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="bdate">Preferred Date *</label>
-                        <input type="date" id="bdate" name="bdate" required>
+                    <div class="cform__group">
+                        <label for="cf-date">Preferred Date *</label>
+                        <input type="date" id="cf-date" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Additional Notes</label>
-                    <textarea id="message" name="message" rows="3" placeholder="Any special requirements or questions…"></textarea>
+                <div class="cform__group">
+                    <label for="cf-msg">Message / Special Requirements</label>
+                    <textarea id="cf-msg" rows="4" placeholder="Tell us anything we should know about your visit…"></textarea>
                 </div>
-                <button type="submit" class="btn btn--crimson btn--full" id="submitBtn">Confirm Reservation</button>
-
-                <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
-                    <span class="form-success__icon">✓</span>
+                <button type="submit" class="cta cta--gold cta--full" id="cformBtn">Send Enquiry</button>
+                <div class="cform__success" id="cformSuccess">
+                    <span class="cform__success-icon">✓</span>
                     <div>
-                        <strong>Reservation Received!</strong>
-                        <p>Thank you — a member of our team will confirm your booking within 24 hours.</p>
+                        <strong>Message Received!</strong>
+                        <p>Thank you — a member of our team will be in touch within 24 hours to confirm your booking.</p>
                     </div>
                 </div>
             </form>
         </div>
+
     </div>
 </section>
 
-<!-- ═══ FOOTER ════════════════════════════════ -->
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer class="footer">
     <div class="footer__top">
         <div class="wrap">
@@ -494,49 +497,27 @@
                         <span>Est. 1926 · Iver, Buckinghamshire</span>
                     </div>
                 </div>
-                <p class="footer__desc">A prestigious multi-sport and social club dedicated to athletic excellence, refined dining, restorative wellness and vibrant community life since 1926.</p>
+                <p class="footer__about">A prestigious multi-sport and social club dedicated to athletic excellence, refined dining, restorative wellness and vibrant community life since 1926.</p>
                 <div class="footer__socials">
-                    <a href="#" class="footer__social" aria-label="Facebook">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                    </a>
-                    <a href="#" class="footer__social" aria-label="Instagram">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                    </a>
-                    <a href="#" class="footer__social" aria-label="Twitter">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
+                    <a href="#" class="footer__soc" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                    <a href="#" class="footer__soc" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="#" class="footer__soc" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                 </div>
             </div>
-
-            <div class="footer__nav-grid">
-                <div class="footer__nav-col">
+            <div class="footer__links">
+                <div>
                     <h4>Facilities</h4>
-                    <ul>
-                        <li><a href="#facilities">Tennis Courts</a></li>
-                        <li><a href="#facilities">Padel Courts</a></li>
-                        <li><a href="#facilities">Cricket Nets</a></li>
-                        <li><a href="#facilities">Lawn Bowls</a></li>
-                        <li><a href="#facilities">Football Pitch</a></li>
-                    </ul>
+                    <ul><li><a href="#facilities">Tennis Courts</a></li><li><a href="#facilities">Padel Courts</a></li><li><a href="#facilities">Cricket Nets</a></li><li><a href="#facilities">Lawn Bowls</a></li><li><a href="#facilities">Football Pitch</a></li></ul>
                 </div>
-                <div class="footer__nav-col">
+                <div>
                     <h4>Dining &amp; Social</h4>
-                    <ul>
-                        <li><a href="#dining">The 1920 Kitchen</a></li>
-                        <li><a href="#dining">The Players Bar</a></li>
-                        <li><a href="#book">The Balcony Events</a></li>
-                        <li><a href="#book">Private Hire</a></li>
-                    </ul>
+                    <ul><li><a href="#dining">The 1920 Kitchen</a></li><li><a href="#dining">The Players Bar</a></li><li><a href="#contact">The Balcony Events</a></li><li><a href="#contact">Private Hire</a></li></ul>
                 </div>
-                <div class="footer__nav-col">
+                <div>
                     <h4>Wellness</h4>
-                    <ul>
-                        <li><a href="#wellness">The Retreat Spa</a></li>
-                        <li><a href="#wellness">Athletes' Recovery</a></li>
-                        <li><a href="#wellness">Park Gym</a></li>
-                    </ul>
+                    <ul><li><a href="#wellness">The Retreat Spa</a></li><li><a href="#wellness">Athletes' Recovery</a></li><li><a href="#wellness">Park Gym</a></li></ul>
                 </div>
-                <div class="footer__nav-col">
+                <div>
                     <h4>Opening Hours</h4>
                     <ul class="footer__hours">
                         <li><span>Sports Grounds</span><span>6am – 10pm</span></li>
@@ -550,127 +531,81 @@
         </div>
     </div>
     <div class="footer__bottom">
-        <div class="wrap footer__bottom-inner">
+        <div class="wrap footer__bottom-row">
             <p>© 2026 Richings Park Sports Club. All rights reserved.</p>
-            <nav class="footer__legal" aria-label="Legal links">
-                <a href="#">Privacy Policy</a>
-                <span aria-hidden="true">·</span>
-                <a href="#">Terms &amp; Conditions</a>
-                <span aria-hidden="true">·</span>
-                <a href="#">Safeguarding Policy</a>
-            </nav>
+            <nav><a href="#">Privacy Policy</a><span>·</span><a href="#">Terms &amp; Conditions</a><span>·</span><a href="#">Safeguarding</a></nav>
         </div>
     </div>
 </footer>
 
 <script>
-(function () {
-    'use strict';
+(function(){
+  'use strict';
 
-    /* ── Progress bar ── */
-    var progressBar = document.getElementById('progressBar');
-    function updateProgress() {
-        var scrolled = window.scrollY;
-        var total = document.body.scrollHeight - window.innerHeight;
-        progressBar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
-    }
+  /* progress bar */
+  var pb = document.getElementById('progressBar');
+  /* navbar */
+  var nav = document.getElementById('nav');
 
-    /* ── Navbar scroll ── */
-    var nav = document.getElementById('nav');
-    function updateNav() {
-        if (window.scrollY > 60) {
-            nav.classList.add('nav--scrolled');
-        } else {
-            nav.classList.remove('nav--scrolled');
-        }
-    }
+  window.addEventListener('scroll', function(){
+    var s = window.scrollY, h = document.body.scrollHeight - window.innerHeight;
+    pb.style.width = (h > 0 ? s/h*100 : 0)+'%';
+    nav.classList.toggle('nav--on', s > 60);
+  }, {passive:true});
 
-    window.addEventListener('scroll', function () {
-        updateProgress();
-        updateNav();
-    }, { passive: true });
-
-    /* ── Mobile burger ── */
-    var burger = document.getElementById('navBurger');
-    var navLinks = document.getElementById('navLinks');
-
-    burger.addEventListener('click', function () {
-        var isOpen = navLinks.classList.toggle('nav__links--open');
-        burger.classList.toggle('nav__burger--open', isOpen);
-        burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  /* burger */
+  var burger = document.getElementById('burger');
+  var menu   = document.getElementById('navMenu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('menu--open');
+    burger.classList.toggle('burger--open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('menu--open');
+      burger.classList.remove('burger--open');
     });
+  });
 
-    /* Close nav on link click */
-    navLinks.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-            navLinks.classList.remove('nav__links--open');
-            burger.classList.remove('nav__burger--open');
-            burger.setAttribute('aria-expanded', 'false');
-        });
+  /* min date */
+  var dt = document.getElementById('cf-date');
+  if(dt) dt.min = new Date().toISOString().split('T')[0];
+
+  /* form */
+  var form = document.getElementById('cform');
+  var succ = document.getElementById('cformSuccess');
+  var btn  = document.getElementById('cformBtn');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var ok = ['cf-fname','cf-email','cf-facility','cf-date'].every(function(id){
+        return document.getElementById(id).value.trim() !== '';
+      });
+      if(!ok){ alert('Please complete all required fields.'); return; }
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      setTimeout(function(){
+        succ.style.display = 'flex';
+        form.reset();
+        btn.disabled = false;
+        btn.textContent = 'Send Enquiry';
+        setTimeout(function(){ succ.style.display='none'; }, 8000);
+      }, 900);
     });
+  }
 
-    /* ── Set min date on booking form ── */
-    var dateInput = document.getElementById('bdate');
-    if (dateInput) {
-        dateInput.min = new Date().toISOString().split('T')[0];
-    }
-
-    /* ── Booking form submission ── */
-    var bookingForm = document.getElementById('bookingForm');
-    var formSuccess = document.getElementById('formSuccess');
-    var submitBtn = document.getElementById('submitBtn');
-
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            /* Basic validation */
-            var fname    = document.getElementById('fname').value.trim();
-            var email    = document.getElementById('email').value.trim();
-            var facility = document.getElementById('facility').value;
-            var bdate    = document.getElementById('bdate').value;
-            if (!fname || !email || !facility || !bdate) {
-                alert('Please fill in all required fields before submitting.');
-                return;
-            }
-            /* Show success */
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending…';
-            setTimeout(function () {
-                formSuccess.style.display = 'flex';
-                bookingForm.reset();
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Confirm Reservation';
-                setTimeout(function () {
-                    formSuccess.style.display = 'none';
-                }, 8000);
-            }, 800);
-        });
-    }
-
-    /* ── Scroll reveal ── */
-    var revealEls = document.querySelectorAll(
-        '.fac-card, .dining-card, .w-card, .mem-card, .testi-card, .about__grid, .pillar, .booking__detail'
-    );
-
-    if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        revealEls.forEach(function (el) {
-            el.classList.add('will-reveal');
-            observer.observe(el);
-        });
-    } else {
-        /* Fallback for older browsers */
-        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-    }
-
+  /* scroll reveal */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); }
+      });
+    },{threshold:0.1});
+    document.querySelectorAll('.fcard,.dcard,.wcard,.mcard,.tcard,.pillar,.cinfo__row,.about__layout').forEach(function(el){
+      el.classList.add('reveal'); io.observe(el);
+    });
+  }
 }());
 </script>
 </body>

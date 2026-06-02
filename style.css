@@ -277,13 +277,15 @@ input,select,textarea,button{font-family:inherit}
 /* ════════════ FOOTER ════════════ */
 .footer{}
 .footer__top{background:var(--Vd);padding:5.5rem 0 4.5rem}
-.footer__brand-row{display:grid;grid-template-columns:auto 1fr auto;gap:3rem;align-items:start;margin-bottom:4rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(255,253,245,.06)}
-.footer__brand{display:flex;align-items:center;gap:13px}
-.footer__logo{width:68px;height:68px;object-fit:contain;mix-blend-mode:lighten}
-.footer__brand strong{font-family:var(--fH);font-size:.9rem;font-weight:700;color:var(--I);display:block;letter-spacing:.07em;margin-bottom:.2rem}
-.footer__brand span{font-size:.62rem;color:var(--G);letter-spacing:.14em;display:block}
-.footer__about{font-size:.84rem;color:rgba(255,253,245,.38);line-height:1.8;max-width:360px}
-.footer__socials{display:flex;gap:.7rem;align-items:center}
+
+/* Large centred logo hero */
+.footer__logo-hero{text-align:center;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,253,245,.07)}
+.footer__logo-big{width:180px;height:180px;object-fit:contain;margin:0 auto 1.8rem;filter:drop-shadow(0 4px 24px rgba(0,0,0,.5))}
+.footer__logo-rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--G),transparent);margin:0 auto 1.4rem}
+.footer__club-name{font-family:var(--fH);font-size:1.3rem;font-weight:700;color:var(--I);letter-spacing:.22em;margin-bottom:.5rem}
+.footer__club-tagline{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--G);margin-bottom:1.2rem;opacity:.85}
+.footer__about{font-size:.84rem;color:rgba(255,253,245,.38);line-height:1.8;max-width:480px;margin:0 auto 1.8rem}
+.footer__socials{display:flex;gap:.7rem;align-items:center;justify-content:center}
 .footer__soc{width:38px;height:38px;border:1px solid rgba(211,185,115,.16);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(255,253,245,.32);transition:all .24s}
 .footer__soc:hover{background:var(--C);border-color:var(--C);color:var(--I)}
 .footer__links{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem}

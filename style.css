@@ -84,12 +84,12 @@ input,select,textarea,button{font-family:inherit}
 
 /* Brand */
 .nav__brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.nav__logo{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.3));transition:all .35s}
-.nav--on .nav__logo{width:46px;height:46px}
+.nav__logo{width:68px;height:68px;object-fit:contain;filter:drop-shadow(0 2px 10px rgba(0,0,0,.4));transition:all .35s}
+.nav--on .nav__logo{width:54px;height:54px}
 .nav__brand-words{display:flex;flex-direction:column;line-height:1.2}
-.nav__brand-main{font-family:var(--fH);font-size:.9rem;font-weight:700;letter-spacing:.15em;color:var(--I);transition:color .3s}
-.nav__brand-sub{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--G)}
-.nav--on .nav__brand-main{color:var(--V)}
+.nav__brand-main{font-family:var(--fH);font-size:1rem;font-weight:700;letter-spacing:.18em;color:var(--I);transition:color .3s;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.nav__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--G)}
+.nav--on .nav__brand-main{color:var(--V);text-shadow:none}
 
 /* Links */
 .nav__menu{display:flex;align-items:center;gap:.2rem}
@@ -279,13 +279,13 @@ input,select,textarea,button{font-family:inherit}
 .footer__top{background:var(--Vd);padding:5.5rem 0 4.5rem}
 
 /* Large centred logo hero */
-.footer__logo-hero{text-align:center;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,253,245,.07)}
-.footer__logo-big{width:180px;height:180px;object-fit:contain;margin:0 auto 1.8rem;filter:drop-shadow(0 6px 28px rgba(0,0,0,.55))}
-.footer__logo-rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--G),transparent);margin:0 auto 1.4rem}
-.footer__club-name{font-family:var(--fH);font-size:1.3rem;font-weight:700;color:var(--I);letter-spacing:.22em;margin-bottom:.5rem}
-.footer__club-tagline{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--G);margin-bottom:1.2rem;opacity:.85}
-.footer__about{font-size:.84rem;color:rgba(255,253,245,.38);line-height:1.8;max-width:480px;margin:0 auto 1.8rem}
-.footer__socials{display:flex;gap:.7rem;align-items:center;justify-content:center}
+.footer__logo-hero{text-align:center;margin-bottom:4.5rem;padding-bottom:4.5rem;border-bottom:1px solid rgba(211,185,115,.15)}
+.footer__logo-big{width:240px;height:240px;object-fit:contain;margin:0 auto 2rem;filter:drop-shadow(0 8px 32px rgba(0,0,0,.6)) drop-shadow(0 2px 8px rgba(211,185,115,.2))}
+.footer__logo-rule{width:160px;height:1px;background:linear-gradient(90deg,transparent,var(--G),transparent);margin:0 auto 1.6rem}
+.footer__club-name{font-family:var(--fH);font-size:1.5rem;font-weight:700;color:var(--I);letter-spacing:.25em;margin-bottom:.6rem;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.footer__club-tagline{font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--G);margin-bottom:1.4rem;opacity:.9}
+.footer__about{font-size:.9rem;color:rgba(255,253,245,.52);line-height:1.85;max-width:520px;margin:0 auto 2rem}
+.footer__socials{display:flex;gap:.8rem;align-items:center;justify-content:center}
 .footer__soc{width:38px;height:38px;border:1px solid rgba(211,185,115,.16);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(255,253,245,.32);transition:all .24s}
 .footer__soc:hover{background:var(--C);border-color:var(--C);color:var(--I)}
 .footer__links{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem}

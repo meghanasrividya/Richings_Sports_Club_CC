@@ -78,14 +78,14 @@ input,select,textarea,button{font-family:inherit}
 .reveal.in-view{opacity:1;transform:none}
 
 /* ════════════ NAVBAR ════════════ */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:88px;display:flex;align-items:center;padding:0 2.5rem;transition:all .35s var(--ease)}
-.nav--on{background:rgba(255,253,245,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--Im);box-shadow:0 2px 20px rgba(39,39,39,.09);height:76px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:120px;display:flex;align-items:center;padding:0 2.5rem;transition:all .35s var(--ease)}
+.nav--on{background:rgba(255,253,245,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--Im);box-shadow:0 2px 20px rgba(39,39,39,.09);height:90px}
 .nav__inner{width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 
 /* Brand */
 .nav__brand{display:flex;align-items:center;gap:14px;flex-shrink:0}
-.nav__logo{height:100px;width:auto;object-fit:contain;display:block;transition:height .35s var(--ease);image-rendering:-webkit-optimize-contrast}
-.nav--on .nav__logo{height:80px}
+.nav__logo{height:110px;width:auto;object-fit:contain;display:block;flex-shrink:0;transition:height .35s var(--ease)}
+.nav--on .nav__logo{height:76px}
 .nav__brand-words{display:flex;flex-direction:column;line-height:1.2}
 .nav__brand-main{font-family:var(--fH);font-size:1rem;font-weight:700;letter-spacing:.18em;color:var(--I);transition:color .3s;text-shadow:0 1px 6px rgba(0,0,0,.5)}
 .nav__brand-sub{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--G)}
@@ -280,7 +280,7 @@ input,select,textarea,button{font-family:inherit}
 
 /* Large centred logo hero */
 .footer__logo-hero{text-align:center;margin-bottom:4.5rem;padding-bottom:4.5rem;border-bottom:1px solid rgba(211,185,115,.15)}
-.footer__logo-big{width:360px;height:auto;object-fit:contain;margin:0 auto 2.2rem;display:block;image-rendering:-webkit-optimize-contrast;}
+.footer__logo-big{width:380px;height:auto;object-fit:contain;margin:0 auto 2.2rem;display:block;}
 .footer__logo-rule{width:160px;height:1px;background:linear-gradient(90deg,transparent,var(--G),transparent);margin:0 auto 1.6rem}
 .footer__club-name{font-family:var(--fH);font-size:1.5rem;font-weight:700;color:var(--I);letter-spacing:.25em;margin-bottom:.6rem;text-shadow:0 2px 12px rgba(0,0,0,.4)}
 .footer__club-tagline{font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--G);margin-bottom:1.4rem;opacity:.9}

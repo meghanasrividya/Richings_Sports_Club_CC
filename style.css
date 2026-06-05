@@ -69,8 +69,8 @@ input,select,textarea,button{font-family:inherit}
 .cta--gold:hover{background:var(--Gl);border-color:var(--Gl);transform:translateY(-2px);box-shadow:0 12px 36px rgba(211,185,115,.45)}
 .cta--outline{background:transparent;color:var(--C);border-color:var(--C)}
 .cta--outline:hover{background:var(--C);color:var(--I);transform:translateY(-2px)}
-.cta--ghost{background:transparent;color:var(--I);border-color:rgba(255,253,245,.45)}
-.cta--ghost:hover{background:rgba(255,253,245,.1);border-color:var(--I)}
+.cta--ghost{background:transparent;color:var(--I);border-color:rgba(255,253,245,.75);text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.cta--ghost:hover{background:rgba(255,253,245,.15);border-color:var(--I);color:#fff}
 .cta--full{width:100%;display:block}
 
 /* ── Reveal animations ────────────────────── */

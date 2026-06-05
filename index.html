@@ -110,7 +110,6 @@
 
 <!-- ═══════════ FACILITIES ═══════════ -->
 <section class="facilities" id="facilities">
-    <!-- Animated background -->
     <div class="fac-bg" aria-hidden="true">
         <div class="fac-bg__orb fac-bg__orb--1"></div>
         <div class="fac-bg__orb fac-bg__orb--2"></div>
@@ -121,10 +120,88 @@
             <p class="label label--gold">Active Facilities</p>
             <h2 class="h2 h2--light">World-Class <em>Sports Arenas</em></h2>
             <div class="divider divider--gold divider--center"></div>
-                <p class="fcard__body">A dedicated tournament-standard court with agility coaching clinics and full team hosting capability throughout the season.</p>
-                <ul class="fcard__list"><li>Professional surface</li><li>Agility coaching</li><li>Tournament hosting</li></ul>
-                <a href="book.html?facility=khokho" class="fcard__link" target="_blank">Book the Arena →</a>
+            <p class="prose prose--dim">Precision-engineered courts and fields for every discipline — from championship tennis and padel to lawn bowls, cricket and beyond.</p>
+        </div>
+        <div class="fac-grid">
+
+            <!-- Tennis -->
+            <article class="fac-card reveal" style="--delay:.05s">
+                <div class="fac-card__img-wrap"><img src="images/tennis.png" alt="Championship Tennis" class="fac-card__img" loading="lazy"><div class="fac-card__veil"></div></div>
+                <div class="fac-card__badge">Racket Sport</div>
+                <div class="fac-card__content">
+                    <div class="fac-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="20" cy="20" r="14"/><path d="M9 9l22 22M6 20a14 14 0 0 1 14-14M20 34a14 14 0 0 0 14-14M34 34l6 6"/></svg></div>
+                    <h3 class="fac-card__h">Championship Tennis</h3>
+                    <p class="fac-card__body">Four grass courts &amp; six premium acrylic courts with LTA-qualified coaching year-round.</p>
+                    <ul class="fac-card__feats"><li>10 courts · floodlit until 10pm</li><li>LTA coaches · equipment hire</li></ul>
+                    <a href="book.html?facility=tennis" class="fac-card__cta" target="_blank">Book a Court <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
             </article>
+
+            <!-- Padel (tall) -->
+            <article class="fac-card fac-card--tall reveal" style="--delay:.12s">
+                <div class="fac-card__img-wrap"><img src="images/padel.png" alt="Panoramic Padel" class="fac-card__img" loading="lazy"><div class="fac-card__veil"></div></div>
+                <div class="fac-card__badge">Racket Sport</div>
+                <div class="fac-card__content">
+                    <div class="fac-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="8" y="6" width="22" height="30" rx="11"/><path d="M30 18h8M30 24h8"/><circle cx="34" cy="38" r="4"/></svg></div>
+                    <h3 class="fac-card__h">Panoramic Padel</h3>
+                    <p class="fac-card__body">Three glass-walled courts with spectacular views — the world's fastest-growing sport at its finest.</p>
+                    <ul class="fac-card__feats"><li>3 panoramic glass courts</li><li>Racquet hire · beginner clinics</li></ul>
+                    <a href="book.html?facility=padel" class="fac-card__cta" target="_blank">Book a Court <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+
+            <!-- Cricket -->
+            <article class="fac-card reveal" style="--delay:.19s">
+                <div class="fac-card__img-wrap"><img src="images/cricket.png" alt="Cricket Nets" class="fac-card__img" loading="lazy"><div class="fac-card__veil"></div></div>
+                <div class="fac-card__badge">Heritage Sport</div>
+                <div class="fac-card__content">
+                    <div class="fac-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 38L32 8M32 8l4 4M10 38l4 4M16 12l16 16"/></svg></div>
+                    <h3 class="fac-card__h">Cricket Nets</h3>
+                    <p class="fac-card__body">Three high-performance lanes with automated bowling machines and ECB-qualified coaching.</p>
+                    <ul class="fac-card__feats"><li>3 private lanes · pro machines</li><li>ECB coaches · video analysis</li></ul>
+                    <a href="book.html?facility=cricket" class="fac-card__cta" target="_blank">Book a Lane <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+
+            <!-- Bowls -->
+            <article class="fac-card reveal" style="--delay:.26s">
+                <div class="fac-card__img-wrap"><img src="images/bowls.png" alt="Lawn Bowls" class="fac-card__img" loading="lazy"><div class="fac-card__veil"></div></div>
+                <div class="fac-card__badge">Lawn Sport</div>
+                <div class="fac-card__content">
+                    <div class="fac-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="24" cy="28" r="14"/><circle cx="24" cy="28" r="6"/><path d="M24 14V8M18 16l-4-4M30 16l4-4"/></svg></div>
+                    <h3 class="fac-card__h">Luxury Lawn Bowls</h3>
+                    <p class="fac-card__body">Six-rink championship bentgrass green surrounded by mature oaks and elegant heritage pavilions.</p>
+                    <ul class="fac-card__feats"><li>6 tournament rinks</li><li>Equipment hire · weekly leagues</li></ul>
+                    <a href="book.html?facility=bowls" class="fac-card__cta" target="_blank">Book a Rink <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+
+            <!-- Football (tall) -->
+            <article class="fac-card fac-card--tall reveal" style="--delay:.33s">
+                <div class="fac-card__img-wrap"><img src="images/football.png" alt="Football Pitch" class="fac-card__img" loading="lazy"><div class="fac-card__veil"></div></div>
+                <div class="fac-card__badge">Team Sport</div>
+                <div class="fac-card__content">
+                    <div class="fac-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="24" cy="24" r="18"/><path d="M24 6l5 7h8l-6 6 2 9-9-5-9 5 2-9-6-6h8z"/></svg></div>
+                    <h3 class="fac-card__h">Elite Football Pitch</h3>
+                    <p class="fac-card__body">State-of-the-art 3G FIFA-approved turf with full LED floodlighting for spectacular night matches.</p>
+                    <ul class="fac-card__feats"><li>5 / 7 / 11-a-side formats</li><li>Pro floodlights · changing rooms</li></ul>
+                    <a href="book.html?facility=football" class="fac-card__cta" target="_blank">Book the Pitch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+
+            <!-- Kho Kho -->
+            <article class="fac-card reveal" style="--delay:.40s">
+                <div class="fac-card__img-wrap"><img src="images/hero.png" alt="Kho Kho Arena" class="fac-card__img" loading="lazy"><div class="fac-card__veil"></div></div>
+                <div class="fac-card__badge">Traditional Sport</div>
+                <div class="fac-card__content">
+                    <div class="fac-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="24" cy="12" r="6"/><path d="M24 18v14M16 26l-8 10M32 26l8 10M18 32h12"/></svg></div>
+                    <h3 class="fac-card__h">Kho Kho Arena</h3>
+                    <p class="fac-card__body">Tournament-standard court with specialist agility coaching and full team hosting capability.</p>
+                    <ul class="fac-card__feats"><li>Professional surface</li><li>Agility coaching · tournaments</li></ul>
+                    <a href="book.html?facility=khokho" class="fac-card__cta" target="_blank">Book the Arena <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+            </article>
+
         </div>
     </div>
 </section>

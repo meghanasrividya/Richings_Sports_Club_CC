@@ -77,6 +77,16 @@ input,select,textarea,button{font-family:inherit}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
 .reveal.in-view{opacity:1;transform:none}
 
+/* Facility cards — always visible, CSS-only entrance */
+@keyframes facCardIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.fac-card{animation:facCardIn .6s cubic-bezier(.25,.8,.25,1) both}
+.fac-grid .fac-card:nth-child(1){animation-delay:.05s}
+.fac-grid .fac-card:nth-child(2){animation-delay:.12s}
+.fac-grid .fac-card:nth-child(3){animation-delay:.19s}
+.fac-grid .fac-card:nth-child(4){animation-delay:.26s}
+.fac-grid .fac-card:nth-child(5){animation-delay:.33s}
+.fac-grid .fac-card:nth-child(6){animation-delay:.40s}
+
 /* ════════════ NAVBAR ════════════ */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:120px;display:flex;align-items:center;padding:0 2.5rem;transition:all .35s var(--ease)}
 .nav--on{background:rgba(255,253,245,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--Im);box-shadow:0 2px 20px rgba(39,39,39,.09);height:90px}

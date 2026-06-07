@@ -289,88 +289,108 @@
 
 <!-- ═══════════ MEMBERSHIP ═══════════ -->
 <section class="membership" id="membership">
+    <!-- Animated background for membership -->
+    <div class="mem-bg" aria-hidden="true">
+        <div class="mem-bg__orb mem-bg__orb--1"></div>
+        <div class="mem-bg__orb mem-bg__orb--2"></div>
+    </div>
+    
     <div class="wrap">
-        <div class="sec-head sec-head--center">
+        <div class="sec-head sec-head--center" style="animation:memReveal .8s both">
             <p class="label label--gold">Join the Club</p>
-            <h2 class="h2">Membership &amp;<em> Subscriptions</em></h2>
+            <h2 class="h2 h2--light">Membership &amp;<em> Subscriptions</em></h2>
             <div class="divider divider--gold divider--center"></div>
-            <p class="prose">RPLTC Membership is not expensive and we provide balls free of charge. Floodlight tokens are available at reasonable rates too... So take a look at the costs below and then sign up!</p>
+            <p class="prose prose--dim">RPLTC Membership is not expensive and we provide balls free of charge. Floodlight tokens are available at reasonable rates too. Take a look at the costs below and then sign up!</p>
         </div>
 
-        <!-- Membership Information Panel -->
-        <div class="mem-info-panel" style="background: rgba(255,253,245,.03); border: 1px solid rgba(211,185,115,.2); padding: 2.5rem; border-radius: 4px; margin-bottom: 4rem; text-align: center;">
-            <h3 style="color: var(--G); margin-bottom: 1.2rem; letter-spacing: .15em; text-transform: uppercase; font-size: 1.1rem;">Now Open — Membership Fees Due 1st April 2026</h3>
-            
-            <p style="color: rgba(255,253,245,.75); line-height: 1.6; margin-bottom: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                If you are thinking about joining the club as a senior or junior member then please can you contact one of our coaches <strong>Tim (07515 4888555)</strong> or <strong>Nigel (07599 666509)</strong> to chat about the many opportunities for all levels of tennis playing abilities before submitting a membership form. The new fees will take your membership up to the end of March 2027.
-            </p>
-            
-            <p style="color: rgba(255,253,245,.75); line-height: 1.6; margin-bottom: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Existing members can continue to pre-book courts as now, with their subscriptions due on 1st April 2026. This fee will take their membership up to the end of March 2027.
-            </p>
-
-            <p style="color: rgba(255,253,245,.9); line-height: 1.6; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 600;">
-                As from March 2026 members will be now able to renew and pay for their membership online by clicking the renew membership below button.
-            </p>
-
-            <a href="#renew" class="cta cta--gold">Renew Membership Online</a>
+        <!-- Membership Information Panel (Glassmorphic) -->
+        <div class="mem-info-panel" style="animation:memReveal .8s both .1s">
+            <div class="mem-info-panel__glow"></div>
+            <div class="mem-info-panel__content">
+                <div class="mem-info-panel__header">
+                    <span class="mem-info-panel__badge">Now Open</span>
+                    <h3>Membership Fees Due 1st April 2026</h3>
+                </div>
+                <div class="mem-info-panel__body">
+                    <p>If you are thinking about joining the club as a senior or junior member then please can you contact one of our coaches <strong>Tim (07515 4888555)</strong> or <strong>Nigel (07599 666509)</strong> to chat about the many opportunities for all levels of tennis playing abilities before submitting a membership form. The new fees will take your membership up to the end of March 2027.</p>
+                    <p>Existing members can continue to pre-book courts as now, with their subscriptions due on 1st April 2026. This fee will take their membership up to the end of March 2027.</p>
+                    <p class="highlight-text">As from March 2026 members will be now able to renew and pay for their membership online by clicking the renew membership below button.</p>
+                </div>
+                <a href="#renew" class="cta cta--gold cta--glow">Renew Membership Online</a>
+            </div>
         </div>
 
-        <div class="sec-head sec-head--center">
-            <h3 class="h3" style="color: var(--I); margin-bottom: .5rem;">Subscriptions</h3>
+        <div class="sec-head sec-head--center" style="animation:memReveal .8s both .2s">
+            <h3 class="h3 h3--light">Subscriptions</h3>
             <p class="prose prose--dim" style="font-size: 1rem;">2026 – until End of March 2027</p>
         </div>
         
         <!-- Subscription Cards Grid -->
-        <div class="mem-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+        <div class="mem-grid">
             
-            <div class="mcard" style="padding: 1.5rem; text-align: center;">
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Full Member</h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£270</p>
+            <div class="sub-card" style="animation:memReveal .8s both .3s">
+                <div class="sub-card__content">
+                    <h4>Full Member</h4>
+                    <p class="price">£270</p>
+                </div>
             </div>
 
-            <div class="mcard" style="padding: 1.5rem; text-align: center;">
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Pensioner <span style="font-size: .8rem; font-weight: normal; color: rgba(255,253,245,.5);">(over 67)</span></h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£220</p>
+            <div class="sub-card" style="animation:memReveal .8s both .35s">
+                <div class="sub-card__content">
+                    <h4>Pensioner <span>(over 67)</span></h4>
+                    <p class="price">£220</p>
+                </div>
             </div>
 
-            <div class="mcard" style="padding: 1.5rem; text-align: center;">
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Married Couple</h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£475</p>
+            <div class="sub-card" style="animation:memReveal .8s both .4s">
+                <div class="sub-card__content">
+                    <h4>Married Couple</h4>
+                    <p class="price">£475</p>
+                </div>
             </div>
 
-            <div class="mcard mcard--featured" style="padding: 1.5rem; text-align: center; position: relative;">
-                <div class="mcard__ribbon" style="top: 10px; right: -30px;">Value</div>
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Family Membership</h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£635<span style="font-size: 1rem;">**</span></p>
+            <div class="sub-card sub-card--featured" style="animation:memReveal .8s both .45s">
+                <div class="sub-card__ribbon">Value</div>
+                <div class="sub-card__content">
+                    <h4>Family Membership</h4>
+                    <p class="price">£635<span>**</span></p>
+                </div>
             </div>
 
-            <div class="mcard" style="padding: 1.5rem; text-align: center;">
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Under 25 Full</h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£145</p>
+            <div class="sub-card" style="animation:memReveal .8s both .5s">
+                <div class="sub-card__content">
+                    <h4>Under 25 Full</h4>
+                    <p class="price">£145</p>
+                </div>
             </div>
 
-            <div class="mcard" style="padding: 1.5rem; text-align: center;">
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Full Time Student</h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£92</p>
+            <div class="sub-card" style="animation:memReveal .8s both .55s">
+                <div class="sub-card__content">
+                    <h4>Full Time Student</h4>
+                    <p class="price">£92</p>
+                </div>
             </div>
 
-            <div class="mcard" style="padding: 1.5rem; text-align: center;">
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Assoc. Parent</h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£50</p>
+            <div class="sub-card" style="animation:memReveal .8s both .6s">
+                <div class="sub-card__content">
+                    <h4>Assoc. Parent</h4>
+                    <p class="price">£50</p>
+                </div>
             </div>
 
-            <div class="mcard" style="padding: 1.5rem; text-align: center;">
-                <h4 style="color: var(--I); font-family: var(--fH); font-size: 1.1rem; margin-bottom: .5rem;">Junior Full RPLTC</h4>
-                <p style="color: var(--G); font-size: 1.6rem; font-weight: 700;">£92</p>
+            <div class="sub-card" style="animation:memReveal .8s both .65s">
+                <div class="sub-card__content">
+                    <h4>Junior Full RPLTC</h4>
+                    <p class="price">£92</p>
+                </div>
             </div>
 
         </div>
         
         <!-- Small Print Notes -->
-        <div style="text-align: center; margin-top: 3rem; color: rgba(255,253,245,.5); font-size: .85rem; line-height: 1.6;">
-            <p style="margin-bottom: .5rem; font-style: italic;">(NB separate membership form for Juniors)</p>
-            <p>**Family Membership includes adults and two children <br> <span style="font-size: .8rem; opacity: .8;">(3rd subsequent child 50% discount)</span>.</p>
+        <div class="mem-notes" style="animation:memReveal .8s both .7s">
+            <p><i>(NB separate membership form for Juniors)</i></p>
+            <p>**Family Membership includes adults and two children <span>(3rd subsequent child 50% discount)</span>.</p>
         </div>
 
     </div>

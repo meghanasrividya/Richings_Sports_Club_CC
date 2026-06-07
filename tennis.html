@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richings Park Lawn Tennis Club (RPLTC) | Membership</title>
+    <meta name="description" content="Richings Park Lawn Tennis Club (RPLTC) Membership & Subscriptions. Join our thriving tennis community today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=16">
+    <style>
+        .tennis-hero {
+            padding: 12rem 0 6rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #050101, #0d0d0d);
+            position: relative;
+        }
+        .tennis-hero h1 {
+            color: var(--I);
+            font-family: var(--fH);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .tennis-hero p {
+            color: rgba(255,253,245,.6);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<header class="nav" id="nav">
+    <div class="nav__inner">
+        <a href="index.html" class="nav__brand">
+            <img src="images/logo.png" alt="Richings Park Sports Club" class="nav__logo">
+            <div class="nav__brand-words">
+                <span class="nav__brand-main">RICHINGS PARK</span>
+                <span class="nav__brand-sub">Sports &amp; Social Club · Est. 1920</span>
+            </div>
+        </a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <nav class="nav__menu" id="navMenu">
+            <a href="index.html#about"       class="nav__item">About</a>
+            <a href="index.html#facilities"  class="nav__item">Facilities</a>
+            <a href="index.html#dining"      class="nav__item">Dining</a>
+            <a href="index.html#wellness"    class="nav__item">Wellness</a>
+            <a href="index.html#membership"  class="nav__item">Membership</a>
+            <a href="index.html#contact"     class="nav__book">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="tennis-hero">
+        <p class="label label--gold">RPLTC</p>
+        <h1>Richings Park Lawn Tennis Club</h1>
+        <p>Join our thriving tennis community. World-class grass courts, dedicated coaching, and competitive play for all levels.</p>
+    </section>
+
+    <!-- ═══════════ MEMBERSHIP ═══════════ -->
+    <section class="membership" id="membership">
+        <!-- Animated background for membership -->
+        <div class="mem-bg" aria-hidden="true">
+            <div class="mem-bg__orb mem-bg__orb--1"></div>
+            <div class="mem-bg__orb mem-bg__orb--2"></div>
+            <div class="mem-bg__orb mem-bg__orb--3"></div>
+        </div>
+        
+        <div class="wrap">
+            <div class="sec-head sec-head--center" style="animation:memReveal .8s both">
+                <p class="label label--gold">Join RPLTC</p>
+                <h2 class="h2 h2--light">Tennis <em>Subscriptions</em></h2>
+                <div class="divider divider--gold divider--center"></div>
+                <p class="prose prose--dim">RPLTC Membership is not expensive and we provide balls free of charge. Floodlight tokens are available at reasonable rates too. Take a look at the costs below and then sign up!</p>
+            </div>
+
+            <!-- Membership Information Panel (Glassmorphic) -->
+            <div class="mem-info-panel" style="animation:memReveal .8s both .1s">
+                <div class="mem-info-panel__glow"></div>
+                <div class="mem-info-panel__content">
+                    <div class="mem-info-panel__header">
+                        <span class="mem-info-panel__badge">Now Open</span>
+                        <h3>Membership Fees Due 1st April 2026</h3>
+                    </div>
+                    <div class="mem-info-panel__body">
+                        <p>If you are thinking about joining the club as a senior or junior member then please can you contact one of our coaches <strong>Tim (07515 4888555)</strong> or <strong>Nigel (07599 666509)</strong> to chat about the many opportunities for all levels of tennis playing abilities before submitting a membership form. The new fees will take your membership up to the end of March 2027.</p>
+                        <p>Existing members can continue to pre-book courts as now, with their subscriptions due on 1st April 2026. This fee will take their membership up to the end of March 2027.</p>
+                        <p class="highlight-text">As from March 2026 members will be now able to renew and pay for their membership online by clicking the renew membership below button.</p>
+                    </div>
+                    <a href="#renew" class="cta cta--gold cta--glow">Renew Membership Online</a>
+                </div>
+            </div>
+
+            <div class="sec-head sec-head--center" style="animation:memReveal .8s both .2s">
+                <h3 class="h3 h3--light">Subscriptions</h3>
+                <p class="prose prose--dim" style="font-size: 1rem;">2026 – until End of March 2027</p>
+            </div>
+            
+            <!-- Subscription Cards Grid -->
+            <div class="mem-grid">
+                
+                <div class="sub-card" style="animation:memReveal .8s both .3s">
+                    <div class="sub-card__content">
+                        <h4>Full Member</h4>
+                        <p class="price">£270</p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .35s">
+                    <div class="sub-card__content">
+                        <h4>Pensioner <span>(over 67)</span></h4>
+                        <p class="price">£220</p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .4s">
+                    <div class="sub-card__content">
+                        <h4>Married Couple</h4>
+                        <p class="price">£475</p>
+                    </div>
+                </div>
+
+                <div class="sub-card sub-card--featured" style="animation:memReveal .8s both .45s">
+                    <div class="sub-card__ribbon">Value</div>
+                    <div class="sub-card__content">
+                        <h4>Family Membership</h4>
+                        <p class="price">£635<span>**</span></p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .5s">
+                    <div class="sub-card__content">
+                        <h4>Under 25 Full</h4>
+                        <p class="price">£145</p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .55s">
+                    <div class="sub-card__content">
+                        <h4>Full Time Student</h4>
+                        <p class="price">£92</p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .6s">
+                    <div class="sub-card__content">
+                        <h4>Assoc. Parent</h4>
+                        <p class="price">£50</p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .65s">
+                    <div class="sub-card__content">
+                        <h4>Junior Full RPLTC</h4>
+                        <p class="price">£92</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Small Print Notes -->
+            <div class="mem-notes" style="animation:memReveal .8s both .7s">
+                <p><i>(NB separate membership form for Juniors)</i></p>
+                <p>**Family Membership includes adults and two children <span>(3rd subsequent child 50% discount)</span>.</p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+    <div class="footer__top">
+        <div class="wrap">
+            <div class="footer__logo-hero">
+                <img src="images/logo.png" alt="Richings Park Sports Club Official Crest" class="footer__logo-big">
+                <div class="footer__logo-rule" aria-hidden="true"></div>
+                <h3 class="footer__club-name">RICHINGS PARK SPORTS CLUB</h3>
+                <p class="footer__club-tagline">Est. 1920 · Wellesley Avenue, Iver, Buckinghamshire</p>
+                <p class="footer__about">A prestigious multi-sport and social club dedicated to athletic excellence, refined dining, restorative wellness and vibrant community life since 1920.</p>
+                <div class="footer__socials">
+                    <a href="#" class="footer__soc" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                    <a href="#" class="footer__soc" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="#" class="footer__soc" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <div>
+                    <h4>Facilities</h4>
+                    <ul><li><a href="index.html#facilities">Tennis Courts</a></li><li><a href="index.html#facilities">Padel Courts</a></li><li><a href="index.html#facilities">Cricket Nets</a></li><li><a href="index.html#facilities">Lawn Bowls</a></li><li><a href="index.html#facilities">Football Pitch</a></li></ul>
+                </div>
+                <div>
+                    <h4>Dining &amp; Social</h4>
+                    <ul><li><a href="index.html#dining">The 1920 Kitchen</a></li><li><a href="index.html#dining">The Players Bar</a></li><li><a href="index.html#contact">The Balcony Events</a></li><li><a href="index.html#contact">Private Hire</a></li></ul>
+                </div>
+                <div>
+                    <h4>Wellness</h4>
+                    <ul><li><a href="index.html#wellness">The Retreat Spa</a></li><li><a href="index.html#wellness">Athletes' Recovery</a></li><li><a href="index.html#wellness">Park Gym</a></li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="wrap footer__bottom-row">
+            <p>© 2026 Richings Park Sports Club. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    var s = window.scrollY;
+    nav.classList.toggle('nav--on', s > 20);
+  }, {passive:true});
+
+  var burger = document.getElementById('burger');
+  var menu   = document.getElementById('navMenu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('menu--open');
+    burger.classList.toggle('burger--open', open);
+  });
+}());
+</script>
+</body>
+</html>

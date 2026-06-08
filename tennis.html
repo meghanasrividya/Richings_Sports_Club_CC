@@ -10,24 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=16">
     <style>
-        .tennis-hero {
-            padding: 12rem 0 6rem;
-            text-align: center;
-            background: linear-gradient(to bottom, #050101, #0d0d0d);
-            position: relative;
-        }
-        .tennis-hero h1 {
-            color: var(--I);
-            font-family: var(--fH);
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .tennis-hero p {
-            color: rgba(255,253,245,.6);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        /* Small override just for tennis page active state if needed */
+        .nav__menu .nav__item--active { color: var(--G); }
     </style>
 </head>
 <body>
@@ -46,8 +30,7 @@
         <nav class="nav__menu" id="navMenu">
             <a href="index.html#about"       class="nav__item">About</a>
             <a href="index.html#facilities"  class="nav__item">Facilities</a>
-            <a href="index.html#dining"      class="nav__item">Dining</a>
-            <a href="index.html#wellness"    class="nav__item">Wellness</a>
+            <a href="tennis.html"            class="nav__item nav__item--active">Tennis Club</a>
             <a href="index.html#membership"  class="nav__item">Membership</a>
             <a href="index.html#contact"     class="nav__book">Contact Us</a>
         </nav>
@@ -56,9 +39,35 @@
 
 <main>
     <section class="tennis-hero">
-        <p class="label label--gold">RPLTC</p>
-        <h1>Richings Park Lawn Tennis Club</h1>
-        <p>Join our thriving tennis community. World-class grass courts, dedicated coaching, and competitive play for all levels.</p>
+        <div class="tennis-hero__bg">
+            <img src="images/tennis-hero.png" alt="Championship Grass Court at RPLTC">
+            <div class="tennis-hero__veil"></div>
+        </div>
+        <div class="tennis-hero__content">
+            <span class="tennis-hero__badge">RPLTC</span>
+            <h1>Richings Park <em>Lawn Tennis Club</em></h1>
+            <p>Experience the prestige of one of Buckinghamshire's finest tennis communities. World-class grass courts, elite LTA-qualified coaching, and competitive play for all levels since 1920.</p>
+        </div>
+    </section>
+
+    <section class="tennis-features">
+        <div class="tf-grid">
+            <div class="tf-card" style="animation-delay:0s">
+                <div class="tf-icon">🎾</div>
+                <h3>10 Premier Courts</h3>
+                <p>Four pristine natural grass courts for summer play, plus six floodlit all-weather acrylic courts open until 10pm year-round.</p>
+            </div>
+            <div class="tf-card" style="animation-delay:0.1s">
+                <div class="tf-icon">🏆</div>
+                <h3>LTA Pro Coaching</h3>
+                <p>Expert tuition led by our head coaches Tim & Nigel. From junior academies to adult clinics and elite performance training.</p>
+            </div>
+            <div class="tf-card" style="animation-delay:0.2s">
+                <div class="tf-icon">🤝</div>
+                <h3>Vibrant Community</h3>
+                <p>Weekly social mix-ins, seasonal club tournaments, competitive leagues, and a thriving clubhouse atmosphere.</p>
+            </div>
+        </div>
     </section>
 
     <!-- ═══════════ MEMBERSHIP ═══════════ -->

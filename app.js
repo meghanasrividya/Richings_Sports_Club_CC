@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Health
         'The Retreat (Wellness Centre)': { baseRate: 60, requireSlot: true, costLabel: 'Holistic Spa Session (1 Hr)' },
         'The Recovery (Athlete Area)': { baseRate: 45, requireSlot: true, costLabel: 'Metabolic Cryo-Recovery Session' },
-        'Park Gym (Full Access)': { baseRate: 20, requireSlot: false, costLabel: 'Elite Facility Day Pass' },
+        'ActiveSpace (Register Interest)': { baseRate: 0, requireSlot: false, costLabel: 'ActiveSpace \u2014 Register Interest (opening Sept 2026)' }, // pricing TBC pre-launch
         // Sports
         'Tennis Court': { baseRate: 15, requireSlot: true, costLabel: 'Floodlit Tennis Court (1 Hr)' },
         'Football Pitch': { baseRate: 45, requireSlot: true, costLabel: 'Tournament 3G Football Arena (1 Hr)' },

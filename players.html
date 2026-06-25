@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Players — Sports Bar &amp; Café in Iver | Richings Park Sports Club</title>
+<meta name="description" content="The Players is a sports bar and café in Iver — live sport on screen, indoor and outdoor seating, fresh coffee, drinks and light bites. Where sport, food and community meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=16">
+<style>
+/* ════ THE PLAYERS — brand-scoped tokens (green / gold / cream) ════ */
+:root{
+  --pl-green:#28341B; --pl-green-deep:#141a0d; --pl-ink:#1b2113;
+  --pl-gold:#c9a84c; --pl-gold-soft:#e3ce92; --pl-cream:#f4efe3; --pl-sage:#7c875f;
+}
+.pl *{box-sizing:border-box}
+.pl{font-family:'Open Sans',sans-serif;color:var(--pl-ink);overflow-x:hidden}
+
+/* signature: the "skewer" — a gold line through a tennis-ball dot, echoing the logo */
+.pl-skewer{display:flex;align-items:center;justify-content:center;gap:.55rem;margin:1.4rem 0}
+.pl-skewer span{height:1px;width:46px;background:linear-gradient(90deg,transparent,var(--pl-gold))}
+.pl-skewer span+span{background:linear-gradient(90deg,var(--pl-gold),transparent)}
+.pl-skewer i{width:9px;height:9px;border-radius:50%;background:var(--pl-gold-soft);box-shadow:0 0 0 3px rgba(201,168,76,.18)}
+.pl-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--pl-gold)}
+.pl-wrap{max-width:1180px;margin:0 auto;padding:0 1.6rem}
+
+/* reveal */
+.pl-rise{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.pl-rise.in{opacity:1;transform:none}
+
+/* ════ HERO ════ */
+.pl-hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:radial-gradient(circle at 50% 32%,#34431f,var(--pl-green) 42%,var(--pl-green-deep) 100%)}
+.pl-hero::after{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background:radial-gradient(circle at 50% 30%,transparent 60%,rgba(0,0,0,.45))}
+.pl-hero__inner{position:relative;z-index:2;padding:8rem 1.5rem 5rem;max-width:760px}
+.pl-plaque{display:inline-block;background:#fff;border-radius:10px;padding:1.5rem;margin-bottom:2.2rem;
+  box-shadow:0 0 0 1px rgba(201,168,76,.6),0 0 60px rgba(201,168,76,.22),0 30px 60px rgba(0,0,0,.4);
+  animation:plGlow 5s ease-in-out infinite alternate}
+@keyframes plGlow{from{box-shadow:0 0 0 1px rgba(201,168,76,.5),0 0 40px rgba(201,168,76,.16),0 30px 60px rgba(0,0,0,.4)}
+  to{box-shadow:0 0 0 1px rgba(201,168,76,.75),0 0 80px rgba(201,168,76,.30),0 30px 60px rgba(0,0,0,.45)}}
+.pl-plaque img{display:block;width:230px;height:230px;object-fit:contain}
+.pl-hero h1{font-family:'Libre Baskerville',serif;color:var(--pl-cream);font-weight:700;
+  font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 1.4rem}
+.pl-hero h1 em{color:var(--pl-gold-soft);font-style:italic}
+.pl-hero p{color:rgba(244,239,227,.82);font-size:1.06rem;line-height:1.75;max-width:560px;margin:0 auto 2.4rem}
+.pl-cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.pl-btn{display:inline-block;padding:.95rem 2rem;border-radius:3px;font-size:.82rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:all .3s ease;cursor:pointer}
+.pl-btn--gold{background:var(--pl-gold);color:var(--pl-green-deep)}
+.pl-btn--gold:hover{background:var(--pl-gold-soft);transform:translateY(-2px)}
+.pl-btn--ghost{border:1px solid rgba(244,239,227,.45);color:var(--pl-cream)}
+.pl-btn--ghost:hover{border-color:var(--pl-gold);color:var(--pl-gold-soft)}
+.pl-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;color:rgba(244,239,227,.5);
+  font-size:.66rem;letter-spacing:.3em;text-transform:uppercase}
+
+/* ════ ATMOSPHERE STRIP ════ */
+.pl-strip{position:relative;height:62vh;min-height:420px;background:#000 center/cover no-repeat;
+  background-image:url('images/players-dining-neon.jpg')}
+.pl-strip::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,26,13,.25),rgba(20,26,13,.55))}
+.pl-strip__cap{position:absolute;left:0;right:0;bottom:2rem;z-index:2;text-align:center;color:rgba(244,239,227,.85);
+  font-size:.74rem;letter-spacing:.28em;text-transform:uppercase}
+
+/* ════ ABOUT (cream, editorial split) ════ */
+.pl-about{background:var(--pl-cream);padding:6.5rem 0}
+.pl-split{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+.pl-split__media img{width:100%;border-radius:8px;box-shadow:0 30px 60px rgba(20,26,13,.18);display:block}
+.pl-h2{font-family:'Libre Baskerville',serif;font-weight:700;color:var(--pl-green);
+  font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.14;margin:.7rem 0 0}
+.pl-h2 em{color:var(--pl-gold);font-style:italic}
+.pl-body{color:#4a4d3e;font-size:1.02rem;line-height:1.85;margin:1.4rem 0 0}
+.pl-body+.pl-body{margin-top:1rem}
+
+/* ════ EVERY PLAYER (green, tags) ════ */
+.pl-welcome{background:var(--pl-green);padding:6rem 0;text-align:center;position:relative}
+.pl-welcome .pl-eyebrow{color:var(--pl-gold-soft)}
+.pl-welcome .pl-h2{color:var(--pl-cream)}
+.pl-welcome p.pl-lead{color:rgba(244,239,227,.78);max-width:620px;margin:1.4rem auto 0;font-size:1.02rem;line-height:1.8}
+.pl-tags{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:2.6rem}
+.pl-tag{border:1px solid rgba(201,168,76,.4);color:var(--pl-gold-soft);padding:.6rem 1.25rem;border-radius:40px;
+  font-size:.85rem;letter-spacing:.02em;transition:all .3s ease}
+.pl-tag:hover{background:rgba(201,168,76,.12);border-color:var(--pl-gold)}
+
+/* ════ WATCH LIVE SPORT (dark feature) ════ */
+.pl-watch{background:var(--pl-green-deep);padding:0;display:grid;grid-template-columns:1fr 1fr}
+.pl-watch__media{background:center/cover no-repeat;background-image:url('images/players-bar-tvs.jpg');min-height:480px}
+.pl-watch__text{padding:5.5rem 4rem;display:flex;flex-direction:column;justify-content:center}
+.pl-watch__text .pl-h2{color:var(--pl-cream)}
+.pl-watch__text .pl-body{color:rgba(244,239,227,.74)}
+.pl-chiplist{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
+.pl-chiplist span{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--pl-gold-soft);
+  border-bottom:1px solid rgba(201,168,76,.35);padding-bottom:.2rem}
+
+/* ════ MENU ════ */
+.pl-menu{background:var(--pl-cream);padding:6.5rem 0}
+.pl-menu__head{text-align:center;margin-bottom:3.2rem}
+.pl-menu__mark{width:54px;height:54px;border-radius:50%;object-fit:cover;margin:0 auto 1rem;display:block;
+  box-shadow:0 0 0 2px var(--pl-gold)}
+.pl-menu__grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem 4rem;max-width:980px;margin:0 auto}
+.pl-cat{margin-bottom:2.4rem}
+.pl-cat__h{font-family:'Libre Baskerville',serif;font-size:1.05rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--pl-green);margin:0 0 .3rem}
+.pl-cat__rule{height:1px;background:linear-gradient(90deg,var(--pl-gold),transparent);margin:0 0 1.1rem}
+.pl-cat__note{font-size:.78rem;color:var(--pl-sage);font-style:italic;margin:-.6rem 0 1rem}
+.pl-item{margin-bottom:1rem}
+.pl-item__top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.pl-item__name{font-weight:700;color:var(--pl-ink);font-size:.96rem;letter-spacing:.02em}
+.pl-item__dots{flex:1;border-bottom:1px dotted rgba(124,135,95,.5);transform:translateY(-3px)}
+.pl-item__price{font-family:'Libre Baskerville',serif;color:var(--pl-gold);font-size:.96rem}
+.pl-item__desc{font-size:.84rem;color:#6b6d5c;line-height:1.5;margin:.2rem 0 0;max-width:90%}
+.pl-item--sub{display:flex;justify-content:space-between;font-size:.82rem;color:var(--pl-sage);margin:.3rem 0 0}
+.pl-ribbon{margin-top:3rem;background:var(--pl-green);color:var(--pl-gold-soft);text-align:center;
+  padding:1rem;border-radius:4px;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;max-width:980px;margin-left:auto;margin-right:auto}
+
+/* ════ WHY VISIT (cards) ════ */
+.pl-why{background:#fff;padding:6.5rem 0;text-align:center}
+.pl-why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem;text-align:left}
+.pl-card{background:var(--pl-cream);border:1px solid rgba(124,135,95,.16);border-radius:8px;padding:2.3rem 2rem;transition:all .35s ease}
+.pl-card:hover{transform:translateY(-6px);box-shadow:0 24px 44px rgba(20,26,13,.12)}
+.pl-card h3{font-family:'Libre Baskerville',serif;color:var(--pl-green);font-size:1.3rem;margin:0 0 .7rem}
+.pl-card p{color:#5b5d4d;font-size:.93rem;line-height:1.65;margin:0}
+.pl-card__k{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pl-gold);display:block;margin-bottom:.8rem}
+
+/* ════ GALLERY ════ */
+.pl-gallery{background:var(--pl-green-deep);padding:6rem 0}
+.pl-gallery .pl-eyebrow{color:var(--pl-gold-soft)}
+.pl-gallery .pl-h2{color:var(--pl-cream);text-align:center}
+.pl-gallery__head{text-align:center;margin-bottom:3rem}
+.pl-ggrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:1rem}
+.pl-gfig{position:relative;margin:0;overflow:hidden;border-radius:7px}
+.pl-gfig img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;filter:saturate(1.02)}
+.pl-gfig:hover img{transform:scale(1.07)}
+.pl-gfig figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1rem .8rem;color:var(--pl-cream);
+  font-size:.78rem;font-weight:600;letter-spacing:.02em;opacity:0;transform:translateY(8px);transition:all .35s ease;
+  background:linear-gradient(180deg,transparent,rgba(10,14,6,.85))}
+.pl-gfig:hover figcaption{opacity:1;transform:none}
+.pl-gfig--w2{grid-column:span 2} .pl-gfig--h2{grid-row:span 2}
+
+/* ════ CTA BAND ════ */
+.pl-band{background:radial-gradient(circle at 50% 0,#34431f,var(--pl-green-deep));padding:6rem 1.5rem;text-align:center}
+.pl-band h2{font-family:'Libre Baskerville',serif;color:var(--pl-cream);font-style:italic;
+  font-size:clamp(1.8rem,4vw,2.9rem);line-height:1.2;margin:0 0 .6rem}
+.pl-band p{color:rgba(244,239,227,.7);margin:0 0 2rem;font-size:1rem}
+
+@media(max-width:860px){
+  .pl-split,.pl-watch,.pl-menu__grid,.pl-why__grid{grid-template-columns:1fr}
+  .pl-watch__media{min-height:300px}
+  .pl-watch__text{padding:3.5rem 1.6rem}
+  .pl-ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+  .pl-gfig--w2,.pl-gfig--h2{grid-column:span 2;grid-row:span 1}
+  .pl-gfig figcaption{opacity:1;transform:none}
+}
+@media(prefers-reduced-motion:reduce){.pl-rise{transition:none;opacity:1;transform:none}.pl-plaque{animation:none}}
+</style>
+</head>
+<body class="pl">
+
+<!-- ════ NAV ════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">
+      <img src="images/logo.png" alt="Richings Park Sports Club" class="nav__logo">
+      <div class="nav__brand-words">
+        <span class="nav__brand-main">RICHINGS PARK</span>
+        <span class="nav__brand-sub">Sports &amp; Social Club · Est. 1920</span>
+      </div>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="index.html#about"      class="nav__item">About</a>
+      <a href="index.html#facilities" class="nav__item">Facilities</a>
+      <a href="tennis.html"           class="nav__item">Tennis Club</a>
+      <a href="activespace.html"      class="nav__item">ActiveSpace</a>
+      <a href="players.html"          class="nav__item nav__item--active">The Players</a>
+      <a href="index.html#contact"    class="nav__book">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ════ HERO ════ -->
+  <section class="pl-hero">
+    <div class="pl-hero__inner">
+      <div class="pl-plaque"><img src="images/players-logo.jpg" alt="The Players — Sports Bar & Café logo"></div>
+      <p class="pl-eyebrow">Sports Bar &amp; Café · Iver</p>
+      <div class="pl-skewer"><span></span><i></i><span></span></div>
+      <h1>Where sport, food &amp; <em>community</em> meet</h1>
+      <p>A welcoming sports bar and café in Iver for players, teams, families and locals — live sport on screen, indoor and outdoor seating, fresh coffee, drinks and light bites.</p>
+      <div class="pl-cta-row">
+        <a href="#menu" class="pl-btn pl-btn--gold">View the menu</a>
+        <a href="index.html#contact" class="pl-btn pl-btn--ghost">Plan your visit</a>
+      </div>
+    </div>
+    <div class="pl-scroll">Scroll</div>
+  </section>
+
+  <!-- ════ ATMOSPHERE STRIP ════ -->
+  <section class="pl-strip">
+    <p class="pl-strip__cap">Come for the game · Stay for The Players</p>
+  </section>
+
+  <!-- ════ ABOUT ════ -->
+  <section class="pl-about">
+    <div class="pl-wrap">
+      <div class="pl-split">
+        <div class="pl-rise">
+          <p class="pl-eyebrow">About</p>
+          <h2 class="pl-h2">A place to <em>gather</em></h2>
+          <p class="pl-body">The Players is a lively, welcoming sports bar and café created for the people who play, support and love sport. Whether you're coming off the tennis court, finishing a padel match, meeting your football team or simply popping in for coffee, this is your place to gather.</p>
+          <p class="pl-body">With live sports channels, comfortable indoor seating, an outdoor terrace, quality drinks and a relaxed café menu, The Players brings sport, food and community together under one roof.</p>
+        </div>
+        <div class="pl-split__media pl-rise"><img src="images/players-lounge.jpg" alt="Lounge seating beneath the framed Players logo with a live cricket view"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ EVERY PLAYER ════ -->
+  <section class="pl-welcome">
+    <div class="pl-wrap pl-rise">
+      <p class="pl-eyebrow">A place for every player</p>
+      <h2 class="pl-h2">Everyone is <em>welcome</em></h2>
+      <p class="pl-lead">From club members and local teams to families, supporters and residents of Iver — whether you're here to compete, train, watch, eat, drink or unwind, you'll always find a warm welcome.</p>
+      <div class="pl-tags">
+        <span class="pl-tag">Tennis</span>
+        <span class="pl-tag">Padel</span>
+        <span class="pl-tag">Football</span>
+        <span class="pl-tag">Lawn bowls</span>
+        <span class="pl-tag">Kho kho</span>
+        <span class="pl-tag">Pickleball</span>
+        <span class="pl-tag">Families &amp; children</span>
+        <span class="pl-tag">Local residents</span>
+        <span class="pl-tag">Sports fans &amp; social groups</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ WATCH LIVE SPORT ════ -->
+  <section class="pl-watch">
+    <div class="pl-watch__media" role="img" aria-label="The bar with live sport on multiple screens"></div>
+    <div class="pl-watch__text pl-rise">
+      <p class="pl-eyebrow">Watch live sport</p>
+      <h2 class="pl-h2">The biggest moments, <em>live</em></h2>
+      <p class="pl-body">From Premier League football and tennis tournaments to cricket, rugby, boxing, Formula 1 and major international events — our sports bar is the perfect place to watch the action with friends, teammates and family, over great food and drinks.</p>
+      <div class="pl-chiplist">
+        <span>Football</span><span>Tennis</span><span>Cricket</span><span>Rugby</span><span>Boxing</span><span>Formula 1</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ MENU ════ -->
+  <section class="pl-menu" id="menu">
+    <div class="pl-wrap">
+      <div class="pl-menu__head pl-rise">
+        <img src="images/players-logo.jpg" alt="" class="pl-menu__mark">
+        <p class="pl-eyebrow">Bar &amp; Café</p>
+        <h2 class="pl-h2">The <em>menu</em></h2>
+        <div class="pl-skewer"><span></span><i></i><span></span></div>
+      </div>
+      <div class="pl-menu__grid pl-rise">
+        <div>
+          <div class="pl-cat">
+            <h3 class="pl-cat__h">Starters</h3><div class="pl-cat__rule"></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Loaded Fries</span><span class="pl-item__dots"></span><span class="pl-item__price">£8.99</span></div><p class="pl-item__desc">Crispy fries, melted cheese, bacon, scallions, sour cream</p></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Wings</span><span class="pl-item__dots"></span><span class="pl-item__price">£11.99</span></div><p class="pl-item__desc">Choice of buffalo, BBQ or garlic parmesan</p></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Quesadilla</span><span class="pl-item__dots"></span><span class="pl-item__price">£10.99</span></div><p class="pl-item__desc">Grilled chicken, cheddar, peppers, onions, salsa, sour cream</p></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Chips &amp; Salsa</span><span class="pl-item__dots"></span><span class="pl-item__price">£4.99</span></div><p class="pl-item__desc">Fresh tortilla chips, house-made salsa</p></div>
+          </div>
+          <div class="pl-cat">
+            <h3 class="pl-cat__h">Salads</h3><div class="pl-cat__rule"></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Caesar Salad</span><span class="pl-item__dots"></span><span class="pl-item__price">£8.99</span></div><p class="pl-item__desc">Romaine, parmesan, croutons, caesar dressing</p><div class="pl-item--sub"><span>Add chicken</span><span>£3.00</span></div></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Cobb Salad</span><span class="pl-item__dots"></span><span class="pl-item__price">£12.99</span></div><p class="pl-item__desc">Mixed greens, grilled chicken, bacon, egg, avocado, blue cheese, tomatoes</p></div>
+          </div>
+        </div>
+        <div>
+          <div class="pl-cat">
+            <h3 class="pl-cat__h">Handhelds</h3><div class="pl-cat__rule"></div>
+            <p class="pl-cat__note">Served with fries or house chips</p>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Players Burger</span><span class="pl-item__dots"></span><span class="pl-item__price">£12.99</span></div><p class="pl-item__desc">Beef patty, cheddar, lettuce, tomato, onion, pickles, house sauce</p></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Chicken Sandwich</span><span class="pl-item__dots"></span><span class="pl-item__price">£11.99</span></div><p class="pl-item__desc">Grilled or crispy chicken, lettuce, tomato, pickles, mayo</p></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Philly Cheesesteak</span><span class="pl-item__dots"></span><span class="pl-item__price">£13.99</span></div><p class="pl-item__desc">Sliced steak, peppers, onions, provolone, hoagie roll</p></div>
+          </div>
+          <div class="pl-cat">
+            <h3 class="pl-cat__h">Entrées</h3><div class="pl-cat__rule"></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Fish &amp; Chips</span><span class="pl-item__dots"></span><span class="pl-item__price">£14.99</span></div><p class="pl-item__desc">Beer-battered cod, fries, coleslaw, tartar sauce</p></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">BBQ Ribs</span><span class="pl-item__dots"></span><span class="pl-item__price">£16.99</span></div><p class="pl-item__desc">Half rack, fries, coleslaw</p></div>
+            <div class="pl-item"><div class="pl-item__top"><span class="pl-item__name">Chicken Tenders</span><span class="pl-item__dots"></span><span class="pl-item__price">£11.99</span></div><p class="pl-item__desc">Crispy tenders, fries, choice of dipping sauce</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="pl-ribbon">Good food · Cold drinks · Great game</p>
+    </div>
+  </section>
+
+  <!-- ════ WHY VISIT ════ -->
+  <section class="pl-why">
+    <div class="pl-wrap">
+      <div class="pl-rise">
+        <p class="pl-eyebrow">Why visit</p>
+        <h2 class="pl-h2">More than a <em>sports bar</em></h2>
+      </div>
+      <div class="pl-why__grid pl-rise">
+        <div class="pl-card">
+          <span class="pl-card__k">Inside &amp; out</span>
+          <h3>Indoor &amp; outdoor seating</h3>
+          <p>Relax inside for live sport and casual dining, or enjoy the fresh air on our outdoor terrace — perfect for sunny days and post-match catch-ups.</p>
+        </div>
+        <div class="pl-card">
+          <span class="pl-card__k">Teams &amp; clubs</span>
+          <h3>Made for meet-ups</h3>
+          <p>The ideal meeting point for local teams and clubs — pre-fixture gatherings, post-match drinks, club socials, presentation evenings and celebrations.</p>
+        </div>
+        <div class="pl-card">
+          <span class="pl-card__k">For Iver</span>
+          <h3>A local hub</h3>
+          <p>You don't need to be playing to enjoy The Players. We're here for the whole community — coffee, food, drinks, live matches and time with friends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ GALLERY ════ -->
+  <section class="pl-gallery">
+    <div class="pl-wrap">
+      <div class="pl-gallery__head pl-rise">
+        <p class="pl-eyebrow">The space</p>
+        <h2 class="pl-h2">Inside The Players</h2>
+      </div>
+      <div class="pl-ggrid pl-rise">
+        <figure class="pl-gfig pl-gfig--w2 pl-gfig--h2"><img src="images/players-dining-neon.jpg" alt="Dining room with the Players neon sign and live sport screens" loading="lazy"><figcaption>The dining room</figcaption></figure>
+        <figure class="pl-gfig"><img src="images/players-bar-tvs.jpg" alt="The bar with live sport on screen" loading="lazy"><figcaption>The bar</figcaption></figure>
+        <figure class="pl-gfig"><img src="images/players-lounge.jpg" alt="Lounge seating beneath the framed logo" loading="lazy"><figcaption>Logo lounge</figcaption></figure>
+        <figure class="pl-gfig pl-gfig--w2"><img src="images/players-dining-windows.jpg" alt="Light-filled dining area with full-height windows" loading="lazy"><figcaption>Garden-side dining</figcaption></figure>
+        <figure class="pl-gfig"><img src="images/players-memorabilia.jpg" alt="Sports memorabilia feature wall with lounge seating" loading="lazy"><figcaption>Memorabilia nook</figcaption></figure>
+        <figure class="pl-gfig"><img src="images/players-menu.jpg" alt="The Players printed menu" loading="lazy"><figcaption>The menu</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CTA BAND ════ -->
+  <section class="pl-band">
+    <div class="pl-rise">
+      <h2>Come for the game.<br>Stay for The Players.</h2>
+      <p>Visit us before your game, after your match, or anytime you want to relax with good company.</p>
+      <a href="index.html#contact" class="pl-btn pl-btn--gold">Plan your visit</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ════ FOOTER ════ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="wrap">
+      <div class="footer__logo-hero">
+        <img src="images/logo.png" alt="Richings Park Sports Club Official Crest" class="footer__logo-big">
+        <div class="footer__logo-rule" aria-hidden="true"></div>
+        <h3 class="footer__club-name">RICHINGS PARK SPORTS CLUB</h3>
+        <p class="footer__club-tagline">Est. 1920 · Wellesley Avenue, Iver, Buckinghamshire</p>
+        <p class="footer__about">A prestigious multi-sport and social club dedicated to athletic excellence, refined dining, restorative wellness and vibrant community life since 1920.</p>
+      </div>
+      <div class="footer__links">
+        <div>
+          <h4>Facilities</h4>
+          <ul><li><a href="index.html#facilities">Tennis Courts</a></li><li><a href="index.html#facilities">Padel Courts</a></li><li><a href="index.html#facilities">Cricket Nets</a></li><li><a href="index.html#facilities">Lawn Bowls</a></li><li><a href="activespace.html">ActiveSpace</a></li></ul>
+        </div>
+        <div>
+          <h4>Dining &amp; Social</h4>
+          <ul><li><a href="index.html#dining">The 1920 Kitchen</a></li><li><a href="players.html">The Players</a></li><li><a href="index.html#contact">The Balcony Events</a></li><li><a href="index.html#contact">Private Hire</a></li></ul>
+        </div>
+        <div>
+          <h4>Wellness</h4>
+          <ul><li><a href="index.html#wellness">The Retreat</a></li><li><a href="index.html#wellness">The Recovery</a></li><li><a href="activespace.html">ActiveSpace</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="wrap footer__bottom-row">
+      <p>© 2026 Richings Park Sports Club. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('nav--on',window.scrollY>20);},{passive:true});
+  var burger=document.getElementById('burger'),menu=document.getElementById('navMenu');
+  burger.addEventListener('click',function(){var o=menu.classList.toggle('menu--open');burger.classList.toggle('burger--open',o);});
+
+  // scroll reveal
+  var rise=document.querySelectorAll('.pl-rise');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+    rise.forEach(function(el){io.observe(el);});
+  } else { rise.forEach(function(el){el.classList.add('in');}); }
+}());
+</script>
+</body>
+</html>

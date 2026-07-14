@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richings Park Bowls Club | Membership &amp; Lawn Bowls</title>
+    <meta name="description" content="Richings Park Bowls Club — a small, friendly lawn bowls club within the grounds of Richings Park Sports Club. Free taster sessions, free coaching, all abilities welcome. Get fit, make friends, have fun.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="refine.css?v=1">
+    <style>
+        /* ── Scoped additions for the Bowls page ── */
+        .nav__menu .nav__item--active { color: var(--G); }
+
+        /* Intro split */
+        .bowls-intro{padding:5.5rem 0;background:var(--I)}
+        .bowls-intro__layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        .bowls-intro__media{position:relative;border-radius:6px;overflow:hidden;box-shadow:var(--shL)}
+        .bowls-intro__media img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1s var(--ease)}
+        .bowls-intro__media:hover img{transform:scale(1.04)}
+        .bowls-intro__tagline{font-family:var(--fH);font-style:italic;color:var(--C);font-size:1.15rem;margin-bottom:1rem}
+
+        /* Learn-to-play band */
+        .bowls-learn{padding:5.5rem 0;background:var(--Iw)}
+        .bowls-learn__layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        .bowls-learn__media{border-radius:6px;overflow:hidden;box-shadow:var(--shL)}
+        .bowls-learn__media img{width:100%;aspect-ratio:4/3;object-fit:cover}
+        .bowls-learn__list{margin:1.75rem 0}
+        .bowls-learn__list li{position:relative;padding-left:1.75rem;margin-bottom:.85rem;color:var(--M)}
+        .bowls-learn__list li::before{content:"●";position:absolute;left:0;top:-1px;color:var(--G);font-size:.7rem}
+
+        /* Committee */
+        .committee{padding:5.5rem 0;background:var(--I)}
+        .committee__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem;margin-top:3rem}
+        .pcard{background:#fff;border:1px solid var(--Im);border-radius:6px;padding:2rem 1.5rem;text-align:center;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
+        .pcard:hover{transform:translateY(-6px);box-shadow:var(--shL);border-color:var(--G)}
+        .pcard__init{width:60px;height:60px;margin:0 auto 1.1rem;border-radius:50%;background:linear-gradient(135deg,var(--Gl),var(--G));color:var(--Cd);font-family:var(--fH);font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+        .pcard__name{font-family:var(--fH);font-size:1.1rem;color:var(--V);margin-bottom:.3rem}
+        .pcard__role{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--C);font-weight:600;margin-bottom:.9rem}
+        .pcard__contact{font-size:.85rem;color:var(--M);line-height:1.8}
+        .pcard__contact a:hover{color:var(--C)}
+
+        /* Season strip */
+        .season{padding:4rem 0;background:var(--V);color:var(--I)}
+        .season__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:2rem;text-align:center}
+        .season__n{font-family:var(--fH);font-size:2.4rem;color:var(--G);line-height:1}
+        .season__l{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--Im);opacity:.75;margin-top:.6rem}
+
+        /* Find us */
+        .bowls-find{padding:5.5rem 0;background:var(--Iw)}
+        .bowls-find__layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        .bowls-find__map{border-radius:6px;overflow:hidden;box-shadow:var(--shL);border:1px solid var(--Im)}
+        .bowls-find__map iframe{width:100%;height:380px;border:0;display:block}
+
+        @media(max-width:900px){
+            .bowls-intro__layout,.bowls-learn__layout,.bowls-find__layout{grid-template-columns:1fr;gap:2.5rem}
+            .bowls-learn__media{order:-1}
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<header class="nav" id="nav">
+    <div class="nav__inner">
+        <a href="index.html" class="nav__brand">
+            <img src="images/logo.png" alt="Richings Park Sports Club" class="nav__logo">
+            <div class="nav__brand-words">
+                <span class="nav__brand-main">RICHINGS PARK</span>
+                <span class="nav__brand-sub">Sports &amp; Social Club · Est. 1920</span>
+            </div>
+        </a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <nav class="nav__menu" id="navMenu">
+            <a href="index.html#about"       class="nav__item">About</a>
+            <a href="active-facilities.html" class="nav__item nav__item--active">Sport</a>
+            <a href="activespace.html"       class="nav__item">ActiveSpace</a>
+            <a href="retreat.html"           class="nav__item">Retreat</a>
+            <a href="kitchen.html"           class="nav__item">1920 Kitchen</a>
+            <a href="players.html"           class="nav__item">The Players</a>
+            <a href="plaza.html"             class="nav__item">The Plaza</a>
+            <a href="index.html#contact"     class="nav__book">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="tennis-hero">
+        <div class="tennis-hero__bg">
+            <img src="images/bowls-green.jpg" alt="The bowling green at Richings Park Bowls Club">
+            <div class="tennis-hero__veil"></div>
+        </div>
+        <div class="tennis-hero__content">
+            <span class="tennis-hero__badge">RPBC</span>
+            <h1>Richings Park <em>Bowls Club</em></h1>
+            <p>Get fit, make friends, have fun. A small, friendly lawn bowls club set within the grounds of Richings Park Sports Club — welcoming all abilities and ages, with free coaching and a free taster session.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════ FEATURE CARDS ═══════════ -->
+    <section class="tennis-features">
+        <div class="tf-grid">
+            <div class="tf-card" style="animation-delay:0s">
+                <div class="tf-icon"></div>
+                <h3>A Friendly Club</h3>
+                <p>We're a small, welcoming club within the Sports Club grounds. If you're looking for gentle exercise in a friendly atmosphere, lawn bowls is the sport for you.</p>
+            </div>
+            <div class="tf-card" style="animation-delay:0.1s">
+                <div class="tf-icon"></div>
+                <h3>Free Coaching</h3>
+                <p>New members of all abilities are welcome — male or female, seasoned bowler or complete newcomer. Coaching from our club experts comes free of charge.</p>
+            </div>
+            <div class="tf-card" style="animation-delay:0.2s">
+                <div class="tf-icon"></div>
+                <h3>Social &amp; Competitive</h3>
+                <p>Social bowls twice a week, weekend and mid-week matches against local clubs, County and National competitions, plus club tours and social events.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ WELCOME ═══════════ -->
+    <section class="bowls-intro" id="about-bowls">
+        <div class="wrap">
+            <div class="bowls-intro__layout">
+                <div class="bowls-intro__media">
+                    <img src="images/bowls-team.jpg" alt="Members of Richings Park Bowls Club outside the clubhouse">
+                </div>
+                <div>
+                    <p class="label label--gold">Welcome</p>
+                    <h2 class="h2">A small club with a <em>big</em> welcome</h2>
+                    <div class="divider divider--gold"></div>
+                    <p class="bowls-intro__tagline">"Get fit, make friends, have fun."</p>
+                    <p class="prose">We are a small, friendly club located within the grounds of the Richings Park Sports Club. If you are looking for some gentle exercise in a friendly atmosphere, then lawn bowls is the sport for you — and Richings Park Bowls Club is the place to be.</p>
+                    <p class="prose">We play outdoors from April to September, with weekend and mid-week matches against other local clubs. A number of our members also compete at County and National level, and we run a host of social events open to all members.</p>
+                    <a href="#membership" class="cta cta--crimson">Become a member</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SEASON AT A GLANCE ═══════════ -->
+    <section class="season">
+        <div class="wrap">
+            <div class="season__grid">
+                <div>
+                    <div class="season__n">Apr–Sep</div>
+                    <div class="season__l">Outdoor season</div>
+                </div>
+                <div>
+                    <div class="season__n">2×</div>
+                    <div class="season__l">Social bowls weekly</div>
+                </div>
+                <div>
+                    <div class="season__n">Winter</div>
+                    <div class="season__l">Short mat bowls</div>
+                </div>
+                <div>
+                    <div class="season__n">Free</div>
+                    <div class="season__l">Coaching &amp; taster session</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ LEARN TO PLAY ═══════════ -->
+    <section class="bowls-learn">
+        <div class="wrap">
+            <div class="bowls-learn__layout">
+                <div>
+                    <p class="label label--gold">Learn to play</p>
+                    <h2 class="h2">Easy to learn. A <em>lifetime</em> to master.</h2>
+                    <div class="divider divider--gold"></div>
+                    <p class="prose">Lawn bowls is an easy game to learn how to play, but a slightly more difficult one to master. The longer you play, the more you pick up the finer points of the game — and the better you become.</p>
+                    <ul class="bowls-learn__list">
+                        <li>All abilities and ages welcome — experienced or complete newcomer</li>
+                        <li>Free coaching from our club experts</li>
+                        <li>All you'll need is a pair of flat-soled trainers</li>
+                        <li>Come down for a free taster session before you commit</li>
+                    </ul>
+                    <a href="#membership" class="cta cta--gold">Book a free taster</a>
+                </div>
+                <div class="bowls-learn__media">
+                    <img src="images/bowls.png" alt="A game of lawn bowls in play at Richings Park">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ MEMBERSHIP ═══════════ -->
+    <section class="membership" id="membership">
+
+        <div class="wrap">
+            <div class="sec-head sec-head--center" style="animation:memReveal .8s both">
+                <p class="label label--gold">Join RPBC</p>
+                <h2 class="h2 h2--light">Membership <em>Options</em></h2>
+                <div class="divider divider--gold divider--center"></div>
+                <p class="prose prose--dim">Whether you've played lots of lawn bowls before or haven't given it a try yet, we'd love for you to come down and give it a go with a free taster session. All abilities and ages are welcome, with free coaching on offer — all you'll need is a pair of flat-soled trainers.</p>
+            </div>
+
+            <!-- Full Membership detail panel -->
+            <div class="mem-info-panel" style="animation:memReveal .8s both .1s">
+                <div class="mem-info-panel__glow"></div>
+                <div class="mem-info-panel__content">
+                    <div class="mem-info-panel__header">
+                        <span class="mem-info-panel__badge">Full Membership · £120 / year</span>
+                        <h3>Everything included in Full Membership</h3>
+                    </div>
+                    <div class="mem-info-panel__body">
+                        <p>Social bowls sessions twice a week from April to September, plus matches throughout the season and winter short mat bowls to keep you playing all year round.</p>
+                        <p>Full members have access to the bowling green from midday whenever there are no matches scheduled, along with coaching from our club experts.</p>
+                        <p class="highlight-text">Full membership also includes access to all our social events and club tours.</p>
+                    </div>
+                    <a href="https://www.richingsparkbowlsclub.co.uk/membership-form/" class="cta cta--gold cta--glow" target="_blank" rel="noopener">Join now</a>
+                </div>
+            </div>
+
+            <div class="sec-head sec-head--center" style="animation:memReveal .8s both .2s">
+                <h3 class="h3 h3--light">Subscriptions</h3>
+                <p class="prose prose--dim" style="font-size:1rem;">Annual membership rates</p>
+            </div>
+
+            <div class="mem-grid">
+                <div class="sub-card sub-card--featured" style="animation:memReveal .8s both .3s">
+                    <div class="sub-card__ribbon">Popular</div>
+                    <div class="sub-card__content">
+                        <h4>Full Membership</h4>
+                        <p class="price">£120<span>/yr</span></p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .35s">
+                    <div class="sub-card__content">
+                        <h4>New Joiner <span>(first year)</span></h4>
+                        <p class="price">£45<span>/yr</span></p>
+                    </div>
+                </div>
+
+                <div class="sub-card" style="animation:memReveal .8s both .4s">
+                    <div class="sub-card__content">
+                        <h4>Taster Session</h4>
+                        <p class="price">Free</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mem-notes" style="animation:memReveal .8s both .5s">
+                <p><i>New Joiner membership is a discounted rate for your first year and includes membership of Richings Park Sports Club, access to all events, and coaching from club experts.</i></p>
+                <p>Taster sessions are completely free — just bring a pair of <span>flat-soled trainers</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ COMMITTEE ═══════════ -->
+    <section class="committee" id="committee">
+        <div class="wrap">
+            <div class="sec-head sec-head--center">
+                <p class="label label--gold">Meet the team</p>
+                <h2 class="h2">The <em>Committee</em></h2>
+                <div class="divider divider--gold divider--center"></div>
+                <p class="prose">Get in touch with any of the team to find out more or to book your free taster session.</p>
+            </div>
+
+            <div class="committee__grid">
+                <div class="pcard">
+                    <div class="pcard__init">JJ</div>
+                    <div class="pcard__name">Jeff Jacobs</div>
+                    <div class="pcard__role">President</div>
+                </div>
+
+                <div class="pcard">
+                    <div class="pcard__init">DO</div>
+                    <div class="pcard__name">David Orr</div>
+                    <div class="pcard__role">Club Secretary</div>
+                    <div class="pcard__contact">
+                        <a href="tel:01753652708">01753 652708</a><br>
+                        <a href="mailto:orrfamily@supanet.com">orrfamily@supanet.com</a>
+                    </div>
+                </div>
+
+                <div class="pcard">
+                    <div class="pcard__init">PO</div>
+                    <div class="pcard__name">Peter Owen</div>
+                    <div class="pcard__role">Captain</div>
+                    <div class="pcard__contact">
+                        <a href="tel:07907109054">07907 109054</a>
+                    </div>
+                </div>
+
+                <div class="pcard">
+                    <div class="pcard__init">NH</div>
+                    <div class="pcard__name">Norma Hibbs</div>
+                    <div class="pcard__role">Midweek Captain</div>
+                    <div class="pcard__contact">
+                        <a href="tel:07787784249">07787 784249</a>
+                    </div>
+                </div>
+
+                <div class="pcard">
+                    <div class="pcard__init">MG</div>
+                    <div class="pcard__name">Martin Gibney</div>
+                    <div class="pcard__role">Fixtures Secretary</div>
+                    <div class="pcard__contact">
+                        <a href="tel:07900668601">07900 668601</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ WHERE TO FIND US ═══════════ -->
+    <section class="bowls-find" id="find-us">
+        <div class="wrap">
+            <div class="bowls-find__layout">
+                <div>
+                    <p class="label label--gold">Where to find us</p>
+                    <h2 class="h2">Inside the <em>Sports Club</em> grounds</h2>
+                    <div class="divider divider--gold"></div>
+                    <p class="prose">Our bowling green is inside the grounds of Richings Park Sports Club. The park has plenty of parking available and is close to Iver Station.</p>
+                    <div class="cinfo" style="margin-top:2rem">
+                        <div class="cinfo__row">
+                            <span class="cinfo__icon"></span>
+                            <div><strong>Richings Park Sports Club</strong><br>Wellesley Avenue, Iver, Buckinghamshire, SL0 9BN</div>
+                        </div>
+                        <div class="cinfo__row">
+                            <span class="cinfo__icon"></span>
+                            <div><strong>David Orr — Club Secretary</strong><br><a href="tel:01753652708">01753 652708</a></div>
+                        </div>
+                        <div class="cinfo__row">
+                            <span class="cinfo__icon"></span>
+                            <div><strong>Email</strong><br><a href="mailto:orrfamily@supanet.com">orrfamily@supanet.com</a></div>
+                        </div>
+                        <div class="cinfo__row">
+                            <span class="cinfo__icon"></span>
+                            <div><strong>Parking</strong><br>Plenty of on-site parking · close to Iver Station</div>
+                        </div>
+                    </div>
+                    <a href="https://www.facebook.com/RichingsParkBowlsClub" class="cta cta--crimson" target="_blank" rel="noopener" style="margin-top:2rem">Follow us on Facebook</a>
+                </div>
+                <div class="bowls-find__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.4347654714616!2d-0.5089139233800605!3d51.50523927181274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487671cbb91e1c7b%3A0x4d08e20baf9f5e2!2sRichings%20Park%20Bowls%20Club!5e0!3m2!1sen!2suk!4v1761748971589!5m2!1sen!2suk"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Map showing Richings Park Bowls Club"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+    <div class="footer__top">
+        <div class="wrap">
+            <div class="footer__logo-hero">
+                <img src="images/logo.png" alt="Richings Park Sports Club Official Crest" class="footer__logo-big">
+                <div class="footer__logo-rule" aria-hidden="true"></div>
+                <h3 class="footer__club-name">RICHINGS PARK SPORTS CLUB</h3>
+                <p class="footer__club-tagline">Est. 1920 · Wellesley Avenue, Iver, Buckinghamshire</p>
+                <p class="footer__about">A prestigious multi-sport and social club dedicated to athletic excellence, refined dining, restorative wellness and vibrant community life since 1920.</p>
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/RichingsParkBowlsClub" class="footer__soc" aria-label="Facebook" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                    <a href="#" class="footer__soc" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="#" class="footer__soc" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <div>
+                    <h4>Facilities</h4>
+                    <ul><li><a href="index.html#facilities">Tennis Courts</a></li><li><a href="index.html#facilities">Padel Courts</a></li><li><a href="index.html#facilities">Cricket Nets</a></li><li><a href="bowls.html">Lawn Bowls</a></li><li><a href="index.html#facilities">Football Pitch</a></li></ul>
+                </div>
+                <div>
+                    <h4>Dining &amp; Social</h4>
+                    <ul><li><a href="index.html#dining">The 1920 Kitchen</a></li><li><a href="players.html">The Players</a></li><li><a href="index.html#contact">The Balcony Events</a></li><li><a href="index.html#contact">Private Hire</a></li></ul>
+                </div>
+                <div>
+                    <h4>Wellness</h4>
+                    <ul><li><a href="index.html#wellness">The Retreat</a></li><li><a href="index.html#wellness">The Recovery</a></li><li><a href="activespace.html">ActiveSpace</a></li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="wrap footer__bottom-row">
+            <p>© 2026 Richings Park Sports Club. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('nav--on', window.scrollY > 20);
+  }, {passive:true});
+
+  var burger = document.getElementById('burger');
+  var menu   = document.getElementById('navMenu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('menu--open');
+    burger.classList.toggle('burger--open', open);
+  });
+}());
+</script>
+</body>
+</html>

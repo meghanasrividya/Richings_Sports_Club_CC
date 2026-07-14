@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Plaza | Kids Cinema, Entertainment Centre &amp; Dentist | Richings Park Sports Club</title>
+    <meta name="description" content="The Plaza at Richings Park Sports Club — a kids cinema, children's entertainment centre and on-site dental practice. Family facilities in Iver, Buckinghamshire.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="refine.css?v=1">
+    <style>
+        .nav__menu .nav__item--active { color: var(--G); }
+
+        /* reveal */
+        .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+        .rv.is-in{opacity:1;transform:none}
+
+        /* split section */
+        .split{padding:5.5rem 0}
+        .split--alt{background:var(--Iw)}
+        .split__layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        .split__media{border-radius:6px;overflow:hidden;box-shadow:var(--shL)}
+        .split__media img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1s var(--ease)}
+        .split__media:hover img{transform:scale(1.04)}
+        .split--rev .split__media{order:2}
+        .split__list{margin:1.6rem 0}
+        .split__list li{position:relative;padding-left:1.75rem;margin-bottom:.8rem;color:var(--M)}
+        .split__list li::before{content:"\2022";position:absolute;left:.35rem;top:-2px;color:var(--G);font-size:1.1rem}
+
+        /* soft status pill */
+        .status{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border:1px solid var(--G);border-radius:100px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--C);font-weight:600;background:rgba(211,185,115,.1);margin-bottom:1.2rem}
+        .status--soon{color:var(--M);border-color:var(--Im)}
+        .status__dot{width:7px;height:7px;border-radius:50%;background:var(--G)}
+
+        /* amenity grid */
+        .amen{padding:5.5rem 0}
+        .amen__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;margin-top:3rem}
+        .acard{background:#fff;border:1px solid var(--Im);border-radius:6px;padding:2rem 1.6rem;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
+        .acard:hover{transform:translateY(-6px);box-shadow:var(--shL);border-color:var(--G)}
+        .acard__icon{font-size:1.9rem;margin-bottom:.9rem;display:block}
+        .acard h4{font-family:var(--fH);font-size:1.12rem;color:var(--V);margin-bottom:.5rem}
+        .acard p{font-size:.88rem;color:var(--M);line-height:1.7}
+        .acard--soon{background:var(--Iw);border-style:dashed}
+        .acard--soon h4{color:var(--M)}
+
+        /* stat strip */
+        .strip{padding:4rem 0;background:var(--V);color:var(--I)}
+        .strip__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center}
+        .strip__n{font-family:var(--fH);font-size:2.2rem;color:var(--G);line-height:1.15}
+        .strip__l{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--Im);opacity:.75;margin-top:.6rem}
+
+        /* enquiry */
+        .enq{padding:5.5rem 0;background:var(--Iw)}
+        .enq__panel{max-width:760px;margin:2.5rem auto 0;background:#fff;border:1px solid var(--Im);border-radius:6px;padding:2.6rem;box-shadow:var(--sh)}
+        .enq__panel .cform__group{margin-bottom:1.1rem}
+        .enq__panel label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--M);font-weight:600;margin-bottom:.45rem}
+        .enq__panel input,.enq__panel select,.enq__panel textarea{width:100%;padding:.85rem 1rem;border:1px solid var(--Im);border-radius:3px;background:var(--I);color:var(--V);font-size:.95rem;transition:border-color .25s}
+        .enq__panel input:focus,.enq__panel select:focus,.enq__panel textarea:focus{outline:none;border-color:var(--G)}
+        .enq__panel textarea{min-height:120px;resize:vertical}
+        .enq__row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+        .enq__note{font-size:.8rem;color:var(--M);margin-top:1rem;text-align:center}
+
+        @media(max-width:900px){
+            .split__layout{grid-template-columns:1fr;gap:2.5rem}
+            .split--rev .split__media{order:-1}
+            .enq__row{grid-template-columns:1fr}
+            .enq__panel{padding:1.8rem}
+        }
+    </style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+    <div class="nav__inner">
+        <a href="index.html" class="nav__brand">
+            <img src="images/logo.png" alt="Richings Park Sports Club" class="nav__logo">
+            <div class="nav__brand-words">
+                <span class="nav__brand-main">RICHINGS PARK</span>
+                <span class="nav__brand-sub">Sports &amp; Social Club &middot; Est. 1920</span>
+            </div>
+        </a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <nav class="nav__menu" id="navMenu">
+            <a href="index.html#about"       class="nav__item">About</a>
+            <a href="active-facilities.html" class="nav__item">Sport</a>
+            <a href="activespace.html"       class="nav__item">ActiveSpace</a>
+            <a href="retreat.html"           class="nav__item">Retreat</a>
+            <a href="kitchen.html"           class="nav__item">1920 Kitchen</a>
+            <a href="players.html"           class="nav__item">The Players</a>
+            <a href="plaza.html"             class="nav__item nav__item--active">The Plaza</a>
+            <a href="index.html#contact"     class="nav__book">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="tennis-hero">
+        <div class="tennis-hero__bg">
+            <img src="images/hero.png" alt="The Plaza at Richings Park Sports Club">
+            <div class="tennis-hero__veil"></div>
+        </div>
+        <div class="tennis-hero__content">
+            <span class="tennis-hero__badge">The Plaza</span>
+            <h1>The <em>Plaza</em></h1>
+            <p>A kids cinema, a children's entertainment centre and a dental practice &mdash; the part of the club built for everyone who isn't playing.</p>
+        </div>
+    </section>
+
+    <section class="tennis-features">
+        <div class="tf-grid">
+            <div class="tf-card" style="animation-delay:0s">
+                <div class="tf-icon"></div>
+                <h3>Kids Cinema</h3>
+                <p>A dedicated children's cinema right at the club &mdash; perfect for a rainy afternoon, a birthday party, or while the grown-ups train.</p>
+            </div>
+            <div class="tf-card" style="animation-delay:0.1s">
+                <div class="tf-icon"></div>
+                <h3>Kids Entertainment Centre</h3>
+                <p>A play and entertainment space built for younger members &mdash; somewhere for children to be children while the family uses the club.</p>
+            </div>
+            <div class="tf-card" style="animation-delay:0.2s">
+                <div class="tf-icon"></div>
+                <h3>Dental Practice</h3>
+                <p>A dental practice on site, making the Plaza somewhere the whole family has a reason to visit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="split">
+        <div class="wrap">
+            <div class="split__layout rv">
+                <div class="split__media">
+                    <img src="images/hero.png" alt="The Plaza at Richings Park">
+                </div>
+                <div>
+                    <span class="status status--soon"><span class="status__dot"></span>Opening this summer</span>
+                    <p class="label label--gold">The Plaza</p>
+                    <h2 class="h2">A club for the <em>whole family.</em></h2>
+                    <div class="divider divider--gold"></div>
+                    <p class="prose">The Plaza is the part of Richings Park that isn't about sport at all. A kids cinema, a children's entertainment centre and a dental practice sit side by side &mdash; turning the club into somewhere the entire family has a reason to be, not just the one playing.</p>
+                    <ul class="split__list">
+                        <li>Kids cinema for films, parties and rainy afternoons</li>
+                        <li>Children's entertainment centre with supervised play</li>
+                        <li>On-site dental practice</li>
+                        <li>Free parking for all Plaza visitors</li>
+                    </ul>
+                    <a href="#enquire" class="cta cta--crimson">Register your interest</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="split split--alt split--rev">
+        <div class="wrap">
+            <div class="split__layout rv">
+                <div class="split__media">
+                    <img src="images/players-lounge.jpg" alt="Family facilities at the club">
+                </div>
+                <div>
+                    <p class="label label--gold">Why it matters</p>
+                    <h2 class="h2">Nobody sits in the <em>car park.</em></h2>
+                    <div class="divider divider--gold"></div>
+                    <p class="prose">Every club has the same problem: one person plays, and everyone else waits. The Plaza is our answer. While one of you is on court, the kids are at the cinema and the rest of the family has somewhere worth being.</p>
+                    <ul class="split__list">
+                        <li>Something for every age, in one visit</li>
+                        <li>Free parking &mdash; validate your ticket at the kiosk</li>
+                        <li>Steps from The Players and the 1920 Kitchen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="enq" id="enquire">
+        <div class="wrap">
+            <div class="sec-head sec-head--center rv">
+                <p class="label label--gold">Enquire</p>
+                <h2 class="h2">Tell us what you'd <em>use</em></h2>
+                <div class="divider divider--gold divider--center"></div>
+                <p class="prose">The Plaza is opening this summer. Register your interest and we'll be in touch with opening dates and details.</p>
+            </div>
+
+            <div class="enq__panel rv">
+                <form class="cform" id="enqForm" novalidate>
+                    <div class="enq__row">
+                        <div class="cform__group">
+                            <label for="e-name">Name *</label>
+                            <input type="text" id="e-name" placeholder="Jane Smith" required autocomplete="name">
+                        </div>
+                        <div class="cform__group">
+                            <label for="e-email">Email *</label>
+                            <input type="email" id="e-email" placeholder="jane@example.com" required autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="enq__row">
+                        <div class="cform__group">
+                            <label for="e-phone">Phone</label>
+                            <input type="tel" id="e-phone" placeholder="+44 7700 000000" autocomplete="tel">
+                        </div>
+                        <div class="cform__group">
+                            <label for="e-interest">I'm interested in *</label>
+                            <select id="e-interest" required>
+                                <option value="" disabled selected>Select&hellip;</option>
+                            <option>Kids cinema</option>
+                            <option>Kids entertainment centre</option>
+                            <option>Dental practice</option>
+                            <option>Children's birthday party</option>
+                            <option>Something else</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cform__group">
+                        <label for="e-msg">Message</label>
+                        <textarea id="e-msg" placeholder="Tell us a little about what you're looking for&hellip;"></textarea>
+                    </div>
+                    <button type="submit" class="cta cta--crimson cta--full">Send enquiry</button>
+                    <div class="cform__success" id="enqSuccess">
+                        <span class="cform__success-icon">&#10003;</span>
+                        <div>
+                            <strong>Thank you &mdash; enquiry received</strong>
+                            <p>A member of the team will be in touch shortly to talk through the details with you.</p>
+                        </div>
+                    </div>
+                </form>
+                <p class="enq__note">We'll only contact you about The Plaza &mdash; nothing else.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="wrap">
+            <div class="footer__logo-hero">
+                <img src="images/logo.png" alt="Richings Park Sports Club Official Crest" class="footer__logo-big">
+                <div class="footer__logo-rule" aria-hidden="true"></div>
+                <h3 class="footer__club-name">RICHINGS PARK SPORTS CLUB</h3>
+                <p class="footer__club-tagline">Est. 1920 &middot; Wellesley Avenue, Iver, Buckinghamshire</p>
+                <p class="footer__about">A prestigious multi-sport and social club dedicated to athletic excellence, refined dining, restorative wellness and vibrant community life since 1920.</p>
+            </div>
+            <div class="footer__links">
+                <div>
+                    <h4>Sport</h4>
+                    <ul><li><a href="tennis.html">Tennis Club</a></li><li><a href="bowls.html">Lawn Bowls</a></li><li><a href="active-facilities.html">Football &amp; Kho Kho</a></li><li><a href="active-facilities.html">Padel &amp; Pickleball</a></li><li><a href="activespace.html">ActiveSpace Gym</a></li></ul>
+                </div>
+                <div>
+                    <h4>Dining &amp; Social</h4>
+                    <ul><li><a href="kitchen.html">The 1920 Kitchen</a></li><li><a href="kitchen.html#balcony">The Balcony</a></li><li><a href="players.html">The Players</a></li><li><a href="plaza.html">The Plaza</a></li></ul>
+                </div>
+                <div>
+                    <h4>Wellness</h4>
+                    <ul><li><a href="retreat.html">The Retreat</a></li><li><a href="recovery.html">The Recovery</a></li><li><a href="activespace.html">ActiveSpace</a></li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="wrap footer__bottom-row">
+            <p>&copy; 2026 Richings Park Sports Club. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('nav--on', window.scrollY > 20);
+  }, {passive:true});
+
+  var burger = document.getElementById('burger');
+  var menu   = document.getElementById('navMenu');
+  if(burger){ burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('menu--open');
+    burger.classList.toggle('burger--open', open);
+  }); }
+
+  var form = document.getElementById('enqForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var ok = true;
+      form.querySelectorAll('[required]').forEach(function(f){
+        if(!f.value.trim()){ f.style.borderColor = 'var(--C)'; ok = false; }
+        else { f.style.borderColor = ''; }
+      });
+      if(!ok) return;
+      var s = document.getElementById('enqSuccess');
+      s.style.display = 'flex';
+      form.querySelector('button[type=submit]').disabled = true;
+      s.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  }
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+}());
+</script>
+</body>
+</html>

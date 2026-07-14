@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="refine.css?v=1">
     <style>
         /* Small override just for tennis page active state if needed */
         .nav__menu .nav__item--active { color: var(--G); }
@@ -29,11 +30,12 @@
         <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
         <nav class="nav__menu" id="navMenu">
             <a href="index.html#about"       class="nav__item">About</a>
-            <a href="index.html#facilities"  class="nav__item">Facilities</a>
-            <a href="tennis.html"            class="nav__item nav__item--active">Tennis Club</a>
+            <a href="active-facilities.html" class="nav__item nav__item--active">Sport</a>
             <a href="activespace.html"       class="nav__item">ActiveSpace</a>
+            <a href="retreat.html"           class="nav__item">Retreat</a>
+            <a href="kitchen.html"           class="nav__item">1920 Kitchen</a>
             <a href="players.html"           class="nav__item">The Players</a>
-            <a href="index.html#membership"  class="nav__item">Membership</a>
+            <a href="plaza.html"             class="nav__item">The Plaza</a>
             <a href="index.html#contact"     class="nav__book">Contact Us</a>
         </nav>
     </div>
@@ -55,17 +57,17 @@
     <section class="tennis-features">
         <div class="tf-grid">
             <div class="tf-card" style="animation-delay:0s">
-                <div class="tf-icon">🎾</div>
+                <div class="tf-icon"></div>
                 <h3>10 Premier Courts</h3>
                 <p>Four pristine natural grass courts for summer play, plus six floodlit all-weather acrylic courts open until 10pm year-round.</p>
             </div>
             <div class="tf-card" style="animation-delay:0.1s">
-                <div class="tf-icon">🏆</div>
+                <div class="tf-icon"></div>
                 <h3>LTA Pro Coaching</h3>
                 <p>Expert tuition led by our head coaches Tim & Nigel. From junior academies to adult clinics and elite performance training.</p>
             </div>
             <div class="tf-card" style="animation-delay:0.2s">
-                <div class="tf-icon">🤝</div>
+                <div class="tf-icon"></div>
                 <h3>Vibrant Community</h3>
                 <p>Weekly social mix-ins, seasonal club tournaments, competitive leagues, and a thriving clubhouse atmosphere.</p>
             </div>
@@ -75,11 +77,6 @@
     <!-- ═══════════ MEMBERSHIP ═══════════ -->
     <section class="membership" id="membership">
         <!-- Animated background for membership -->
-        <div class="mem-bg" aria-hidden="true">
-            <div class="mem-bg__orb mem-bg__orb--1"></div>
-            <div class="mem-bg__orb mem-bg__orb--2"></div>
-            <div class="mem-bg__orb mem-bg__orb--3"></div>
-        </div>
         
         <div class="wrap">
             <div class="sec-head sec-head--center" style="animation:memReveal .8s both">

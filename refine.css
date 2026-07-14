@@ -1,0 +1,278 @@
+/* ================================================================
+   RICHINGS PARK SPORTS CLUB — REFINEMENT LAYER
+   Load AFTER style.css. Elevates the whole site without a rebuild.
+
+   Direction: an English members' club, engraved rather than printed.
+   Antique gold as a hairline, not a gradient. Claret as ink, not paint.
+   Baskerville set large and tight. Helvetica Neue for everything else.
+   ================================================================ */
+
+:root{
+  /* ── Refined palette ─────────────────────────────
+     Deeper, less saturated. The old crimson was a shade
+     too bright; this is closer to the club crest.      */
+  --C:  #6E1420;   /* claret — deepened from #751716    */
+  --Cd: #4A0D16;   /* oxblood                           */
+  --V:  #14100E;   /* warm ink (was cold #272727)       */
+  --Vd: #0B0908;
+  --I:  #F7F4EE;   /* bone                              */
+  --Iw: #EFEAE0;   /* warm bone                         */
+  --Im: #DDD5C7;   /* mid bone / rules                  */
+  --G:  #B08D4F;   /* antique gold — was too bright     */
+  --Gl: #D9BE86;   /* light gold                        */
+  --M:  #6F675C;   /* muted stone                       */
+
+  /* Typography — Baskerville display, Helvetica Neue body.
+     Open Sans is the genericness; it goes.               */
+  --fB: 'Helvetica Neue','Helvetica','Inter',Arial,sans-serif;
+  --fH: 'Libre Baskerville','Baskerville','Baskerville Old Face',Georgia,serif;
+
+  /* Slower, more confident motion. Nothing bounces. */
+  --ease: cubic-bezier(.22,.61,.36,1);
+
+  /* Shadows: near-invisible. Sophistication is flat. */
+  --sh:  0 1px 2px rgba(20,16,14,.04);
+  --shL: 0 18px 50px -24px rgba(20,16,14,.22);
+  --shC: 0 12px 34px -18px rgba(110,20,32,.32);
+}
+
+/* ── Type: set it like print, not like a webpage ────────── */
+body{ font-family:var(--fB); letter-spacing:-.003em; }
+
+h1,h2,h3,h4,.h2,.h3,.pl-h2{
+  font-family:var(--fH);
+  font-weight:400;
+  letter-spacing:-.018em;
+  line-height:1.06;
+}
+.h2,.pl-h2{ font-size:clamp(2.1rem,4.4vw,3.6rem); }
+h1,.hero__h1,.tennis-hero__content h1,.pl-hero h1{
+  font-size:clamp(2.6rem,6vw,5rem);
+  line-height:1.02;
+  letter-spacing:-.028em;
+}
+/* Italic in a headline is the club's voice — keep it, refine it */
+h1 em,h2 em,.h2 em,.pl-h2 em{ font-style:italic; color:var(--C); }
+.h2--light em,.tennis-hero__content h1 em,.pl-hero h1 em{ color:var(--Gl); }
+
+.prose,p{ line-height:1.75; }
+.prose{ font-size:1rem; color:var(--M); max-width:64ch; }
+
+/* Eyebrows & labels: engraved small caps, generously tracked */
+.label,.pl-eyebrow,.tennis-hero__badge,.mem-info-panel__badge,
+.sub-card__ribbon,.strip__l,.season__l,.pcard__role,.acard--soon h4{
+  font-family:var(--fB);
+  font-size:.68rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.label--gold{ color:var(--G); }
+
+/* ── Kill the gradient orbs. They decorate nothing. ─────── */
+.mem-bg,.fac-bg,.mem-bg__orb,.fac-bg__orb{ display:none !important; }
+.membership,.facilities{ background:var(--V); }
+
+/* ── Kill emoji icons. Replace with an engraved gold rule. ─
+   A hairline reads as a club; a 🎳 reads as a slide deck.   */
+.tf-icon,.acard__icon,.wcard__icon,.fac-card__icon{
+  font-size:0 !important;      /* hides the emoji glyph */
+  line-height:0 !important;
+  margin-bottom:1.5rem !important;
+  display:block;
+}
+.tf-icon::after,.acard__icon::after,.wcard__icon::after,.fac-card__icon::after{
+  content:"";
+  display:block;
+  width:34px;
+  height:1px;
+  background:var(--G);
+}
+/* Contact rows keep a mark, but a typographic one */
+.cinfo__icon{
+  font-size:0 !important;
+  width:auto !important;
+  flex:0 0 auto;
+}
+.cinfo__icon::after{
+  content:"—";
+  font-size:1rem;
+  color:var(--G);
+  line-height:1.6;
+}
+
+/* ── Geometry: architectural, not app-like ─────────────────
+   Big radii feel like software. This is a 1920 sports club. */
+.tf-card,.acard,.pcard,.sub-card,.enq__panel,.split__media,
+.bowls-intro__media,.bowls-learn__media,.bowls-find__map,
+.mem-info-panel,.fac-card,.dcard,.wcard,.tcard,.pl-card,.pl-gfig{
+  border-radius:2px !important;
+}
+.cta,.pl-btn,.nav__book,button,input,select,textarea{
+  border-radius:1px !important;
+}
+
+/* ── Cards: hairline, not shadow. Lift on hover, quietly. ── */
+.tf-card,.acard,.pcard,.sub-card{
+  background:var(--I);
+  border:1px solid var(--Im);
+  box-shadow:none;
+  transition:border-color .5s var(--ease), transform .5s var(--ease);
+}
+.tf-card:hover,.acard:hover,.pcard:hover,.sub-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--G);
+  box-shadow:none;
+}
+
+/* ── Buttons: letterpress, not plastic ───────────────────── */
+.cta,.pl-btn{
+  font-family:var(--fB);
+  font-size:.74rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:600;
+  padding:1.05rem 2.1rem;
+  transition:background .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
+}
+.cta--crimson{ background:var(--C); color:var(--I); border:1px solid var(--C); }
+.cta--crimson:hover{ background:transparent; color:var(--C); }
+.cta--gold,.pl-btn--gold{
+  background:transparent;
+  color:var(--G);
+  border:1px solid var(--G);
+}
+.cta--gold:hover,.pl-btn--gold:hover{ background:var(--G); color:var(--Vd); }
+.cta--glow{ box-shadow:none !important; }
+
+/* ── Dividers: a true hairline with a diamond, letterpress ─ */
+.divider{ height:1px; background:var(--Im); position:relative; width:100%; max-width:none; }
+.divider--gold{ background:linear-gradient(90deg,var(--G),rgba(176,141,79,0)); }
+.divider--center{ background:linear-gradient(90deg,rgba(176,141,79,0),var(--G),rgba(176,141,79,0)); }
+.divider::after{
+  content:"";
+  position:absolute; top:-2px; left:0;
+  width:5px; height:5px;
+  background:var(--G);
+  transform:rotate(45deg);
+}
+.divider--center::after{ left:50%; margin-left:-2.5px; }
+
+/* ── Sections: more air. Sophistication is space. ────────── */
+.split,.amen,.enq,.committee,.bowls-intro,.bowls-learn,.bowls-find,
+.tennis-features,.membership,.facilities,.dining,.wellness{
+  padding-top:clamp(5rem,10vw,8.5rem);
+  padding-bottom:clamp(5rem,10vw,8.5rem);
+}
+.sec-head{ margin-bottom:clamp(3rem,6vw,4.5rem); }
+
+/* ── Hero: darker, quieter, let the type carry it ────────── */
+.tennis-hero__veil,.hero__bg-overlay,.pl-hero__veil{
+  background:linear-gradient(180deg,rgba(11,9,8,.42) 0%,rgba(11,9,8,.78) 100%) !important;
+}
+.tennis-hero__badge{
+  background:transparent;
+  border:1px solid var(--G);
+  color:var(--Gl);
+  padding:.5rem 1.1rem;
+}
+
+/* ── Stat strips: numerals in Baskerville, labels engraved ─ */
+.strip__n,.season__n,.hero__stat strong{
+  font-family:var(--fH);
+  color:var(--Gl);
+  font-weight:400;
+  letter-spacing:-.02em;
+}
+.strip,.season{ background:var(--Vd); }
+
+/* ── Price: the one place we allow scale ─────────────────── */
+.sub-card .price{
+  font-family:var(--fH);
+  font-size:2.6rem;
+  color:var(--C);
+  letter-spacing:-.03em;
+}
+.sub-card .price span{
+  font-family:var(--fB);
+  font-size:.72rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--M);
+}
+.sub-card--featured{ background:var(--V); border-color:var(--G); }
+.sub-card--featured h4,.sub-card--featured .price{ color:var(--Gl); }
+.sub-card__ribbon{ background:var(--G); color:var(--Vd); border-radius:0 !important; }
+
+/* ── Nav: thinner, calmer, gold on scroll ────────────────── */
+.nav__item,.nav__book{
+  font-family:var(--fB);
+  font-size:.76rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.nav--on{
+  background:rgba(11,9,8,.9);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(176,141,79,.24);
+}
+.nav__item:hover{ color:var(--Gl); }
+.nav__book{
+  border:1px solid var(--G);
+  color:var(--Gl);
+  background:transparent;
+  padding:.7rem 1.4rem;
+}
+.nav__book:hover{ background:var(--G); color:var(--Vd); }
+.nav__brand-sub{ letter-spacing:.18em; font-size:.6rem; color:var(--G); }
+
+/* ── Status pills: hairline only ─────────────────────────── */
+.status{
+  background:transparent;
+  border:1px solid var(--Im);
+  border-radius:0;
+  color:var(--M);
+  letter-spacing:.2em;
+}
+.status__dot{ background:var(--G); }
+
+/* ── Footer: engraved ────────────────────────────────────── */
+.footer{ background:var(--Vd); }
+.footer__club-name{
+  font-family:var(--fB);
+  letter-spacing:.28em;
+  font-size:.8rem;
+  font-weight:600;
+}
+.footer__club-tagline{ font-family:var(--fH); font-style:italic; color:var(--G); }
+.footer__links h4{
+  font-family:var(--fB);
+  font-size:.66rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--G);
+}
+
+/* ── Images: no bounce, a long slow settle ───────────────── */
+.split__media img,.bowls-intro__media img,.pl-gfig img,.fac-card__img{
+  transition:transform 1.4s var(--ease) !important;
+}
+.split__media:hover img,.bowls-intro__media:hover img{ transform:scale(1.03) !important; }
+
+/* ── Selection & focus ───────────────────────────────────── */
+::selection{ background:var(--G); color:var(--Vd); }
+a:focus-visible,button:focus-visible,input:focus-visible,
+select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--G);
+  outline-offset:3px;
+}
+
+/* ── Respect reduced motion ──────────────────────────────── */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}

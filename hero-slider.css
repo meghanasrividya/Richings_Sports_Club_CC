@@ -1,0 +1,232 @@
+/* ================================================================
+   RICHINGS PARK SPORTS CLUB — HERO SLIDER
+   Load AFTER refine.css.
+
+   Reference language: Estelle Manor, Surrenne, Casa Cipriani.
+   Pictures do not slide sideways — they dissolve. A slow crossfade
+   with a drifting camera, a scrim light enough to keep the grounds
+   readable, and hairline rules that fill as each frame plays out.
+   ================================================================ */
+
+/* ── Stage ───────────────────────────────────────────────────── */
+.hero__bg{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  background:var(--Vd,#0B0908);
+}
+
+.hero__slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1600ms cubic-bezier(.4,0,.2,1);
+  will-change:opacity;
+}
+.hero__slide.is-active,
+.hero__slide.is-leaving{opacity:1}
+.hero__slide.is-leaving{opacity:0}
+
+.hero__slide .hero__bg-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.06);
+  will-change:transform;
+}
+
+/* The camera drift. Odd frames push in, even frames pull back, so
+   two consecutive images never move the same way.                */
+.hero__slide.is-active .hero__bg-img,
+.hero__slide.is-leaving .hero__bg-img{
+  animation:heroDriftIn 8200ms linear both;
+}
+.hero__slide:nth-child(even).is-active .hero__bg-img,
+.hero__slide:nth-child(even).is-leaving .hero__bg-img{
+  animation-name:heroDriftOut;
+}
+
+@keyframes heroDriftIn{
+  from{transform:scale(1.02) translate3d(-.9%,-.5%,0)}
+  to  {transform:scale(1.14) translate3d( .8%, .4%,0)}
+}
+@keyframes heroDriftOut{
+  from{transform:scale(1.14) translate3d( 1.1%, .5%,0)}
+  to  {transform:scale(1.02) translate3d(-.7%,-.4%,0)}
+}
+
+.hero--paused .hero__slide .hero__bg-img{animation-play-state:paused}
+
+/* ── Scrim ───────────────────────────────────────────────────── */
+/* The old wash sat at 90% claret and buried the photography. This
+   keeps the house tint but lets the grounds through.             */
+.hero__bg-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(120% 80% at 50% 42%, rgba(11,9,8,.52) 0%, rgba(11,9,8,.10) 62%, rgba(11,9,8,0) 100%),
+    linear-gradient(180deg, rgba(11,9,8,.58) 0%, rgba(11,9,8,.06) 30%, rgba(11,9,8,.22) 60%, rgba(11,9,8,.88) 100%),
+    linear-gradient(0deg, rgba(74,13,22,.26), rgba(74,13,22,.26));
+}
+
+/* ── Frame controls ──────────────────────────────────────────── */
+.hero__slider-ui{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:calc(var(--ribbon-h, 96px) + 1.9rem);
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 2.5rem;
+  pointer-events:none;
+}
+.hero__slider-ui > *{pointer-events:auto}
+
+.hero__caption{
+  display:flex;
+  align-items:center;
+  gap:.85rem;
+  font-family:var(--fB);
+  font-size:.63rem;
+  font-weight:600;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:rgba(247,244,238,.74);
+  text-shadow:0 1px 10px rgba(0,0,0,.55);
+  margin:0;
+}
+.hero__caption::before{
+  content:'';
+  width:26px;
+  height:1px;
+  background:var(--G,#B08D4F);
+  flex:none;
+}
+.hero__caption-text{
+  display:inline-block;
+  animation:captionRise 900ms var(--ease,cubic-bezier(.25,.8,.25,1)) both;
+}
+@keyframes captionRise{
+  from{opacity:0;transform:translateY(6px)}
+  to  {opacity:1;transform:none}
+}
+
+.hero__ticks{display:flex;align-items:center;gap:.6rem}
+
+.hero__tick{
+  position:relative;
+  width:46px;
+  height:2px;
+  padding:0;
+  border:0;
+  border-radius:1px;
+  background:rgba(247,244,238,.24);
+  cursor:pointer;
+  overflow:visible;
+  transition:background .3s var(--ease,ease);
+}
+.hero__tick::after{           /* generous hit area, invisible */
+  content:'';
+  position:absolute;
+  inset:-14px -4px;
+}
+.hero__tick:hover{background:rgba(247,244,238,.45)}
+.hero__tick:focus-visible{
+  outline:1px solid var(--G,#B08D4F);
+  outline-offset:6px;
+}
+
+.hero__tick-fill{
+  position:absolute;
+  inset:0;
+  border-radius:1px;
+  background:var(--G,#B08D4F);
+  transform:scaleX(0);
+  transform-origin:left center;
+}
+.hero__tick.is-active .hero__tick-fill{
+  animation:tickFill 6500ms linear forwards;
+}
+.hero--paused .hero__tick.is-active .hero__tick-fill{animation-play-state:paused}
+@keyframes tickFill{
+  from{transform:scaleX(0)}
+  to  {transform:scaleX(1)}
+}
+
+/* ── Legibility over brighter frames ─────────────────────────── */
+.hero__h1{text-shadow:0 2px 30px rgba(11,9,8,.45)}
+.hero__lead{text-shadow:0 1px 16px rgba(11,9,8,.5)}
+.hero__kicker{text-shadow:0 1px 12px rgba(11,9,8,.5)}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width:900px){
+  .hero__slider-ui{padding:0 1.6rem;bottom:calc(var(--ribbon-h, 150px) + 1.4rem)}
+  .hero__tick{width:34px}
+}
+@media (max-width:560px){
+  .hero__caption{display:none}
+  .hero__slider-ui{justify-content:center}
+}
+
+/* ── Interior page heroes ────────────────────────────────────── */
+/* tennis.html, bowls.html, recovery.html, active-facilities.html
+   and activespace.html reuse the same stage. They keep their own
+   veil and colour grade; only the drift and the fade come from
+   here. No caption — every frame is the same venue, so naming
+   each one would be decoration rather than information.          */
+.tennis-hero .hero__slider-ui,
+.as-hero .hero__slider-ui{
+  bottom:2.4rem;
+  z-index:3;
+}
+
+/* The old single-image slowZoom must not run on stacked frames. */
+.tennis-hero__bg .hero__slide .hero__bg-img,
+.as-hero__bg .hero__slide .hero__bg-img{
+  animation:none;
+  transform:scale(1.06);
+}
+.tennis-hero__bg .hero__slide.is-active .hero__bg-img,
+.tennis-hero__bg .hero__slide.is-leaving .hero__bg-img,
+.as-hero__bg .hero__slide.is-active .hero__bg-img,
+.as-hero__bg .hero__slide.is-leaving .hero__bg-img{
+  animation:heroDriftIn 8200ms linear both;
+}
+.tennis-hero__bg .hero__slide:nth-child(even).is-active .hero__bg-img,
+.tennis-hero__bg .hero__slide:nth-child(even).is-leaving .hero__bg-img,
+.as-hero__bg .hero__slide:nth-child(even).is-active .hero__bg-img,
+.as-hero__bg .hero__slide:nth-child(even).is-leaving .hero__bg-img{
+  animation-name:heroDriftOut;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .tennis-hero__bg .hero__slide .hero__bg-img,
+  .tennis-hero__bg .hero__slide.is-active .hero__bg-img,
+  .tennis-hero__bg .hero__slide.is-leaving .hero__bg-img,
+  .as-hero__bg .hero__slide .hero__bg-img,
+  .as-hero__bg .hero__slide.is-active .hero__bg-img,
+  .as-hero__bg .hero__slide.is-leaving .hero__bg-img{
+    animation:none;
+    transform:scale(1.02);
+  }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+/* No camera drift, no autoplay clock. The frames still change on
+   request; they just stop moving on their own.                   */
+@media (prefers-reduced-motion:reduce){
+  .hero__slide{transition-duration:250ms}
+  .hero__slide .hero__bg-img,
+  .hero__slide.is-active .hero__bg-img,
+  .hero__slide.is-leaving .hero__bg-img{
+    animation:none;
+    transform:scale(1.02);
+  }
+  .hero__tick.is-active .hero__tick-fill{animation:none;transform:scaleX(1)}
+  .hero__caption-text{animation:none}
+}

@@ -276,3 +276,84 @@ select:focus-visible,textarea:focus-visible{
     transition-duration:.01ms !important;
   }
 }
+
+/* ================================================================
+   MEMBERSHIP — rates by enquiry
+   Serious clubs invite a conversation rather than post a price.
+   The gold rule does the work the number used to.
+   ================================================================ */
+.sub-card .price--enquire{
+  font-family:var(--fB);
+  font-size:.74rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--G);
+  position:relative;
+  padding-top:1.1rem;
+  margin-bottom:.25rem;
+}
+.sub-card .price--enquire::before{
+  content:"";
+  position:absolute;
+  top:0; left:50%;
+  transform:translateX(-50%);
+  width:30px; height:1px;
+  background:var(--G);
+}
+.sub-card--featured .price--enquire{ color:var(--Gl); }
+
+/* ================================================================
+   CONTACT — Getting here
+   Fills the panel beside the taller form with the one thing a
+   first-time visitor actually needs: how to arrive.
+   ================================================================ */
+.getting-here{
+  margin-top:2.6rem;
+  padding-top:1.9rem;
+  border-top:1px solid rgba(176,141,79,.3);
+}
+.getting-here__label{
+  font-family:var(--fB);
+  font-size:.66rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--G);
+  margin-bottom:1.3rem;
+}
+.getting-here__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem 2rem;
+}
+.getting-here__grid strong{
+  display:block;
+  font-family:var(--fB);
+  font-size:.7rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--Gl);
+  margin-bottom:.4rem;
+}
+.getting-here__grid p{
+  font-size:.83rem;
+  line-height:1.65;
+  color:rgba(247,244,238,.72);
+  margin:0;
+}
+.contact__promise{
+  margin-top:2rem;
+  padding-top:1.5rem;
+  border-top:1px solid rgba(176,141,79,.3);
+  font-family:var(--fH);
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--Gl);
+}
+.contact__socials{ margin-top:2rem; }
+
+@media(max-width:640px){
+  .getting-here__grid{ grid-template-columns:1fr; gap:1.2rem; }
+}

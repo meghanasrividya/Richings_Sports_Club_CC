@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=14">
     <link rel="stylesheet" href="refine.css?v=1">
+    <link rel="stylesheet" href="hero-slider.css?v=1">
 </head>
 <body>
 
@@ -40,9 +41,23 @@
 </header>
 
 <!-- ═══════════ HERO ═══════════ -->
-<section class="hero" id="hero">
+<section class="hero" id="hero" data-slider data-dwell="6500">
     <div class="hero__bg">
-        <img src="images/hero.png" alt="Richings Park Sports Club" class="hero__bg-img">
+        <div class="hero__slide" data-caption="The Grounds">
+            <img src="images/hero.png" alt="Richings Park Sports Club from the air" class="hero__bg-img" fetchpriority="high">
+        </div>
+        <div class="hero__slide" data-caption="The Courts">
+            <img src="images/tennis-courts.jpg" alt="Tennis courts at Richings Park" class="hero__bg-img" decoding="async">
+        </div>
+        <div class="hero__slide" data-caption="The Green">
+            <img src="images/bowls-team.jpg" alt="Members on the bowls green" class="hero__bg-img" decoding="async">
+        </div>
+        <div class="hero__slide" data-caption="The Players">
+            <img src="images/players-dining-windows.jpg" alt="The Players dining room" class="hero__bg-img" decoding="async">
+        </div>
+        <div class="hero__slide" data-caption="ActiveSpace">
+            <img src="images/activespace-entrance.jpg" alt="ActiveSpace gym entrance" class="hero__bg-img" decoding="async">
+        </div>
         <div class="hero__bg-overlay"></div>
     </div>
     <div class="hero__body">
@@ -58,6 +73,10 @@
             <a href="#contact"    class="cta cta--gold">Reserve a Visit</a>
             <a href="#facilities" class="cta cta--ghost">Explore the Club</a>
         </div>
+    </div>
+    <div class="hero__slider-ui">
+        <p class="hero__caption"><span class="hero__caption-text"></span></p>
+        <div class="hero__ticks" aria-label="Hero image navigation"></div>
     </div>
     <div class="hero__ribbon">
         <div class="hero__stat"><strong>1920</strong><span>Year Founded</span></div>
@@ -303,13 +322,13 @@
                 <div class="sub-card__content">
                     <p style="color:var(--G); font-size:.65rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase; margin-bottom:.5rem;">Social</p>
                     <h4>Club Member</h4>
-                    <p class="price">£35<span>/mo</span></p>
+                    <p class="price price--enquire">By enquiry</p>
                     <ul style="text-align:left; color:rgba(255,253,245,.8); font-size:.85rem; margin:1.5rem 0; line-height:1.6; list-style:none; padding:0;">
-                        <li style="margin-bottom:.5rem;">✓ Access to all sports courts</li>
-                        <li style="margin-bottom:.5rem;">✓ Priority court booking</li>
-                        <li style="margin-bottom:.5rem;">✓ 10% dining discount</li>
-                        <li style="margin-bottom:.5rem;">✓ Member social events</li>
-                        <li>✓ Guest passes ×2/month</li>
+                        <li style="margin-bottom:.5rem;">Access to all sports courts</li>
+                        <li style="margin-bottom:.5rem;">Priority court booking</li>
+                        <li style="margin-bottom:.5rem;">Member dining rates</li>
+                        <li style="margin-bottom:.5rem;">Member social events</li>
+                        <li>Monthly guest passes</li>
                     </ul>
                     <a href="#contact" class="cta cta--outline" style="width:100%; display:block; padding:.8rem;">Enquire Now</a>
                 </div>
@@ -321,13 +340,13 @@
                 <div class="sub-card__content">
                     <p style="color:var(--G); font-size:.65rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase; margin-bottom:.5rem;">Premier</p>
                     <h4>Gold Member</h4>
-                    <p class="price">£65<span>/mo</span></p>
+                    <p class="price price--enquire">By enquiry</p>
                     <ul style="text-align:left; color:rgba(255,253,245,.8); font-size:.85rem; margin:1.5rem 0; line-height:1.6; list-style:none; padding:0;">
-                        <li style="margin-bottom:.5rem;">✓ Everything in Club</li>
-                        <li style="margin-bottom:.5rem;">✓ Priority ActiveSpace access</li>
-                        <li style="margin-bottom:.5rem;">✓ 20% dining &amp; spa discount</li>
-                        <li style="margin-bottom:.5rem;">✓ Free equipment hire</li>
-                        <li style="margin-bottom:.5rem;">✓ Guest passes ×5/month</li>
+                        <li style="margin-bottom:.5rem;">Everything in Club</li>
+                        <li style="margin-bottom:.5rem;">Priority ActiveSpace access</li>
+                        <li style="margin-bottom:.5rem;">Enhanced dining &amp; spa rates</li>
+                        <li style="margin-bottom:.5rem;">Complimentary equipment hire</li>
+                        <li style="margin-bottom:.5rem;">Additional guest passes</li>
                         <li>✓ Lounge priority seating</li>
                     </ul>
                     <a href="#contact" class="cta cta--gold cta--glow" style="width:100%; display:block; padding:.8rem;">Enquire Now</a>
@@ -339,12 +358,12 @@
                 <div class="sub-card__content">
                     <p style="color:var(--G); font-size:.65rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase; margin-bottom:.5rem;">Business</p>
                     <h4>Corporate</h4>
-                    <p class="price">Bespoke</p>
+                    <p class="price price--enquire">Bespoke</p>
                     <ul style="text-align:left; color:rgba(255,253,245,.8); font-size:.85rem; margin:1.5rem 0; line-height:1.6; list-style:none; padding:0;">
-                        <li style="margin-bottom:.5rem;">✓ Everything in Gold</li>
-                        <li style="margin-bottom:.5rem;">✓ Up to 10 staff memberships</li>
-                        <li style="margin-bottom:.5rem;">✓ Private event space hire</li>
-                        <li style="margin-bottom:.5rem;">✓ Dedicated account manager</li>
+                        <li style="margin-bottom:.5rem;">Everything in Gold</li>
+                        <li style="margin-bottom:.5rem;">Staff memberships</li>
+                        <li style="margin-bottom:.5rem;">Private event space hire</li>
+                        <li style="margin-bottom:.5rem;">Dedicated account manager</li>
                         <li>✓ Branded matchday hosting</li>
                     </ul>
                     <a href="#contact" class="cta cta--outline" style="width:100%; display:block; padding:.8rem;">Contact Us</a>
@@ -408,7 +427,7 @@
                         <div class="cinfo__icon"></div>
                         <div>
                             <strong>Address</strong>
-                            <p>Wellesley Avenue, Iver,<br>Buckinghamshire, SL0 9BY</p>
+                            <p>Wellesley Avenue, Iver,<br>Buckinghamshire, SL0 9BN</p>
                         </div>
                     </div>
                     <div class="cinfo__row">
@@ -433,6 +452,30 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="getting-here">
+                    <p class="getting-here__label">Getting Here</p>
+                    <div class="getting-here__grid">
+                        <div>
+                            <strong>By train</strong>
+                            <p>Iver station, five minutes on foot. Elizabeth line direct to Paddington.</p>
+                        </div>
+                        <div>
+                            <strong>By road</strong>
+                            <p>M4 Junction 5 and M25 Junction 15 both within ten minutes.</p>
+                        </div>
+                        <div>
+                            <strong>Parking</strong>
+                            <p>Free on site for members and visitors. Validate your ticket at the kiosk.</p>
+                        </div>
+                        <div>
+                            <strong>From Heathrow</strong>
+                            <p>Fifteen minutes by car — ideal for visiting teams and guests.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="contact__promise">Every enquiry answered within one working day.</p>
 
                 <div class="contact__socials">
                     <a href="#" class="contact__soc" aria-label="Facebook">
@@ -578,6 +621,8 @@
         </div>
     </div>
 </footer>
+
+<script src="hero-slider.js?v=1"></script>
 
 <script>
 (function(){

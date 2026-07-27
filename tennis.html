@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=16">
     <link rel="stylesheet" href="refine.css?v=1">
+    <link rel="stylesheet" href="hero-slider.css?v=1">
     <style>
         /* Small override just for tennis page active state if needed */
         .nav__menu .nav__item--active { color: var(--G); }
@@ -42,10 +43,18 @@
 </header>
 
 <main>
-    <section class="tennis-hero">
+    <section class="tennis-hero" data-slider data-dwell="6500">
         <div class="tennis-hero__bg">
-            <img src="images/tennis-courts.jpg" alt="Tennis courts at Richings Park with players in action">
+                <div class="hero__slide">
+                    <img src="images/tennis-courts.jpg" alt="Tennis courts at Richings Park with players in action" class="hero__bg-img" fetchpriority="high">
+                </div>
+                <div class="hero__slide">
+                    <img src="images/tennis-hero.png" alt="Match play on the Richings Park courts" class="hero__bg-img" decoding="async">
+                </div>
             <div class="tennis-hero__veil"></div>
+        </div>
+        <div class="hero__slider-ui">
+            <div class="hero__ticks" aria-label="Hero image navigation"></div>
         </div>
         <div class="tennis-hero__content">
             <span class="tennis-hero__badge">RPLTC</span>
@@ -236,5 +245,6 @@
   });
 }());
 </script>
+<script src="hero-slider.js?v=1"></script>
 </body>
 </html>
